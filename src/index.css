@@ -2,13 +2,12 @@
 
 @font-face {
   font-family: "Cotta";
-  src: url("../fonts/cotta.otf") format("opentype");
+  src: url("./assets/fonts/cotta.otf") format("opentype");
 }
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 @layer components {
   ::selection {
@@ -69,31 +68,4 @@
     filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
   }
 
-  .nav-link {
-    @apply relative block w-full text-coffee-400 hover:bg-coffee-400/50 backdrop-blur-sm py-3 px-3 text-lg rounded-xl hover:text-coffee-900 transition-all duration-200 ease-in-out;
-  }
-
-  .navlink-dropdown {
-    @apply relative w-full text-coffee-400 text-lg transition-all duration-200 ease-in-out flex items-center justify-center flex-col gap-2;
-  }
-
-
-  .slider-overlay {
-    @apply absolute inset-0 size-full bg-gradient-to-b from-transparent via-transparent to-black/60 z-10 pointer-events-none select-none;
-  }
-
-
-  .is-checked {
-    @apply bg-coffee-800 text-coffee-400;
-  }
-
-  /* #navLinks::-webkit-scrollbar-track {
-    @apply bg-coffee-400;
-  }
-  #navLinks::-webkit-scrollbar-thumb {
-    @apply bg-coffee-600 rounded-full;
-  }
-  #navLinks::-webkit-scrollbar-thumb:hover {
-    @apply bg-coffee-800 rounded-full;
-  } */
 }

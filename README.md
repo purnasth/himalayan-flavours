@@ -1,5 +1,8 @@
-![Himalayan Flavours](./assets/logo.png)
+# React + Vite
 
-## Description
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Get ready for a culinary adventure as "Himalaya Flavors" opens its doors soon! This new restaurant promises to bring the rich and diverse tastes of Nepal, India, and China to your plate. From the aromatic spices of Indian curries to the savory delights of Nepali momos and the exquisite flavors of Chinese stir-fries, "Himalaya Flavors" offers an authentic dining experience.
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh

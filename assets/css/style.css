@@ -16,6 +16,10 @@
   }
 
   ::-webkit-scrollbar {
+    @apply w-0;
+  }
+
+  /* ::-webkit-scrollbar {
     @apply w-2 rounded-full bg-transparent;
   }
 
@@ -29,12 +33,13 @@
 
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-coffee-800;
-  }
+  } */
 
   body {
     @apply font-body;
   }
 
+  .navlink,
   h1,
   h2,
   h3,
@@ -58,6 +63,10 @@
 
   section {
     @apply py-12 sm:py-24 md:py-28 lg:py-36;
+  }
+
+  .filter-white {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
   }
 
   .nav-link {

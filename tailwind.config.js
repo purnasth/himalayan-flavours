@@ -14,7 +14,7 @@ module.exports = {
         // "light-coffee-clr": "#FFE9D2",
         // "yellow-clr": "#FFDE59",
         dark: "#111111",
-        light: "#E1F7EB",
+        light: "#fffbf3",
       },
       fontFamily: {
         title: ['"Cotta"', "Georgia", "Cambria", "serif"],
@@ -34,12 +34,12 @@ module.exports = {
       },
       container: {
         center: true,
-        padding: "2rem",
+        padding: "1rem",
         screens: {
           sm: "100%",
           md: "100%",
           lg: "1024px",
-          xl: "1280px",
+          xl: "1380px",
           "2xl": "1600px",
         },
       },

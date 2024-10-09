@@ -6,6 +6,7 @@ import LogoBar from './components/ui/LogoBar';
 import Cuisine from './components/Cuisine';
 import Facility from './components/Facility';
 import OffersReview from './components/OffersReview';
+import Gallery from './components/Gallery';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <Facility />
       <LogoBar />
       <OffersReview />
+      <Gallery />
     </>
   );
 };

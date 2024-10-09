@@ -61,8 +61,12 @@
   }
 
   main {
-    @apply py-12 px-4 sm:py-24 md:px-12 xl:px-16 md:py-[7.5rem] lg:py-[9rem] relative z-10;
+    @apply py-12 px-4 sm:py-24 md:px-12 xl:px-16 md:py-32 lg:py-36 xl:py-48 relative z-10;
   }
+
+  /* section {
+    @apply py-24 md:py-32 lg:py-48 px-4;
+  } */
 
   .filter-white {
     filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);

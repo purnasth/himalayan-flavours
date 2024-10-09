@@ -9,7 +9,6 @@ import 'lightgallery/css/lg-zoom.css';
 import 'lightgallery/css/lg-video.css';
 import 'lightgallery/css/lg-thumbnail.css';
 import 'lightgallery/css/lg-fullscreen.css';
-import { useState } from 'react';
 
 const galleryImages = [
   {
@@ -132,29 +131,78 @@ const galleryImages = [
     url: 'https://www.avenuecalgary.com/wp-content/uploads/2024/02/BR2024-Aama-scaled.jpg',
     alt: 'Gallery Image 24',
   },
+  {
+    id: 'image25',
+    url: 'https://www.avenuecalgary.com/wp-content/uploads/2024/02/BR2024-Aama-scaled.jpg',
+    alt: 'Gallery Image 24',
+  },
+  {
+    id: 'image25',
+    url: 'https://www.avenuecalgary.com/wp-content/uploads/2024/02/BR2024-Aama-scaled.jpg',
+    alt: 'Gallery Image 24',
+  },
+  {
+    id: 'image25',
+    url: 'https://www.avenuecalgary.com/wp-content/uploads/2024/02/BR2024-Aama-scaled.jpg',
+    alt: 'Gallery Image 24',
+  },
 ];
 
 const Gallery = () => {
   return (
     <>
-      <main>
+      <main className="bg-gray-100">
+        <div className="absolute inset-0 flex h-28 -translate-y-1/3 flex-col items-center justify-center gap-2">
+          <div className="mx-auto inline-flex items-center justify-center gap-4 overflow-hidden rounded-full bg-white p-12">
+            <img
+              src="https://thekayonresort.com/wp-content/uploads/2023/05/Traveller-Choice-TripAdvisor-2023-Square.jpg"
+              alt=""
+              className="size-24 bg-white object-contain p-2"
+            />
+            <img
+              src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/48/de/67/caption.jpg?w=600&h=-1&s=1"
+              alt=""
+              className="size-24 bg-white object-contain p-2"
+            />
+            <img
+              src="https://serendipitywilderness.com/wp-content/uploads/2024/03/2023-WLRA-Winner-Logo-1-1024x917.png"
+              alt=""
+              className="size-24 bg-white object-contain p-2"
+            />
+          </div>
+          <span className="opacity-70">The Awards & Recognization</span>
+        </div>
+
+        <div className="mx-auto mb-24 flex max-w-lg flex-col items-center justify-center gap-4 text-center">
+          <h3 className="text-xl capitalize leading-snug sm:text-2xl md:text-4xl lg:text-6xl lg:leading-snug">
+            Taste the difference
+          </h3>
+          <p className="text-center text-sm text-dark/60">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
+            cum itaque nulla iste rem tempora, sequi ducimus a sit dicta, ullam
+            minus vero. Similique magni nihil, quia provident soluta illo harum
+            cupiditate, excepturi totam nobis sunt assumenda, et eius porro a
+            sit perferendis fugit voluptate voluptas architecto exercitationem
+            saepe. Velit!
+          </p>
+        </div>
         <LightGallery
           plugins={[lgZoom, lgVideo, lgThumbnail, lgFullscreen]}
           mode="lg-fade"
-          elementClassNames="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
+          elementClassNames="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6"
           options={{
             thumbnail: true,
             autoplay: true,
           }}
         >
-          {galleryImages.map((image) => (
+          {galleryImages.map((image, index) => (
             <div
-              key={image.id}
-              className="gallery-item group overflow-hidden"
+              key={index}
+              className="group mb-6 break-inside-avoid overflow-hidden rounded-3xl shadow-md"
               data-src={image.url}
             >
               <img
-                className="h-80 w-full cursor-pointer overflow-hidden rounded-3xl object-cover shadow-md transition duration-700 ease-in-out group-hover:scale-125"
+                className="h-auto w-full cursor-pointer overflow-hidden object-cover shadow-md transition duration-700 ease-in-out group-hover:scale-125"
                 src={image.url}
                 alt={image.alt}
                 loading="lazy"

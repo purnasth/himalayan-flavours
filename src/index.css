@@ -60,8 +60,8 @@
     @apply font-medium font-body;
   }
 
-  section {
-    @apply py-12 sm:py-24 md:py-28 lg:py-36;
+  main {
+    @apply py-12 px-4 sm:py-24 md:px-12 xl:px-16 md:py-[7.5rem] lg:py-[9rem] relative z-10;
   }
 
   .filter-white {

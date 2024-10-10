@@ -7,6 +7,7 @@ import Cuisine from './components/Cuisine';
 import Facility from './components/Facility';
 import OffersReview from './components/OffersReview';
 import Gallery from './components/Gallery';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
       <LogoBar />
       <OffersReview />
       <Gallery />
+      <Footer />
     </>
   );
 };

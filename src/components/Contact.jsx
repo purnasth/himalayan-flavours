@@ -6,11 +6,11 @@ const Contact = () => {
     <section className="p-0">
       <div className="mx-auto grid w-2/3 grid-cols-2 gap-16 bg-white p-12">
         <div className="">
-          <div class="mx-auto mb-24 flex max-w-lg flex-col items-center justify-center gap-4">
-            <h3 class="text-xl capitalize leading-snug sm:text-2xl md:text-4xl lg:text-6xl lg:leading-snug">
+          <div className="mx-auto mb-24 flex max-w-lg flex-col items-center justify-center gap-4">
+            <h3 className="text-xl capitalize leading-snug sm:text-2xl md:text-4xl lg:text-6xl lg:leading-snug">
               Hungry for happiness?
             </h3>
-            <p class="text-pretty text-sm text-dark/60">
+            <p className="text-pretty text-sm text-dark/60">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
               cum itaque nulla iste rem tempora, sequi ducimus a sit dicta,
               ullam minus vero. Similique magni nihil, quia provident soluta

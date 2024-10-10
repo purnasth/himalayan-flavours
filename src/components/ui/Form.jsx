@@ -53,10 +53,7 @@ const Form = () => {
       <form onSubmit={handleSubmit(onSubmit)} className="">
         {contactFormFields.map((input) => (
           <div key={input.name} className="relative mb-4">
-            <label
-              htmlFor={input.name}
-              className="mb-2 block text-dark/80"
-            >
+            <label htmlFor={input.name} className="mb-2 block text-dark/80">
               {input.label}
             </label>
             {input.type === 'textarea' ? (
@@ -95,11 +92,11 @@ const Form = () => {
         >
           {isSubmitting ? 'Sending...' : 'Submit'}
         </button>
-        <p class="mt-4 text-sm text-dark/80">
+        <p className="mt-4 text-sm text-dark/80">
           or Call us at
           <a
             href="tel:+12509861755"
-            class="navlink mx-1 font-body font-bold underline underline-offset-2"
+            className="navlink mx-1 font-body font-bold underline underline-offset-2"
           >
             +1 250 986 1755
           </a>

@@ -231,7 +231,7 @@ const Navbar = () => {
               </ul>
             </div>
           </div>
-          {/* <hr class="my-8 w-full border-dark/20" /> */}
+          {/* <hr className="my-8 w-full border-dark/20" /> */}
           <div className="mt-12 flex w-full items-center justify-between border-t-2 border-dark/10">
             <span className="flex gap-0 text-base text-dark">
               <svg

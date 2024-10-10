@@ -33,12 +33,12 @@ const OffersReview = () => {
                     <h2 className="text-shadow-dark-glow mx-8 max-w-xl text-center text-xl leading-relaxed md:mx-0 md:text-4xl md:leading-snug">
                       Nepalese Cuisine
                     </h2>
-                    <p class="text-center text-sm opacity-80">
+                    <p className="text-center text-sm opacity-80">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     </p>
                   </div>
 
-                  <button class="rounded-full border border-light/50 bg-light/10 px-8 py-2 font-bold text-light backdrop-blur">
+                  <button className="rounded-full border border-light/50 bg-light/10 px-8 py-2 font-bold text-light backdrop-blur">
                     Explore More
                   </button>
                 </div>
@@ -59,12 +59,12 @@ const OffersReview = () => {
                     <h2 className="text-shadow-dark-glow mx-8 max-w-xl text-center text-xl leading-relaxed md:mx-0 md:text-4xl md:leading-snug">
                       Nepalese Cuisine
                     </h2>
-                    <p class="text-center text-sm opacity-80">
+                    <p className="text-center text-sm opacity-80">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     </p>
                   </div>
 
-                  <button class="rounded-full border border-light/50 bg-light/10 px-8 py-2 font-bold text-light backdrop-blur">
+                  <button className="rounded-full border border-light/50 bg-light/10 px-8 py-2 font-bold text-light backdrop-blur">
                     Explore More
                   </button>
                 </div>

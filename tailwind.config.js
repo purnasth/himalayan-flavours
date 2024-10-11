@@ -6,6 +6,8 @@ module.exports = {
       colors: {
         dark: '#000',
         light: '#fffbf3',
+        "logo-blue": '#004aad',
+        "logo-red": '#ff3130'
       },
       fontFamily: {
         title: ['"Cotta"', 'Georgia', 'Cambria', 'serif'],

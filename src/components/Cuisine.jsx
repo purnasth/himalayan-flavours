@@ -1,10 +1,11 @@
 import React from 'react';
+import bgCuisine from '../assets/images/bg_cuisine.png';
 
 const Cuisine = () => {
   return (
     <main className="flex h-screen w-full items-center justify-center">
       <img
-        src="https://mayurstay.com/prestigio/assets/images/Artboard%201%20copy%205.png"
+        src={bgCuisine}
         alt=""
         className="absolute inset-0 -z-10 size-full object-cover"
       />

@@ -6,6 +6,7 @@ import {
   TbBowlChopsticks,
 } from 'react-icons/tb';
 import { MdOutlineLocationOn } from 'react-icons/md';
+import bgCuisine from '../assets/images/bg_cuisine.png';
 
 const Facility = () => {
   return (
@@ -41,7 +42,7 @@ const Facility = () => {
 
           <div className="flex flex-col items-center gap-4 p-4 text-center">
             <TbArmchair className="text-4xl text-dark/80" />
-            <p className="text-xs md:text-xs xl:text-base">Warm Hospitality</p>
+            <p className="text-xs md:text-xs xl:text-base">Welcoming Hospitality</p>
           </div>
 
           <div className="flex flex-col items-center gap-4 p-4 text-center">
@@ -58,7 +59,7 @@ const Facility = () => {
         </div>
 
         <img
-          src="https://rachelgouk.com/wp-content/uploads/2020/05/nepali-kitchen-nepalese-restaurant-shanghai-37.jpg"
+          src={bgCuisine}
           alt=""
           className="mx-auto mt-12 h-[60vh] w-full rounded-3xl object-cover shadow"
         />

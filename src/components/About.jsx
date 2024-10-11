@@ -1,4 +1,5 @@
 import React from 'react';
+import newariCuisine from '../assets/images/nepali_cuisine.jpg'
 
 const About = () => {
   return (
@@ -7,14 +8,14 @@ const About = () => {
         <div className="hidden space-y-24 pt-64 md:block">
           <div className="flex items-end justify-end">
             <img
-              src="https://www.avenuecalgary.com/wp-content/uploads/2024/02/BR2024-Aama-scaled.jpg"
+              src={newariCuisine}
               alt=""
               className="h-60 w-44 object-cover"
             />
           </div>
           <div className="flex items-end">
             <img
-              src="https://www.avenuecalgary.com/wp-content/uploads/2024/02/BR2024-Aama-scaled.jpg"
+              src={newariCuisine}
               alt=""
               className="h-full w-80 object-cover"
             />
@@ -39,14 +40,14 @@ const About = () => {
         <div className="hidden space-y-24 pt-64 md:block">
           <div className="flex items-end justify-end">
             <img
-              src="https://www.avenuecalgary.com/wp-content/uploads/2024/02/BR2024-Aama-scaled.jpg"
+              src={newariCuisine}
               alt=""
               className="h-full w-80 object-cover"
             />
           </div>
           <div className="flex">
             <img
-              src="https://www.avenuecalgary.com/wp-content/uploads/2024/02/BR2024-Aama-scaled.jpg"
+              src={newariCuisine}
               alt=""
               className="h-60 w-44 object-cover"
             />

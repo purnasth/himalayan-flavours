@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 @font-face {
-  font-family: "Cotta";
-  src: url("./assets/fonts/cotta.otf") format("opentype");
+  font-family: 'Cotta';
+  src: url('./assets/fonts/cotta.otf') format('opentype');
 }
 
 @tailwind base;
@@ -57,11 +57,11 @@
   button,
   ul,
   li {
-    @apply font-medium font-body;
+    @apply font-body font-medium;
   }
 
   main {
-    @apply py-12 px-4 sm:py-24 md:px-12 xl:px-16 md:py-32 lg:py-36 xl:py-48 relative z-10;
+    @apply relative z-10 px-4 py-12 sm:py-24 md:px-12 md:py-32 lg:py-36 xl:px-16 xl:py-48;
   }
 
   /* section {
@@ -69,7 +69,8 @@
   } */
 
   .filter-white {
-    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%)
+      hue-rotate(288deg) brightness(102%) contrast(102%);
   }
 
   .transition-300 {
@@ -78,5 +79,9 @@
 
   .transition-1000 {
     @apply transition-all duration-1000;
+  }
+
+  .navlink {
+    @apply transition-300 group-hover:text-logo-blue inline-block w-full pb-2 text-2xl font-bold capitalize text-dark group-hover:font-extrabold group-hover:tracking-wider;
   }
 }

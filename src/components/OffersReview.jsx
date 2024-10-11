@@ -1,4 +1,5 @@
 import React from 'react';
+import bgCuisine from '../assets/images/bg_cuisine.png';
 
 const OffersReview = () => {
   return (
@@ -20,12 +21,12 @@ const OffersReview = () => {
               <div className="group relative">
                 <div className="overlay absolute inset-0 -z-0 size-full bg-black/70"></div>
                 <img
-                  src="https://www.avenuecalgary.com/wp-content/uploads/2024/02/BR2024-Aama-scaled.jpg"
+                  src={bgCuisine}
                   alt=""
-                  className="-z-10 h-[36rem] w-full object-cover shadow"
+                  className="-z-10 h-[36rem] w-full object-cover object-left-top shadow"
                 />
 
-                <div className="absolute inset-0 z-10 flex size-full flex-col items-center justify-around p-12 text-center text-light ">
+                <div className="absolute inset-0 z-10 flex size-full flex-col items-center justify-between px-12 py-16 text-center text-light">
                   <span className="text-sm font-light uppercase tracking-wider md:text-sm">
                     On Every Dish 10% Off
                   </span>
@@ -38,7 +39,7 @@ const OffersReview = () => {
                     </p>
                   </div>
 
-                  <button className="rounded-full border border-light/50 bg-light/10 px-8 py-2 font-bold text-light backdrop-blur">
+                  <button className="rounded-full border border-light/50 bg-light/10 px-8 py-2 text-light backdrop-blur">
                     Explore More
                   </button>
                 </div>
@@ -46,12 +47,12 @@ const OffersReview = () => {
               <div className="group relative">
                 <div className="overlay absolute inset-0 -z-0 size-full bg-black/70"></div>
                 <img
-                  src="https://www.avenuecalgary.com/wp-content/uploads/2024/02/BR2024-Aama-scaled.jpg"
+                  src={bgCuisine}
                   alt=""
-                  className="-z-10 h-[36rem] w-full object-cover shadow"
+                  className="-z-10 h-[36rem] w-full object-cover object-left-top shadow"
                 />
 
-                <div className="absolute inset-0 z-10 flex size-full flex-col items-center justify-around p-12 text-center text-light ">
+                <div className="absolute inset-0 z-10 flex size-full flex-col items-center justify-between px-12 py-16 text-center text-light">
                   <span className="text-sm font-light uppercase tracking-wider md:text-sm">
                     On Every Dish 10% Off
                   </span>
@@ -64,7 +65,7 @@ const OffersReview = () => {
                     </p>
                   </div>
 
-                  <button className="rounded-full border border-light/50 bg-light/10 px-8 py-2 font-bold text-light backdrop-blur">
+                  <button className="rounded-full border border-light/50 bg-light/10 px-8 py-2 text-light backdrop-blur">
                     Explore More
                   </button>
                 </div>

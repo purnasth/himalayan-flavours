@@ -96,7 +96,7 @@ const Form = () => {
           or Call us at
           <a
             href="tel:+12509861755"
-            className="navlink mx-1 font-body font-bold underline underline-offset-2"
+            className="mx-1 font-body font-bold underline underline-offset-2"
           >
             +1 250 986 1755
           </a>

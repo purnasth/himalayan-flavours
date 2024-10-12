@@ -43,7 +43,7 @@ const Navbar = () => {
           <div className="flex gap-2">
             <button
               onClick={toggleNav}
-              className="round-full transition-300 rounded-full border border-white/50 bg-dark p-2 text-white hover:border-black/80 hover:bg-white hover:text-dark"
+              className="transition-300 rounded-full border border-white/50 bg-dark p-2 text-white hover:border-black/80 hover:bg-white hover:text-dark"
             >
               <CgMenuHotdog className="text-2xl" />
             </button>
@@ -66,7 +66,7 @@ const Navbar = () => {
             <img
               src={logo}
               alt="Logo"
-              className={`transition-1000 h-32 w-auto object-contain ${
+              className={`transition-1000 h-16 w-auto object-contain md:h-32 ${
                 visible ? '-translate-y-0' : '-translate-y-full scale-0'
               } ${window.scrollY > 0 ? '-translate-y-full scale-0' : 'translate-y-0'}`}
             />
@@ -74,15 +74,13 @@ const Navbar = () => {
         </div>
       </header>
 
-      {isOpen && (
-        <div
-          className="fixed inset-0 z-30 bg-black/50 backdrop-blur-sm"
-          onClick={closeNav}
-        />
-      )}
+      <div
+        className={`transition-700 fixed inset-0 z-30 bg-black/50 backdrop-blur-sm ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+        onClick={closeNav}
+      />
 
       <nav
-        className={`fixed left-0 top-0 h-screen w-[28rem] overflow-y-auto bg-light transition-transform duration-300 ease-in-out ${
+        className={`transition-700 fixed left-0 top-0 h-screen w-full overflow-y-auto bg-light md:w-[28rem] ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         } z-50`}
       >
@@ -97,48 +95,28 @@ const Navbar = () => {
           <div className="mt-12 w-full">
             <span className="text-xs uppercase text-dark/50">Navigation</span>
             <ul className="links mt-6 flex flex-col items-start justify-start gap-2 md:gap-4">
-              <li className="w-full group">
-                <a
-                  href="#"
-                  className="navlink"
-                  aria-label="Stay"
-                >
+              <li className="group w-full">
+                <a href="#" className="navlink" aria-label="Stay">
                   About Restaurant
                 </a>
               </li>
-              <li className="w-full group">
-                <a
-                  href="#"
-                  className="navlink"
-                  aria-label="Menu"
-                >
+              <li className="group w-full">
+                <a href="#" className="navlink" aria-label="Menu">
                   Food Menu
                 </a>
               </li>
-              <li className="w-full group">
-                <a
-                  href="#"
-                  className="navlink"
-                  aria-label="Gallery"
-                >
+              <li className="group w-full">
+                <a href="#" className="navlink" aria-label="Gallery">
                   Food Gallery
                 </a>
               </li>
-              <li className="w-full group">
-                <a
-                  href="#"
-                  className="navlink"
-                  aria-label="Contact"
-                >
+              <li className="group w-full">
+                <a href="#" className="navlink" aria-label="Contact">
                   Contact Info
                 </a>
               </li>
-              <li className="w-full group">
-                <a
-                  href="#"
-                  className="navlink"
-                  aria-label="Promotions"
-                >
+              <li className="group w-full">
+                <a href="#" className="navlink" aria-label="Promotions">
                   Promotions
                 </a>
               </li>

@@ -77,6 +77,10 @@
     @apply transition-all duration-300 ease-linear;
   }
 
+  .transition-700 {
+    @apply transition-all duration-700 ease-in-out;
+  }
+
   .transition-1000 {
     @apply transition-all duration-1000;
   }

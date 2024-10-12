@@ -10,141 +10,166 @@ import 'lightgallery/css/lg-video.css';
 import 'lightgallery/css/lg-thumbnail.css';
 import 'lightgallery/css/lg-fullscreen.css';
 
+import bgCuisine from '../assets/images/bg_cuisine.png';
+import newariCuisine from '../assets/images/nepali_cuisine.jpg';
+import newariKitchen from '../assets/images/nepali_kitchen.jpg';
+
+
 const galleryImages = [
   {
     id: 'image1',
-    url: 'https://www.avenuecalgary.com/wp-content/uploads/2024/02/BR2024-Aama-scaled.jpg',
+    url: bgCuisine,
     alt: 'Gallery Image 1',
   },
   {
     id: 'image2',
-    url: 'https://rachelgouk.com/wp-content/uploads/2020/05/nepali-kitchen-nepalese-restaurant-shanghai-37.jpg',
+    url: newariCuisine,
     alt: 'Gallery Image 2',
   },
   {
     id: 'image3',
-    url: 'https://www.avenuecalgary.com/wp-content/uploads/2024/02/BR2024-Aama-scaled.jpg',
+    url: newariKitchen,
     alt: 'Gallery Image 3',
   },
   {
     id: 'image4',
-    url: 'https://www.avenuecalgary.com/wp-content/uploads/2024/02/BR2024-Aama-scaled.jpg',
+    url: newariKitchen,
     alt: 'Gallery Image 4',
   },
   {
     id: 'image5',
-    url: 'https://www.avenuecalgary.com/wp-content/uploads/2024/02/BR2024-Aama-scaled.jpg',
+    url: newariKitchen,
     alt: 'Gallery Image 5',
   },
   {
     id: 'image6',
-    url: 'https://www.avenuecalgary.com/wp-content/uploads/2024/02/BR2024-Aama-scaled.jpg',
+    url: newariKitchen,
     alt: 'Gallery Image 6',
   },
   {
     id: 'image7',
-    url: 'https://rachelgouk.com/wp-content/uploads/2020/05/nepali-kitchen-nepalese-restaurant-shanghai-37.jpg',
+    url: newariCuisine,
     alt: 'Gallery Image 7',
   },
   {
     id: 'image8',
-    url: 'https://www.avenuecalgary.com/wp-content/uploads/2024/02/BR2024-Aama-scaled.jpg',
+    url: newariKitchen,
     alt: 'Gallery Image 8',
   },
   {
     id: 'image9',
-    url: 'https://www.avenuecalgary.com/wp-content/uploads/2024/02/BR2024-Aama-scaled.jpg',
+    url: newariKitchen,
     alt: 'Gallery Image 9',
   },
   {
     id: 'image10',
-    url: 'https://rachelgouk.com/wp-content/uploads/2020/05/nepali-kitchen-nepalese-restaurant-shanghai-37.jpg',
+    url: newariCuisine,
     alt: 'Gallery Image 10',
   },
   {
     id: 'image11',
-    url: 'https://www.avenuecalgary.com/wp-content/uploads/2024/02/BR2024-Aama-scaled.jpg',
+    url: newariKitchen,
     alt: 'Gallery Image 11',
   },
   {
     id: 'image12',
-    url: 'https://www.avenuecalgary.com/wp-content/uploads/2024/02/BR2024-Aama-scaled.jpg',
+    url: bgCuisine,
     alt: 'Gallery Image 12',
   },
   {
     id: 'image13',
-    url: 'https://rachelgouk.com/wp-content/uploads/2020/05/nepali-kitchen-nepalese-restaurant-shanghai-37.jpg',
+    url: newariCuisine,
     alt: 'Gallery Image 13',
   },
   {
     id: 'image14',
-    url: 'https://www.avenuecalgary.com/wp-content/uploads/2024/02/BR2024-Aama-scaled.jpg',
+    url: bgCuisine,
     alt: 'Gallery Image 14',
   },
   {
     id: 'image15',
-    url: 'https://rachelgouk.com/wp-content/uploads/2020/05/nepali-kitchen-nepalese-restaurant-shanghai-37.jpg',
+    url: newariCuisine,
     alt: 'Gallery Image 15',
   },
   {
     id: 'image16',
-    url: 'https://www.avenuecalgary.com/wp-content/uploads/2024/02/BR2024-Aama-scaled.jpg',
+    url: bgCuisine,
     alt: 'Gallery Image 16',
   },
   {
     id: 'image17',
-    url: 'https://www.avenuecalgary.com/wp-content/uploads/2024/02/BR2024-Aama-scaled.jpg',
+    url: bgCuisine,
     alt: 'Gallery Image 17',
   },
   {
     id: 'image18',
-    url: 'https://rachelgouk.com/wp-content/uploads/2020/05/nepali-kitchen-nepalese-restaurant-shanghai-37.jpg',
+    url: newariCuisine,
     alt: 'Gallery Image 18',
   },
   {
     id: 'image19',
-    url: 'https://www.avenuecalgary.com/wp-content/uploads/2024/02/BR2024-Aama-scaled.jpg',
+    url: bgCuisine,
     alt: 'Gallery Image 19',
   },
   {
     id: 'image20',
-    url: 'https://www.avenuecalgary.com/wp-content/uploads/2024/02/BR2024-Aama-scaled.jpg',
+    url: bgCuisine,
     alt: 'Gallery Image 20',
   },
   {
     id: 'image21',
-    url: 'https://rachelgouk.com/wp-content/uploads/2020/05/nepali-kitchen-nepalese-restaurant-shanghai-37.jpg',
+    url: newariCuisine,
     alt: 'Gallery Image 21',
   },
   {
     id: 'image22',
-    url: 'https://www.avenuecalgary.com/wp-content/uploads/2024/02/BR2024-Aama-scaled.jpg',
+    url: bgCuisine,
     alt: 'Gallery Image 22',
   },
   {
     id: 'image23',
-    url: 'https://www.avenuecalgary.com/wp-content/uploads/2024/02/BR2024-Aama-scaled.jpg',
+    url: bgCuisine,
     alt: 'Gallery Image 23',
   },
   {
     id: 'image24',
-    url: 'https://www.avenuecalgary.com/wp-content/uploads/2024/02/BR2024-Aama-scaled.jpg',
+    url: bgCuisine,
     alt: 'Gallery Image 24',
   },
   {
     id: 'image25',
-    url: 'https://www.avenuecalgary.com/wp-content/uploads/2024/02/BR2024-Aama-scaled.jpg',
+    url: bgCuisine,
     alt: 'Gallery Image 24',
   },
   {
     id: 'image25',
-    url: 'https://www.avenuecalgary.com/wp-content/uploads/2024/02/BR2024-Aama-scaled.jpg',
+    url: bgCuisine,
     alt: 'Gallery Image 24',
   },
   {
     id: 'image25',
-    url: 'https://www.avenuecalgary.com/wp-content/uploads/2024/02/BR2024-Aama-scaled.jpg',
+    url: bgCuisine,
     alt: 'Gallery Image 24',
+  },
+  {
+    id: 'image26',
+    url: bgCuisine,
+    alt: 'Gallery Image 24',
+  },
+  {
+    id: 'image27',
+    url: newariCuisine,
+    alt: 'Gallery Image 21',
+  },
+  {
+    id: 'image28',
+    url: newariKitchen,
+    alt: 'Gallery Image 11',
+  },
+  {
+    id: 'image29',
+    url: newariKitchen,
+    alt: 'Gallery Image 11',
   },
 ];
 

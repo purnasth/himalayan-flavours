@@ -6,7 +6,7 @@ import { RiInstagramFill } from 'react-icons/ri';
 const Contact = () => {
   return (
     <section className="p-0">
-      <div className="mx-auto grid w-2/3 grid-cols-2 gap-16 bg-white p-12">
+      <div className="mx-auto grid w-2/3 grid-cols-2 gap-16 bg-white p-12 border shadow-lg">
         <div className="">
           <div className="mx-auto mb-24 flex max-w-lg flex-col items-center justify-center gap-4">
             <h3 className="text-xl capitalize leading-snug sm:text-2xl md:text-4xl lg:text-6xl lg:leading-snug">

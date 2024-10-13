@@ -86,6 +86,28 @@
   }
 
   .navlink {
-    @apply transition-300 group-hover:text-logo-blue inline-block w-full pb-2 text-2xl font-bold capitalize text-dark group-hover:font-extrabold group-hover:tracking-wider;
+    @apply transition-300 inline-block w-full pb-2 text-2xl font-bold capitalize text-dark group-hover:font-extrabold group-hover:tracking-wider group-hover:text-logo-blue;
   }
+}
+
+/* lenis */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
 }

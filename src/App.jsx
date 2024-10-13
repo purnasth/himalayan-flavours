@@ -9,8 +9,10 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import WhatsApp from './components/ui/WhatsApp';
+import useLenisScroll from './hooks/useLenisScroll';
 
 const App = () => {
+  useLenisScroll();
   return (
     <>
       <Router>

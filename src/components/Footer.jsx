@@ -5,6 +5,8 @@ import bgCuisine from '../assets/images/bg_cuisine.png';
 import { MdFacebook, MdStarRate } from 'react-icons/md';
 import { RiInstagramFill } from 'react-icons/ri';
 
+import TestimonialSlider from './ui/TestimonialSlider';
+
 const Footer = () => {
   return (
     <main className="bg-gray-100 p-0">
@@ -22,11 +24,7 @@ const Footer = () => {
       <section className="relative p-24">
         <div className="pointer-events-none absolute inset-0 -z-10 size-full bg-gradient-to-t from-white to-transparent"></div>
         <div className="flex items-center justify-center">
-          <img
-            src={logo}
-            alt=""
-            className="h-40 w-auto object-contain"
-          />
+          <img src={logo} alt="" className="h-40 w-auto object-contain" />
         </div>
         <div className="mt-16 grid grid-cols-7">
           <div className="col-span-2 w-full">
@@ -34,48 +32,28 @@ const Footer = () => {
               Navigation
             </span>
             <ul className="links mt-8 flex flex-col items-start justify-start gap-2 md:gap-4">
-              <li className="w-full group">
-                <a
-                  href="#"
-                  className="navlink"
-                  aria-label="Stay"
-                >
+              <li className="group w-full">
+                <a href="#" className="navlink" aria-label="Stay">
                   About Restaurant
                 </a>
               </li>
-              <li className="w-full group">
-                <a
-                  href="#"
-                  className="navlink"
-                  aria-label="Menu"
-                >
+              <li className="group w-full">
+                <a href="#" className="navlink" aria-label="Menu">
                   Food Menu
                 </a>
               </li>
-              <li className="w-full group">
-                <a
-                  href="#"
-                  className="navlink"
-                  aria-label="Gallery"
-                >
+              <li className="group w-full">
+                <a href="#" className="navlink" aria-label="Gallery">
                   Food Gallery
                 </a>
               </li>
-              <li className="w-full group">
-                <a
-                  href="#"
-                  className="navlink"
-                  aria-label="Contact"
-                >
+              <li className="group w-full">
+                <a href="#" className="navlink" aria-label="Contact">
                   Contact Info
                 </a>
               </li>
-              <li className="w-full group">
-                <a
-                  href="#"
-                  className="navlink"
-                  aria-label="Promotions"
-                >
+              <li className="group w-full">
+                <a href="#" className="navlink" aria-label="Promotions">
                   Promotions
                 </a>
               </li>
@@ -92,34 +70,14 @@ const Footer = () => {
                 Reviews
               </span>
 
-              <p className="review mt-8 text-justify text-sm sm:text-base md:text-pretty">
-                Himalayan Flavours is a great place to enjoy authentic Nepalese
-                cuisine. The food is delicious and the service is excellent. The
-                staff is very friendly and welcoming. I highly recommend this
-                restaurant to anyone looking for a taste of Nepal.
-              </p>
-              <div className="mt-6 flex items-center justify-between gap-12 text-left">
-                <div className="flex items-center justify-center gap-4">
-                  <img
-                    src="https://www.manigrambishrambatika.com/images/testimonial/00LYd-expedia-(1).png"
-                    alt=""
-                    className="size-12 rounded-full object-contain"
-                  />
-                  <div className="space-y-0">
-                    <p className="caps text-base font-bold">Purna Shrestha</p>
-                    <p className="text-xs">via Tripadvisor</p>
-                  </div>
-                </div>
-              </div>
+              <TestimonialSlider />
             </div>
 
-            <div className="mt-12 flex w-full items-center justify-between border-t-2 border-dark/10">
+            <div className="mt-10 flex w-full items-center justify-between border-t-2 border-dark/10">
               <span className="flex gap-0 text-base text-dark">
-                <MdStarRate />
-                <MdStarRate />
-                <MdStarRate />
-                <MdStarRate />
-                <MdStarRate />
+                {Array.from({ length: 5 }).map((_, index) => (
+                  <MdStarRate key={index} />
+                ))}
               </span>
               <p className="my-4 text-sm text-dark/50">
                 <strong className="font-bold text-dark">5.0</strong>/ 5,753

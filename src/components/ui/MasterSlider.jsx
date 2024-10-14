@@ -12,9 +12,10 @@ const MasterSlider = ({
   hasContent = false,
   autoplay = true,
   effect = 'fade',
-  speed = 1000,
+  speed = 2000,
   delay = 5000,
   navigation = true,
+  sizeClassName = 'relative flex h-screen items-center justify-center',
 }) => (
   <>
     <Swiper
@@ -33,10 +34,7 @@ const MasterSlider = ({
       className="h-full"
     >
       {slides.map((slide, index) => (
-        <SwiperSlide
-          key={index}
-          className="relative flex h-screen flex-col items-center justify-center"
-        >
+        <SwiperSlide key={index} className={`${sizeClassName}`}>
           <img
             src={slide.image}
             alt={slide.title || `Slide ${index + 1}`}

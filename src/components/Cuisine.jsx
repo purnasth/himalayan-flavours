@@ -15,7 +15,7 @@ const cuisineSection = [
     subtitle: 'Experience the flavor',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cum itaque nulla iste rem tempora, sequi ducimus a sit dicta, ullam minus vero. Similique magni nihil, quia provident soluta illo harum cupiditate, excepturi totam nobis sunt assumenda, et eius porro a sit perferendis fugit ',
-    image: bgCuisine,
+    image: "https://img.freepik.com/premium-photo/drawing-food-with-frame-that-says-burgers-cheese_1064589-160713.jpg?w=2000",
   },
   {
     title: 'Chinese Cuisine',

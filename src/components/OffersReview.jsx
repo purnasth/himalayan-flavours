@@ -1,6 +1,7 @@
 import React from 'react';
 import { offersContent, testimonialsContent } from '../constants/data';
 import { Link } from 'react-router-dom';
+import fire from '../assets/logos/fire.svg';
 
 const OffersReview = () => {
   return (
@@ -21,7 +22,7 @@ const OffersReview = () => {
             <div className="mt-16 grid grid-cols-2 gap-8">
               {offersContent.slice(0, 2).map((content, index) => (
                 <div key={index} className="group relative">
-                  <div className="overlay absolute inset-0 -z-0 size-full bg-black/70"></div>
+                  <div className="overlay transition-300 absolute inset-0 -z-0 size-full bg-black/70 group-hover:bg-black/80"></div>
                   <img
                     src={content.image}
                     alt=""
@@ -42,9 +43,22 @@ const OffersReview = () => {
                       </p>
                     </div>
 
-                    <button className="rounded-full border border-light/50 bg-light/10 px-8 py-2 text-light backdrop-blur">
+                    <Link
+                      to="#"
+                      className="transition-300 flex items-center justify-center gap-2 rounded-full border border-light/50 bg-light/10 px-4 py-2 text-light backdrop-blur group-hover:bg-light/30"
+                    >
+                      <img
+                        src={fire}
+                        alt="Fire"
+                        className="filter-white transition-300 size-4 scale-75 object-contain group-hover:scale-100 group-hover:filter-none"
+                      />
                       Explore More
-                    </button>
+                      <img
+                        src={fire}
+                        alt="Fire"
+                        className="filter-white transition-300 size-4 scale-75 object-contain group-hover:scale-100 group-hover:filter-none"
+                      />
+                    </Link>
                   </div>
                 </div>
               ))}

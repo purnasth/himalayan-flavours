@@ -18,32 +18,32 @@ import newariKitchen from '../assets/images/nepali_kitchen.jpg';
 const galleryImages = [
   {
     id: 'image1',
-    url: bgCuisine,
+    url: "https://www.acethehimalaya.com/wp-content/uploads/2013/07/famous-nepali-food.jpg",
     alt: 'Gallery Image 1',
   },
   {
     id: 'image2',
-    url: newariCuisine,
+    url: "https://www.nepalsanctuarytreks.com/wp-content/uploads/2018/07/Terai-Cuisine-nepal.png",
     alt: 'Gallery Image 2',
   },
   {
     id: 'image3',
-    url: newariKitchen,
+    url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx31aEDUEZttmqpjhb-T5VGVfjb7kAaYCk5sJj1hRML1VWOOYamVL04md5FG0lolywwLE&usqp=CAU",
     alt: 'Gallery Image 3',
   },
   {
     id: 'image4',
-    url: newariKitchen,
+    url: "https://d2s742iet3d3t1.cloudfront.net/restaurants/restaurant-195528000000000000/menu/items/8/item-1100000000148966358_1708122178.png?size=medium",
     alt: 'Gallery Image 4',
   },
   {
     id: 'image5',
-    url: newariKitchen,
+    url: "https://www.pngarts.com/files/18/Indian-Cuisine-Curry-Dishes-Background-PNG.png",
     alt: 'Gallery Image 5',
   },
   {
     id: 'image6',
-    url: newariKitchen,
+    url: "https://img.pikbest.com/origin/09/02/29/46NpIkbEsTeX3.png!sw800",
     alt: 'Gallery Image 6',
   },
   {
@@ -223,7 +223,7 @@ const Gallery = () => {
           {galleryImages.map((image, index) => (
             <div
               key={index}
-              className="group mb-6 break-inside-avoid overflow-hidden rounded-3xl shadow-md"
+              className="group mb-6 break-inside-avoid overflow-hidden rounded-3xl shadow-md border bg-white"
               data-src={image.url}
             >
               <img

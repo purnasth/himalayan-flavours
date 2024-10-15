@@ -1,5 +1,6 @@
 import React from 'react';
-import newariCuisine from '../assets/images/nepali_cuisine.jpg'
+import newariCuisine from '../assets/images/nepali_cuisine.jpg';
+import FireButton from './ui/FireButton';
 
 const About = () => {
   return (
@@ -26,7 +27,7 @@ const About = () => {
           <h3 className="mt-16 text-xl capitalize leading-snug sm:text-2xl md:text-4xl lg:text-6xl lg:leading-snug">
             Himalayan Flavours
           </h3>
-          <p className="text-center text-sm text-dark/60">
+          <p className="text-center text-sm text-dark/60 mb-12">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
             cum itaque nulla iste rem tempora, sequi ducimus a sit dicta, ullam
             minus vero. Similique magni nihil, quia provident soluta illo harum
@@ -35,7 +36,9 @@ const About = () => {
             saepe. Velit!
           </p>
 
-          <button className="mt-12 bg-orange-300 px-8 py-2 rounded-full">Explore More</button>
+          {/* <button className="mt-12 bg-orange-300 px-8 py-2 rounded-full">Explore More</button> */}
+
+          <FireButton value="Explore More" router="#" />
         </div>
         <div className="hidden space-y-24 pt-64 md:block">
           <div className="flex items-end justify-end">

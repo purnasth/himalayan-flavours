@@ -13,18 +13,20 @@ const Footer = () => {
       {/* <div className="absolute bottom-0 h-3/4 w-full bg-red-600 -z-10"></div> */}
       <div
         className="pointer-events-none absolute bottom-0 -z-10 h-3/4 w-full bg-cover bg-center bg-no-repeat"
-        // style={{
-        //   backgroundImage:
-        //     'url("../src/assets/images/bg_cuisine.png")',
-        // }}
         style={{ backgroundImage: `url(${bgCuisine})` }}
       ></div>
       <Contact />
 
       <section className="relative p-24">
         <div className="pointer-events-none absolute inset-0 -z-10 size-full bg-gradient-to-t from-white to-transparent"></div>
-        <div className="flex items-center justify-center">
-          <img src={logo} alt="" className="h-40 w-auto object-contain" />
+        <div className="z-10 flex items-center justify-center">
+          <a href="/" className="cursor-pointer">
+            <img
+              src={logo}
+              alt=""
+              className="h-40 w-auto object-contain"
+            />
+          </a>
         </div>
         <div className="mt-16 grid grid-cols-7">
           <div className="col-span-2 w-full">

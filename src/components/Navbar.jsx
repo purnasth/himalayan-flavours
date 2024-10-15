@@ -49,7 +49,7 @@ const Navbar = () => {
             </button>
             <button
               type="button"
-              className={`transition-1000 hidden items-center gap-2 rounded-full border border-black bg-white px-4 py-2 font-bold text-dark shadow md:inline-flex ${visible ? 'translate-y-0 scale-100' : '-translate-y-[200%] scale-0'}`}
+              className={`transition-1000 hidden items-center gap-2 rounded-full border border-light/50 text-light bg-dark/50 backdrop-blur-sm px-4 py-2 font-bold shadow md:inline-flex ${visible ? 'translate-y-0 scale-100' : '-translate-y-[200%] scale-0'}`}
               aria-label="Book Now"
               title="Book"
             >

@@ -7,6 +7,8 @@ import { useEffect } from 'react';
 import { MdFacebook } from 'react-icons/md';
 import { RiInstagramFill } from 'react-icons/ri';
 import { MdStarRate } from 'react-icons/md';
+import { Link } from 'react-router-dom';
+import foodMenu from '../assets/menu/menu.pdf';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,15 +49,17 @@ const Navbar = () => {
             >
               <CgMenuHotdog className="text-2xl" />
             </button>
-            <button
-              type="button"
-              className={`transition-1000 hidden items-center gap-2 rounded-full border border-light/50 text-light bg-dark/50 backdrop-blur-sm px-4 py-2 font-bold shadow md:inline-flex ${visible ? 'translate-y-0 scale-100' : '-translate-y-[200%] scale-0'}`}
-              aria-label="Book Now"
-              title="Book"
+            <Link
+              to={foodMenu}
+              className={`transition-1000 hidden items-center gap-2 rounded-full border border-light/50 bg-dark/50 px-4 py-2 font-bold text-light shadow backdrop-blur-sm md:inline-flex ${visible ? 'translate-y-0 scale-100' : '-translate-y-[200%] scale-0'}`}
+              aria-label="View Menu"
+              title="Menu"
+              target="_blank"
+              download
             >
               <MdOutlineRoomService className="text-2xl" />
               View Menu
-            </button>
+            </Link>
           </div>
           <a
             href="/"
@@ -75,7 +79,7 @@ const Navbar = () => {
       </header>
 
       <div
-        className={`transition-700 fixed inset-0 z-30 bg-black/50 backdrop-blur-sm ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+        className={`transition-700 fixed inset-0 z-30 bg-black/50 backdrop-blur-sm ${isOpen ? 'opacity-100' : 'pointer-events-none opacity-0'}`}
         onClick={closeNav}
       />
 

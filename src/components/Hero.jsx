@@ -6,13 +6,14 @@ const Hero = () => {
   return (
     <>
       <section className="group relative m-0 p-0">
-        {/* <div className="overlay absolute inset-0 z-10 size-full bg-black/50"></div> */}
-        <div className="overlay absolute inset-0 z-10 size-full bg-gradient-to-b from-black/60 to-transparent"></div>
+        <div className="overlay pointer-events-none absolute inset-0 z-10 size-full bg-black/20"></div>
+        {/* <div className="overlay absolute inset-0 z-10 size-full bg-gradient-to-b from-transparent to-black"></div> */}
+        <div className="overlay pointer-events-none absolute inset-0 z-10 size-full bg-gradient-to-b from-black/60 to-black/20"></div>
         <img
-          src='https://img.freepik.com/free-photo/lamp-design-with-digital-art-style_23-2151153878.jpg?w=1480&t=st=1728962212~exp=1728962812~hmac=2dfa5864e80f000c728df8eedf9e40d0565538e0dfdd54c8cf0a1f4f17cc4b2a'
-          // src="https://img.freepik.com/free-photo/green-woman-energy-department-interior_1253-741.jpg?w=1480&t=st=1728962326~exp=1728962926~hmac=8f6717b1d9c77cd9c2bd46eea93639c9d2c01977de0c7a99a01a6949af4f4713"
+          // src="https://images5.alphacoders.com/312/312472.jpg"
+          src="https://wallpapers.com/images/hd/food-4k-anl1yr892h6ccjeb.jpg"
           alt=""
-          className="h-screen w-full object-cover object-center"
+          className="contrast-1 25 h-screen w-full object-cover object-center contrast-125"
         />
 
         <div className="pointer-events-none absolute inset-0 z-10 flex size-full flex-col items-center justify-end bg-gradient-to-t from-black/60 to-black/0 text-light">

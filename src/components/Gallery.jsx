@@ -14,36 +14,35 @@ import bgCuisine from '../assets/images/bg_cuisine.png';
 import newariCuisine from '../assets/images/nepali_cuisine.jpg';
 import newariKitchen from '../assets/images/nepali_kitchen.jpg';
 
-
 const galleryImages = [
   {
     id: 'image1',
-    url: "https://www.acethehimalaya.com/wp-content/uploads/2013/07/famous-nepali-food.jpg",
+    url: 'https://www.acethehimalaya.com/wp-content/uploads/2013/07/famous-nepali-food.jpg',
     alt: 'Gallery Image 1',
   },
   {
     id: 'image2',
-    url: "https://www.nepalsanctuarytreks.com/wp-content/uploads/2018/07/Terai-Cuisine-nepal.png",
+    url: 'https://www.nepalsanctuarytreks.com/wp-content/uploads/2018/07/Terai-Cuisine-nepal.png',
     alt: 'Gallery Image 2',
   },
   {
     id: 'image3',
-    url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx31aEDUEZttmqpjhb-T5VGVfjb7kAaYCk5sJj1hRML1VWOOYamVL04md5FG0lolywwLE&usqp=CAU",
+    url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx31aEDUEZttmqpjhb-T5VGVfjb7kAaYCk5sJj1hRML1VWOOYamVL04md5FG0lolywwLE&usqp=CAU',
     alt: 'Gallery Image 3',
   },
   {
     id: 'image4',
-    url: "https://d2s742iet3d3t1.cloudfront.net/restaurants/restaurant-195528000000000000/menu/items/8/item-1100000000148966358_1708122178.png?size=medium",
+    url: 'https://d2s742iet3d3t1.cloudfront.net/restaurants/restaurant-195528000000000000/menu/items/8/item-1100000000148966358_1708122178.png?size=medium',
     alt: 'Gallery Image 4',
   },
   {
     id: 'image5',
-    url: "https://www.pngarts.com/files/18/Indian-Cuisine-Curry-Dishes-Background-PNG.png",
+    url: 'https://www.pngarts.com/files/18/Indian-Cuisine-Curry-Dishes-Background-PNG.png',
     alt: 'Gallery Image 5',
   },
   {
     id: 'image6',
-    url: "https://img.pikbest.com/origin/09/02/29/46NpIkbEsTeX3.png!sw800",
+    url: 'https://img.pikbest.com/origin/09/02/29/46NpIkbEsTeX3.png!sw800',
     alt: 'Gallery Image 6',
   },
   {
@@ -176,7 +175,11 @@ const galleryImages = [
 const Gallery = () => {
   return (
     <>
-      <main className="bg-gray-100">
+      <main className="bg-gray-100 px-0">
+        {/* <div
+          className="pointer-events-none absolute inset-0 top-0 -z-10 h-2/3 w-full bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${bgCuisine})` }}
+        ></div> */}
         <div className="absolute inset-0 flex h-28 -translate-y-1/3 flex-col items-center justify-center gap-2">
           <div className="mx-auto inline-flex items-center justify-center gap-4 overflow-hidden rounded-full bg-white p-12">
             <img
@@ -214,7 +217,7 @@ const Gallery = () => {
         <LightGallery
           plugins={[lgZoom, lgVideo, lgThumbnail, lgFullscreen]}
           mode="lg-fade"
-          elementClassNames="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6"
+          elementClassNames="mx-auto columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-2"
           options={{
             thumbnail: true,
             autoplay: true,
@@ -223,7 +226,7 @@ const Gallery = () => {
           {galleryImages.map((image, index) => (
             <div
               key={index}
-              className="group mb-6 break-inside-avoid overflow-hidden rounded-3xl shadow-md border bg-white"
+              className="group mb-2 break-inside-avoid overflow-hidden border bg-white shadow-md"
               data-src={image.url}
             >
               <img

@@ -6,6 +6,8 @@ import Cuisine from '../components/Cuisine';
 import Facility from '../components/Facility';
 import OffersReview from '../components/OffersReview';
 import Gallery from '../components/Gallery';
+import OurMenu from '../components/OurMenu';
+import Reservation from '../components/ui/Reservation';
 
 const Home = () => {
   return (
@@ -13,12 +15,15 @@ const Home = () => {
       <Hero />
       <About />
       <Cuisine />
+      <OurMenu />
+      <Reservation />
+      {/* <LogoBar /> */}
       <Facility />
       <LogoBar />
       <OffersReview />
       <Gallery />
     </>
   );
-}
+};
 
 export default Home;

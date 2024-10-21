@@ -73,7 +73,7 @@ const TestimonialSlider = () => {
               <img
                 src={content.sourceImage}
                 alt={content.author}
-                className="h-12 w-12 rounded-full border object-cover shadow"
+                className="size-12 rounded-full border object-cover shadow"
               />
               <div className="text-left">
                 <p className="caps text-base font-bold">{content.author}</p>
@@ -85,13 +85,13 @@ const TestimonialSlider = () => {
       </Swiper>
       <div className="absolute bottom-6 left-0 right-0 z-10 flex items-center justify-between">
         <button
-          className="swiper-button-prev rounded-full border p-1 text-dark shadow hover:bg-dark/10"
+          className="swiper-button-prev rounded-full border p-1 text-dark shadow backdrop-blur hover:bg-dark/10"
           onClick={handlePrev}
         >
           <TbArrowNarrowLeft />
         </button>
         <button
-          className="swiper-button-next rounded-full border p-1 text-dark shadow hover:bg-dark/10"
+          className="swiper-button-next rounded-full border p-1 text-dark shadow backdrop-blur hover:bg-dark/10"
           onClick={handleNext}
         >
           <TbArrowNarrowRight />

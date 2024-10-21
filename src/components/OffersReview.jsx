@@ -11,7 +11,7 @@ const OffersReview = () => {
           <div className="col-span-2">
             <div className="space-y-4">
               <h5 className="caps text-2xl capitalize md:text-4xl">
-                Offers & Packages
+                Offers & Promotions
               </h5>
               <p className="max-w-lg text-xs text-dark/60 md:text-sm">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat

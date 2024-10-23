@@ -172,7 +172,8 @@ const galleryImages = [
   },
 ];
 
-const Gallery = () => {
+const Gallery = ({ limit }) => {
+  const displayedImages = limit ? galleryImages.slice(0, limit) : galleryImages;
   return (
     <>
       <main className="bg-gray-100 px-0">
@@ -223,7 +224,7 @@ const Gallery = () => {
             autoplay: true,
           }}
         >
-          {galleryImages.map((image, index) => (
+          {displayedImages.map((image, index) => (
             <div
               key={index}
               className="group mb-2 break-inside-avoid overflow-hidden border bg-white shadow-md"

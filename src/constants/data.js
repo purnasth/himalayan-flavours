@@ -1,6 +1,5 @@
 import bgCuisine from '../assets/images/bg_cuisine.png';
 
-
 export const offersContent = [
   {
     offer: 'On Every Dish 10% Off',

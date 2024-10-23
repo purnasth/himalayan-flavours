@@ -4,7 +4,7 @@ import About from '../components/About';
 import LogoBar from '../components/ui/LogoBar';
 import Cuisine from '../components/Cuisine';
 import Facility from '../components/Facility';
-import OffersReview from '../components/OffersReview';
+import Offers from '../components/Offers';
 import Gallery from '../components/Gallery';
 import OurMenu from '../components/OurMenu';
 import Reservation from '../components/ui/Reservation';
@@ -20,8 +20,8 @@ const Home = () => {
       {/* <LogoBar /> */}
       <Facility />
       <LogoBar />
-      <OffersReview />
-      <Gallery />
+      <Offers />
+      <Gallery limit={12} />
     </>
   );
 };

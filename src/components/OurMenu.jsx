@@ -104,54 +104,63 @@ const dishes = [
   {
     id: 12,
     name: 'Momos',
-    category: 'Nepalese',
+    category: 'Chinese',
     description:
       'Steamed dumplings filled with vegetables or meat, served with a spicy sauce.',
     imageUrl:
       'https://png.pngtree.com/png-vector/20240710/ourmid/pngtree-burger-with-floating-ingredient-png-image_13054386.png',
   },
 ];
+const groupedDishes = dishes.reduce((acc, dish) => {
+  acc[dish.category] = acc[dish.category] || [];
+  acc[dish.category].push(dish);
+  return acc;
+}, {});
 
 const OurMenu = () => {
   return (
     <main>
-      <div className="mx-auto mb-24 flex max-w-lg flex-col items-center justify-center gap-4 text-center">
+      <div className="mx-auto mb-32 flex max-w-lg flex-col items-center justify-center gap-4 text-center">
         <h3 className="text-xl capitalize leading-snug sm:text-2xl md:text-4xl lg:text-6xl lg:leading-snug">
           Highlighted Dishes
         </h3>
         <p className="text-center text-sm text-dark/60">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cum
-          itaque nulla iste rem tempora, sequi ducimus a sit dicta, ullam minus
-          vero.
+          Discover the diverse flavors of our menu with authentic Nepalese,
+          Chinese, and Indian dishes.
         </p>
       </div>
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-        {dishes.map((dish) => (
-          <div key={dish.id} className="flex items-center justify-center gap-1">
-            <img
-              src={dish.imageUrl}
-              alt={dish.name}
-              className="size-32 object-contain"
-            />
-            <div className="p-2">
-              <h3 className="font-body text-base font-bold">{dish.name}</h3>
-              {/* <p className="text-sm font-medium text-orange-400">
-                {dish.category}
-              </p> */}
-              <p className="line-clamp-2 text-xs text-gray-600">
-                <span className="text-sm font-bold text-orange-400">
-                  {dish.category}
-                </span>{' '}
-                | {dish.description}
-              </p>
-            </div>
+        {Object.entries(groupedDishes).map(([category, categoryDishes]) => (
+          <div key={category} className="mb-8">
+            <h4 className="mb-4 font-body text-sm font-bold uppercase text-orange-500">
+              {category} Dishes
+            </h4>
+            {categoryDishes.map((dish) => (
+              <div
+                key={dish.id}
+                className="flex items-center justify-center gap-1"
+              >
+                <img
+                  src={dish.imageUrl}
+                  alt={dish.name}
+                  className="size-32 object-contain"
+                />
+                <div className="p-2">
+                  <h3 className="font-body text-base font-bold">{dish.name}</h3>
+                  <p className="line-clamp-2 text-xs text-gray-600">
+                    {dish.description}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         ))}
       </div>
 
-      <div className="mt-16 flex items-center justify-center">
-        <FireButton value="View Menu" router="#" />
+      <div className="flex flex-col items-center justify-center gap-4">
+        <div className="mx-auto h-20 w-px bg-orange-300/30" />
+        <FireButton value="View Full Menu" router="#" />
       </div>
     </main>
   );

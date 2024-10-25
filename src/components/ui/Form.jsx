@@ -9,7 +9,6 @@ const schema = yup.object().shape({
   name: yup.string().required('Name is required'),
   email: yup.string().email('Invalid email').required('Email is required'),
   phone: yup.string().required('Phone is required'),
-  date: yup.string().required('Date is required'),
   message: yup.string().required('Message is required'),
 });
 
@@ -36,13 +35,8 @@ const Form = () => {
 
   const contactFormFields = [
     { name: 'name', label: 'Name', type: 'text' },
-    // { name: 'email', label: 'Email', type: 'email' },
+    { name: 'email', label: 'Email', type: 'email' },
     { name: 'phone', label: 'Phone', type: 'text' },
-    {
-      name: 'date',
-      label: 'Date',
-      type: 'date',
-    },
     {
       name: 'message',
       label: 'Message',

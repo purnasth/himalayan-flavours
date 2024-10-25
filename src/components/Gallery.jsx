@@ -13,11 +13,12 @@ import 'lightgallery/css/lg-fullscreen.css';
 import bgCuisine from '../assets/images/bg_cuisine.png';
 import newariCuisine from '../assets/images/nepali_cuisine.jpg';
 import newariKitchen from '../assets/images/nepali_kitchen.jpg';
+import foodGallery from '../assets/images/foods_gallery.png';
 
 const galleryImages = [
   {
     id: 'image1',
-    url: 'https://www.acethehimalaya.com/wp-content/uploads/2013/07/famous-nepali-food.jpg',
+    url: 'https://www.pngarts.com/files/18/Indian-Cuisine-Curry-Dishes-Background-PNG.png',
     alt: 'Gallery Image 1',
   },
   {
@@ -37,7 +38,7 @@ const galleryImages = [
   },
   {
     id: 'image5',
-    url: 'https://www.pngarts.com/files/18/Indian-Cuisine-Curry-Dishes-Background-PNG.png',
+    url: bgCuisine,
     alt: 'Gallery Image 5',
   },
   {
@@ -52,7 +53,7 @@ const galleryImages = [
   },
   {
     id: 'image8',
-    url: newariKitchen,
+    url: bgCuisine,
     alt: 'Gallery Image 8',
   },
   {
@@ -176,11 +177,18 @@ const Gallery = ({ limit }) => {
   const displayedImages = limit ? galleryImages.slice(0, limit) : galleryImages;
   return (
     <>
-      <main className="bg-gray-100 px-0">
+      <main className="bg-orange-100 px-0">
         {/* <div
-          className="pointer-events-none absolute inset-0 top-0 -z-10 h-2/3 w-full bg-cover bg-center bg-no-repeat"
+          className="pointer-events-none absolute inset-0 top-0 -z-10 h-full w-full bg-cover bg-center bg-no-repeat mix-blend-multiply opacity-20"
           style={{ backgroundImage: `url(${bgCuisine})` }}
         ></div> */}
+        <div
+          className="pointer-events-none absolute inset-0 top-0 -z-10 h-full w-full bg-cover bg-top opacity-60"
+          style={{
+            backgroundImage: `url(${foodGallery})`,
+          }}
+        ></div>
+        <div className="overlay absolute inset-0 -z-10 size-full bg-gradient-to-b from-orange-200/80 to-orange-100"></div>
         <div className="absolute inset-0 flex h-28 -translate-y-1/3 flex-col items-center justify-center gap-2">
           <div className="mx-auto inline-flex items-center justify-center gap-4 overflow-hidden rounded-full bg-white p-12">
             <img
@@ -199,7 +207,9 @@ const Gallery = ({ limit }) => {
               className="size-24 bg-white object-contain p-2"
             />
           </div>
-          <span className="opacity-70">The Awards & Recognization</span>
+          <p className="bg-orange-300/20 px-2 font-bold">
+            The Awards & Recognization
+          </p>
         </div>
 
         <div className="mx-auto mb-24 flex max-w-lg flex-col items-center justify-center gap-4 text-center">
@@ -218,7 +228,7 @@ const Gallery = ({ limit }) => {
         <LightGallery
           plugins={[lgZoom, lgVideo, lgThumbnail, lgFullscreen]}
           mode="lg-fade"
-          elementClassNames="mx-auto columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-2"
+          elementClassNames="max-w-5xl mx-auto columns-1 sm:columns-2 lg:columns-3 xl:columns-3 gap-4"
           options={{
             thumbnail: true,
             autoplay: true,
@@ -227,11 +237,11 @@ const Gallery = ({ limit }) => {
           {displayedImages.map((image, index) => (
             <div
               key={index}
-              className="group mb-2 break-inside-avoid overflow-hidden border bg-white shadow-md"
+              className="group mb-2 break-inside-avoid overflow-hidden rounded-2xl border border-dark/20 bg-white shadow-md"
               data-src={image.url}
             >
               <img
-                className="h-auto w-full cursor-pointer overflow-hidden object-cover shadow-md transition duration-700 ease-in-out group-hover:scale-125"
+                className="h-auto w-full cursor-pointer overflow-hidden object-cover shadow-md transition duration-700 ease-in-out group-hover:scale-110"
                 src={image.url}
                 alt={image.alt}
                 loading="lazy"

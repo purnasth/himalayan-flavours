@@ -2,6 +2,7 @@ import React from 'react';
 import bgCuisine from '../../assets/images/bg_cuisine.png';
 import bgFoods from '../../assets/images/bg_foods.png';
 import FireButton from './FireButton';
+import ReservationWhatsApp from './ReservationWhatsApp';
 
 const Reservation = () => {
   return (
@@ -26,7 +27,7 @@ const Reservation = () => {
             </p>
 
             <div className="my-12 flex items-center justify-center text-black">
-              <FireButton value="Reservation" router="#" />
+              <ReservationWhatsApp />
             </div>
 
             <div className="flex flex-col items-center justify-center gap-2">

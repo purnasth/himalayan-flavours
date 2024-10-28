@@ -2,23 +2,83 @@ import bgCuisine from '../assets/images/bg_cuisine.png';
 
 export const offersContent = [
   {
+    id: 1,
     offer: 'On Every Dish 10% Off',
     title: 'Nepalese Cuisine',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit Lorem ipsum dolor',
     image: bgCuisine,
     link: '/nepalese-cuisine',
   },
   {
+    id: 2,
     offer: 'On Every Dish 15% Off',
     title: 'Indian Cuisine',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit Lorem ipsum dolor',
     image: bgCuisine,
     link: '/indian-cuisine',
   },
   {
+    id: 3,
     offer: 'On Every Dish 20% Off',
     title: 'Chinese Cuisine',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit Lorem ipsum dolor',
+    image: bgCuisine,
+    link: '/chinese-cuisine',
+  },
+  {
+    id: 4,
+    offer: 'On Every Dish 25% Off',
+    title: 'Nepalese Cuisine',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit Lorem ipsum dolor',
+    image: bgCuisine,
+    link: '/nepalese-cuisine',
+  },
+  {
+    id: 5,
+    offer: 'On Every Dish 30% Off',
+    title: 'Indian Cuisine',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit Lorem ipsum dolor',
+    image: bgCuisine,
+    link: '/indian-cuisine',
+  },
+  {
+    id: 6,
+    offer: 'On Every Dish 35% Off',
+    title: 'Chinese Cuisine',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit Lorem ipsum dolor',
+    image: bgCuisine,
+    link: '/chinese-cuisine',
+  },
+  {
+    id: 7,
+    offer: 'On Every Dish 40% Off',
+    title: 'Nepalese Cuisine',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit Lorem ipsum dolor',
+    image: bgCuisine,
+    link: '/nepalese-cuisine',
+  },
+  {
+    id: 8,
+    offer: 'On Every Dish 45% Off',
+    title: 'Indian Cuisine',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit Lorem ipsum dolor',
+    image: bgCuisine,
+    link: '/indian-cuisine',
+  },
+  {
+    id: 9,
+    offer: 'On Every Dish 50% Off',
+    title: 'Chinese Cuisine',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit Lorem ipsum dolor  ',
     image: bgCuisine,
     link: '/chinese-cuisine',
   },

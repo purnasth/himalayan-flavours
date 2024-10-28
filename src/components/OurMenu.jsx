@@ -131,31 +131,35 @@ const OurMenu = () => {
       </div>
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-        {Object.entries(groupedDishes).map(([category, categoryDishes]) => (
-          <div key={category} className="mb-8">
-            <h4 className="mb-4 font-body text-sm font-bold uppercase text-orange-500">
-              {category} Dishes
-            </h4>
-            {categoryDishes.map((dish) => (
-              <div
-                key={dish.id}
-                className="flex items-center justify-center gap-1"
-              >
-                <img
-                  src={dish.imageUrl}
-                  alt={dish.name}
-                  className="size-32 object-contain"
-                />
-                <div className="p-2">
-                  <h3 className="font-body text-base font-bold">{dish.name}</h3>
-                  <p className="line-clamp-2 text-xs text-gray-600">
-                    {dish.description}
-                  </p>
+        {Object.entries(groupedDishes).map(
+          ([category, categoryDishes, index]) => (
+            <div key={index} className="mb-8">
+              <h4 className="mb-4 font-body text-sm font-bold uppercase text-orange-500">
+                {category} Dishes
+              </h4>
+              {categoryDishes.map((dish) => (
+                <div
+                  key={dish.id}
+                  className="flex items-center justify-center gap-1"
+                >
+                  <img
+                    src={dish.imageUrl}
+                    alt={dish.name}
+                    className="size-32 object-contain"
+                  />
+                  <div className="p-2">
+                    <h3 className="font-body text-base font-bold">
+                      {dish.name}
+                    </h3>
+                    <p className="line-clamp-2 text-xs text-gray-600">
+                      {dish.description}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        ))}
+              ))}
+            </div>
+          ),
+        )}
       </div>
 
       <div className="flex flex-col items-center justify-center gap-4">

@@ -8,6 +8,7 @@ import Offers from '../components/Offers';
 import Gallery from '../components/Gallery';
 import OurMenu from '../components/OurMenu';
 import Reservation from '../components/ui/Reservation';
+import Footer from '../components/Footer';
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
       <LogoBar />
       <Offers />
       <Gallery limit={12} />
+      <Footer />
     </>
   );
 };

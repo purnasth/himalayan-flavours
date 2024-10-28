@@ -10,6 +10,9 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import WhatsApp from './components/ui/WhatsApp';
 import useLenisScroll from './hooks/useLenisScroll';
+import Menu from './pages/Menu';
+import GalleryPage from './pages/GalleryPage';
+import PromotionsPage from './pages/PromotionsPage';
 
 const App = () => {
   useLenisScroll();
@@ -19,10 +22,12 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/food-menu" element={<Menu />} />
+          <Route path="/gallery" element={<GalleryPage />} />
+          <Route path="/offers" element={<PromotionsPage />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
-        <Footer />
-        <WhatsApp/>
+        <WhatsApp />
       </Router>
     </>
   );

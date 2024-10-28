@@ -69,13 +69,11 @@
   } */
 
   .filter-white {
-    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%)
-      hue-rotate(288deg) brightness(102%) contrast(102%);
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
   }
 
   .filter-black {
-    filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(7500%)
-      hue-rotate(327deg) brightness(96%) contrast(104%);
+    filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(7500%) hue-rotate(327deg) brightness(96%) contrast(104%);
   }
 
   .transition-300 {
@@ -91,7 +89,7 @@
   }
 
   .navlink {
-    @apply transition-300 inline-block w-full pb-2 text-2xl font-bold capitalize text-dark group-hover:font-bold group-hover:tracking-wider;
+    @apply transition-300 inline-flex items-center justify-between w-full pb-2 text-2xl font-bold capitalize text-dark group-hover:font-bold group-hover:tracking-wider;
   }
 }
 
@@ -121,4 +119,11 @@ html.lenis body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after,
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  display: none;
 }

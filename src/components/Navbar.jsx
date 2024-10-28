@@ -9,6 +9,37 @@ import { RiInstagramFill } from 'react-icons/ri';
 import { MdStarRate } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import foodMenu from '../assets/menu/menu.pdf';
+import { NavLink } from 'react-router-dom';
+import { TbChefHat } from 'react-icons/tb';
+import { PiChefHatBold } from 'react-icons/pi';
+
+const navLinks = [
+  {
+    id: 1,
+    title: 'About Restaurant',
+    url: '/about',
+  },
+  {
+    id: 2,
+    title: 'Food Menu',
+    url: '/food-menu',
+  },
+  {
+    id: 3,
+    title: 'Food Gallery',
+    url: '/gallery',
+  },
+  {
+    id: 4,
+    title: 'Contact Info',
+    url: '/contact',
+  },
+  {
+    id: 5,
+    title: 'Promotions',
+    url: '/offers',
+  },
+];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -98,32 +129,22 @@ const Navbar = () => {
         <div className="justify -evenly flex size-full flex-col items-start gap-0 px-8 text-dark">
           <div className="mt-12 w-full">
             <span className="text-xs uppercase text-dark/50">Navigation</span>
+
             <ul className="links mt-6 flex flex-col items-start justify-start gap-2 md:gap-4">
-              <li className="group w-full">
-                <a href="#" className="navlink" aria-label="Stay">
-                  About Restaurant
-                </a>
-              </li>
-              <li className="group w-full">
-                <a href="#" className="navlink" aria-label="Menu">
-                  Food Menu
-                </a>
-              </li>
-              <li className="group w-full">
-                <a href="#" className="navlink" aria-label="Gallery">
-                  Food Gallery
-                </a>
-              </li>
-              <li className="group w-full">
-                <a href="#" className="navlink" aria-label="Contact">
-                  Contact Info
-                </a>
-              </li>
-              <li className="group w-full">
-                <a href="#" className="navlink" aria-label="Promotions">
-                  Promotions
-                </a>
-              </li>
+              {navLinks.map((link) => (
+                <li className="group w-full">
+                  <NavLink
+                    to={link.url}
+                    className={({ isActive }) =>
+                      `navlink ${isActive ? 'text-orange-400' : 'text-dark'}`
+                    }
+                    aria-label={link.title}
+                  >
+                    {link.title}
+                    <PiChefHatBold className="translate-x-4 rounded-full text-xl opacity-0 transition-all duration-300 group-hover:-translate-x-0 group-hover:opacity-100" />
+                  </NavLink>
+                </li>
+              ))}
             </ul>
           </div>
           <hr className="my-8 w-full border-dark/20" />

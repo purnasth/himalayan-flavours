@@ -217,7 +217,10 @@ const Gallery = ({ limit }) => {
           </p>
         </div>
 
-        <FoodGallery galleryClassName="max-w-6xl mx-auto columns-1 sm:columns-2 lg:columns-3 xl:columns-3 gap-4" />
+        <FoodGallery
+          galleryClassName="max-w-6xl mx-auto columns-1 sm:columns-2 lg:columns-3 xl:columns-3 gap-4"
+          limit={limit}
+        />
       </main>
     </>
   );

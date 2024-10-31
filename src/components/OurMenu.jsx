@@ -145,7 +145,7 @@ const OurMenu = () => {
                   <img
                     src={dish.imageUrl}
                     alt={dish.name}
-                    className="size-32 object-contain"
+                    className="size-32 object-contain object-left -translate-x-3"
                   />
                   <div className="p-2">
                     <h3 className="font-body text-base font-bold">

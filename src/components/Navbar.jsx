@@ -70,43 +70,41 @@ const Navbar = () => {
   return (
     <>
       <header
-        className={`fixed top-0 z-50 w-full p-4 transition-all duration-1000 ease-in-out`}
+        className={`pointer-events-none fixed top-0 z-50 flex w-full items-start justify-between p-4 transition-all duration-1000 ease-in-out`}
       >
-        <div className="flex items-start justify-between">
-          <div className="flex gap-2">
-            <button
-              onClick={toggleNav}
-              className="transition-300 rounded-full border border-white/50 bg-dark p-2 text-white hover:border-black/80 hover:bg-white hover:text-dark"
-            >
-              <CgMenuHotdog className="text-2xl" />
-            </button>
-            <Link
-              to={foodMenu}
-              className={`transition-1000 hidden items-center gap-2 rounded-full border border-light/50 bg-dark/50 px-4 py-2 font-bold text-light shadow backdrop-blur-sm md:inline-flex ${visible ? 'translate-y-0 scale-100' : '-translate-y-[200%] scale-0'}`}
-              aria-label="View Menu"
-              title="Menu"
-              target="_blank"
-              download
-            >
-              <MdOutlineRoomService className="text-2xl" />
-              View Menu
-            </Link>
-          </div>
-          <a
-            href="/"
-            className={`transition-1000 object-contain ${
-              visible ? '' : ''
-            } ${window.scrollY > 0 ? '' : ''}`}
+        <div className="pointer-events-auto flex gap-2">
+          <button
+            onClick={toggleNav}
+            className="transition-300 rounded-full border border-white/50 bg-dark p-2 text-white hover:border-black/80 hover:bg-white hover:text-dark"
           >
-            <img
-              src={logo}
-              alt="Logo"
-              className={`transition-1000 h-16 w-auto object-contain md:h-32 ${
-                visible ? '-translate-y-0' : '-translate-y-full scale-0'
-              } ${window.scrollY > 0 ? '-translate-y-full scale-0' : 'translate-y-0'}`}
-            />
-          </a>
+            <CgMenuHotdog className="text-2xl" />
+          </button>
+          <Link
+            to={foodMenu}
+            className={`transition-1000 hidden items-center gap-2 rounded-full border border-light/50 bg-dark/50 px-4 py-2 font-bold text-light shadow backdrop-blur-sm md:inline-flex ${visible ? 'translate-y-0 scale-100' : '-translate-y-[200%] scale-0'}`}
+            aria-label="View Menu"
+            title="Menu"
+            target="_blank"
+            download
+          >
+            <MdOutlineRoomService className="text-2xl" />
+            View Menu
+          </Link>
         </div>
+        <a
+          href="/"
+          className={`transition-1000 pointer-events-auto object-contain ${
+            visible ? '' : ''
+          } ${window.scrollY > 0 ? '' : ''}`}
+        >
+          <img
+            src={logo}
+            alt="Logo"
+            className={`transition-1000 h-16 w-auto object-contain md:h-32 ${
+              visible ? '-translate-y-0' : '-translate-y-full scale-0'
+            } ${window.scrollY > 0 ? '-translate-y-full scale-0' : 'translate-y-0'}`}
+          />
+        </a>
       </header>
 
       <div

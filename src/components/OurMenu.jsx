@@ -122,11 +122,12 @@ const OurMenu = () => {
     <main>
       <div className="mx-auto mb-32 flex max-w-lg flex-col items-center justify-center gap-4 text-center">
         <h3 className="text-xl capitalize leading-snug sm:text-2xl md:text-4xl lg:text-6xl lg:leading-snug">
-          Highlighted Dishes
+          Highlighted Dishes & Specialties
         </h3>
         <p className="text-center text-sm text-dark/60">
           Discover the diverse flavors of our menu with authentic Nepalese,
-          Chinese, and Indian dishes.
+          Chinese, and Indian dishes. We have something for everyone! Enjoy your
+          favorite dish with your friends and family.
         </p>
       </div>
 
@@ -145,7 +146,7 @@ const OurMenu = () => {
                   <img
                     src={dish.imageUrl}
                     alt={dish.name}
-                    className="size-32 object-contain object-left -translate-x-3"
+                    className="size-32 -translate-x-3 object-contain object-left"
                   />
                   <div className="p-2">
                     <h3 className="font-body text-base font-bold">

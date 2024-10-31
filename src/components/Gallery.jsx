@@ -211,9 +211,7 @@ const Gallery = ({ limit }) => {
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
             cum itaque nulla iste rem tempora, sequi ducimus a sit dicta, ullam
             minus vero. Similique magni nihil, quia provident soluta illo harum
-            cupiditate, excepturi totam nobis sunt assumenda, et eius porro a
-            sit perferendis fugit voluptate voluptas architecto exercitationem
-            saepe. Velit!
+            cupiditate.
           </p>
         </div>
 

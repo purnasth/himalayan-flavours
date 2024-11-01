@@ -95,7 +95,7 @@ const Navbar = () => {
           href="/"
           className={`transition-1000 pointer-events-auto object-contain ${
             visible ? '' : ''
-          } ${window.scrollY > 0 ? '' : ''}`}
+          } ${window.scrollY > 0 ? '-translate-y-full scale-x-0' : 'translate-y-0 scale-100'}`}
         >
           <img
             src={logo}

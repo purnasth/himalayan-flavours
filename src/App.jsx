@@ -14,6 +14,7 @@ import Menu from './pages/Menu';
 import GalleryPage from './pages/GalleryPage';
 import PromotionsPage from './pages/PromotionsPage';
 import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
 
 const App = () => {
   useLenisScroll();
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/offers" element={<PromotionsPage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <WhatsApp />

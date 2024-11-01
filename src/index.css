@@ -14,10 +14,20 @@
     @apply bg-dark text-light;
   }
 
+    /* * {
+      scrollbar-width: thin;
+    } */
   ::-webkit-scrollbar {
     @apply w-0;
   }
 
+    .nearby-scroll::-webkit-scrollbar {
+      @apply h-2 rounded-full bg-light;
+    }
+  
+    .nearby-scroll::-webkit-scrollbar-thumb {
+      @apply bg-orange-300 rounded-full;
+    }
   /* ::-webkit-scrollbar {
     @apply w-2 rounded-full bg-transparent;
   }

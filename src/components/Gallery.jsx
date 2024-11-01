@@ -168,7 +168,7 @@ const Gallery = ({ limit }) => {
   const displayedImages = limit ? galleryImages.slice(0, limit) : galleryImages;
   return (
     <>
-      <main className="bg-orange-100 px-0">
+      <main className="px-0">
         {/* <div
           className="pointer-events-none absolute inset-0 top-0 -z-10 h-full w-full bg-cover bg-center bg-no-repeat mix-blend-multiply opacity-20"
           style={{ backgroundImage: `url(${bgCuisine})` }}
@@ -179,7 +179,7 @@ const Gallery = ({ limit }) => {
             backgroundImage: `url(${foodGallery})`,
           }}
         ></div>
-        <div className="overlay absolute inset-0 -z-10 size-full bg-gradient-to-b from-orange-200/80 to-orange-100"></div>
+        <div className="overlay absolute inset-0 -z-10 size-full bg-gradient-to-b from-orange-200/80 to-orange-50"></div>
         <div className="absolute inset-0 flex h-28 -translate-y-1/3 flex-col items-center justify-center gap-2">
           <div className="mx-auto inline-flex items-center justify-center gap-4 overflow-hidden rounded-full bg-white p-12">
             <img

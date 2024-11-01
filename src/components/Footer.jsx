@@ -9,7 +9,7 @@ import TestimonialSlider from './ui/TestimonialSlider';
 
 const Footer = () => {
   return (
-    <main className="bg-orange-100 p-0">
+    <main className="bg-orange-50 p-0">
       {/* <div className="absolute bottom-0 h-3/4 w-full bg-red-600 -z-10"></div> */}
       <div
         className="pointer-events-none absolute bottom-0 -z-10 h-3/4 w-full bg-cover bg-center bg-no-repeat"

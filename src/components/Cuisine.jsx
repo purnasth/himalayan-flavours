@@ -12,7 +12,7 @@ const cuisineSection = [
   },
   {
     title: 'Indian Cuisine',
-    subtitle: 'Experience the flavor',
+    subtitle: 'Experience the flavour',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cum itaque nulla iste rem tempora, sequi ducimus a sit dicta, ullam minus vero. Similique magni nihil, quia provident soluta illo harum ',
     image:

@@ -7,21 +7,21 @@ import TestimonialSlider from '../components/ui/TestimonialSlider';
 
 const UniversalFooter = () => {
   return (
-    <main className="overflow-hidden p-0">
+    <main className="h-screen overflow-hidden p-0">
       {/* <div className="absolute bottom-0 h-3/4 w-full bg-red-600 -z-10"></div> */}
       <div
         className="pointer-events-none absolute bottom-0 -z-10 h-[140vh] w-full bg-cover bg-bottom bg-no-repeat"
         style={{ backgroundImage: `url(${bgCuisine})` }}
       ></div>
 
-      <section className="relative p-24">
-        <div className="pointer-events-none absolute inset-0 -z-10 size-full bg-gradient-to-t from-white to-transparent"></div>
+      <div className="pointer-events-none absolute inset-0 -z-10 size-full bg-gradient-to-t from-white to-transparent"></div>
+      <section className="container relative flex size-full flex-col items-center justify-evenly">
         <div className="z-10 flex items-center justify-center">
           <a href="/" className="cursor-pointer">
             <img src={logo} alt="" className="h-40 w-auto object-contain" />
           </a>
         </div>
-        <div className="mt-16 grid grid-cols-7">
+        <div className="grid grid-cols-7">
           <div className="col-span-2 w-full">
             <span className="text-xs font-bold uppercase text-dark/70">
               Navigation
@@ -148,10 +148,7 @@ const UniversalFooter = () => {
             </div>
           </div>
         </div>
-
-        {/* <hr className="my-8 w-full border-dark/20" /> */}
-
-        <div className="mt-16 flex flex-col items-center justify-center gap-2 text-sm md:flex-row md:justify-between md:text-base">
+        <div className="flex w-full flex-col items-center justify-center gap-2 text-sm md:flex-row md:justify-between md:text-base">
           <span>© 2024 Himalayan Flavours </span>
           <span>
             Website by: &nbsp;

@@ -141,7 +141,7 @@ const OurMenu = () => {
               {categoryDishes.map((dish) => (
                 <div
                   key={dish.id}
-                  className="flex items-center justify-center gap-1"
+                  className="flex items-center justify-start gap-1"
                 >
                   <img
                     src={dish.imageUrl}

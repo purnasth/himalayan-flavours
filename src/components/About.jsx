@@ -11,23 +11,23 @@ const About = () => {
             <img
               src={newariCuisine}
               alt=""
-              className="h-60 w-44 object-cover"
+              className="h-60 w-44 2xl:w-52 2xl:h-72 object-cover"
             />
           </div>
           <div className="flex items-end">
             <img
               src={newariCuisine}
               alt=""
-              className="h-full w-80 object-cover"
+              className="h-full w-80 2xl:w-96 object-cover"
             />
           </div>
         </div>
-        <div className="sticky top-0 flex max-h-screen flex-col items-center gap-4 text-center">
+        <div className="sticky top-0 flex max-h-fit flex-col items-center gap-4 text-center">
           <div className="bottom-0 h-10 w-px bg-dark/50 md:h-40"></div>
-          <h3 className="mt-16 text-xl capitalize leading-snug sm:text-2xl md:text-4xl lg:text-6xl lg:leading-snug">
+          <h3 className="mt-16 text-xl capitalize leading-snug sm:text-2xl md:text-4xl lg:text-6xl lg:leading-snug 2xl:text-8xl 2xl:leading-normal">
             Himalayan Flavours
           </h3>
-          <p className="text-center text-sm text-dark/60 mb-12">
+          <p className="mb-12 text-center text-sm text-dark/60 2xl:text-base">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
             cum itaque nulla iste rem tempora, sequi ducimus a sit dicta, ullam
             minus vero. Similique magni nihil, quia provident soluta illo harum
@@ -45,14 +45,14 @@ const About = () => {
             <img
               src={newariCuisine}
               alt=""
-              className="h-full w-80 object-cover"
+              className="h-full w-80 2xl:w-96 object-cover"
             />
           </div>
           <div className="flex">
             <img
               src={newariCuisine}
               alt=""
-              className="h-60 w-44 object-cover"
+              className="h-60 w-44 2xl:w-52 2xl:h-72 object-cover"
             />
           </div>
         </div>

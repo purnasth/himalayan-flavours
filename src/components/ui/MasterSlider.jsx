@@ -42,9 +42,11 @@ const MasterSlider = ({
           />
           {hasContent && (
             <div className="mt-12 flex max-w-lg flex-col items-center justify-center gap-4 text-center">
-              {slide.subtitle && <span>{slide.subtitle}</span>}
+              {slide.subtitle && (
+                <span className="text-base 2xl:text-lg">{slide.subtitle}</span>
+              )}
               {slide.title && (
-                <h3 className="text-xl capitalize leading-snug sm:text-2xl md:text-4xl lg:text-8xl lg:leading-none">
+                <h3 className="text-xl capitalize leading-snug sm:text-2xl md:text-4xl lg:text-8xl lg:leading-none 2xl:text-9xl">
                   {slide.title}
                 </h3>
               )}

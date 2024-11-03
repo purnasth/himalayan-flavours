@@ -48,6 +48,11 @@
     @apply font-body;
   }
 
+    main,
+    section,
+    div {
+      @apply font-body;
+    }
   .navlink,
   h1,
   h2,
@@ -136,4 +141,10 @@ html.lenis body {
 .swiper-button-next:after,
 .swiper-rtl .swiper-button-prev:after {
   display: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
 }

@@ -5,7 +5,7 @@ import {
   Route,
   Navigate,
 } from 'react-router-dom';
-import Navbar from './components/Navbar';
+import Navbar from './layouts/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import WhatsApp from './components/ui/WhatsApp';
@@ -15,12 +15,14 @@ import GalleryPage from './pages/GalleryPage';
 import PromotionsPage from './pages/PromotionsPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
+import RouterToTop from './utils/RouterToTop';
 
 const App = () => {
   useLenisScroll();
   return (
     <>
       <Router>
+        <RouterToTop />
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

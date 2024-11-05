@@ -4,6 +4,7 @@ import bgCuisine from '../assets/images/bg_cuisine.png';
 import { MdFacebook, MdStarRate } from 'react-icons/md';
 import { RiInstagramFill } from 'react-icons/ri';
 import TestimonialSlider from '../components/ui/TestimonialSlider';
+import { navLinks } from '../constants/data';
 
 const UniversalFooter = () => {
   return (
@@ -27,31 +28,17 @@ const UniversalFooter = () => {
               Navigation
             </span>
             <ul className="links mt-8 flex flex-col items-start justify-start gap-2 md:gap-4">
-              <li className="group w-full">
-                <a href="#" className="navlink" aria-label="Stay">
-                  About Restaurant
-                </a>
-              </li>
-              <li className="group w-full">
-                <a href="#" className="navlink" aria-label="Menu">
-                  Food Menu
-                </a>
-              </li>
-              <li className="group w-full">
-                <a href="#" className="navlink" aria-label="Gallery">
-                  Food Gallery
-                </a>
-              </li>
-              <li className="group w-full">
-                <a href="#" className="navlink" aria-label="Contact">
-                  Contact Info
-                </a>
-              </li>
-              <li className="group w-full">
-                <a href="#" className="navlink" aria-label="Promotions">
-                  Promotions
-                </a>
-              </li>
+              {navLinks.map((link) => (
+                <li className="group w-full" key={link.id}>
+                  <a
+                    href={link.url}
+                    className="navlink"
+                    aria-label={link.title}
+                  >
+                    {link.title}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 

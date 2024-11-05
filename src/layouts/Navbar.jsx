@@ -1,50 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from '../assets/logos/logo.svg';
-import { useState } from 'react';
 import { CgMenuHotdog } from 'react-icons/cg';
-import { MdOutlineRoomService } from 'react-icons/md';
-import { useEffect } from 'react';
-import { MdFacebook } from 'react-icons/md';
+import { MdOutlineRoomService, MdStarRate, MdFacebook } from 'react-icons/md';
 import { RiInstagramFill } from 'react-icons/ri';
-import { MdStarRate } from 'react-icons/md';
-import { Link } from 'react-router-dom';
-import foodMenu from '../assets/menu/menu.pdf';
-import { NavLink } from 'react-router-dom';
-import { TbChefHat } from 'react-icons/tb';
+// import foodMenu from '../assets/menu/menu.pdf';
 import { PiChefHatBold } from 'react-icons/pi';
-
-const navLinks = [
-  {
-    id: 1,
-    title: 'About Restaurant',
-    url: '/about',
-  },
-  {
-    id: 2,
-    title: 'Food Menu',
-    url: '/food-menu',
-  },
-  {
-    id: 3,
-    title: 'Food Gallery',
-    url: '/gallery',
-  },
-  {
-    id: 4,
-    title: 'Contact Info',
-    url: '/contact',
-  },
-  {
-    id: 5,
-    title: 'Promotions',
-    url: '/offers',
-  },
-];
+import { navLinks } from '../constants/data';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,15 +26,16 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [prevScrollPos]);
 
+  useEffect(() => {
+    setIsOpen(false);
+    document.body.style.overflow = 'auto';
+  }, [location]);
+
   const toggleNav = () => {
     setIsOpen(!isOpen);
     document.body.style.overflow = !isOpen ? 'hidden' : 'auto';
   };
 
-  const closeNav = () => {
-    setIsOpen(false);
-    document.body.style.overflow = 'auto';
-  };
   return (
     <>
       <header
@@ -80,7 +49,8 @@ const Navbar = () => {
             <CgMenuHotdog className="text-2xl" />
           </button>
           <Link
-            to={foodMenu}
+            // to={foodMenu}
+            to="/food-menu"
             className={`transition-1000 hidden items-center gap-2 rounded-full border border-light/50 bg-dark/50 px-4 py-2 font-bold text-light shadow backdrop-blur-sm md:inline-flex ${visible ? 'translate-y-0 scale-100' : '-translate-y-[200%] scale-0'}`}
             aria-label="View Menu"
             title="Menu"
@@ -109,7 +79,7 @@ const Navbar = () => {
 
       <div
         className={`transition-700 fixed inset-0 z-30 bg-black/50 backdrop-blur-sm ${isOpen ? 'opacity-100' : 'pointer-events-none opacity-0'}`}
-        onClick={closeNav}
+        onClick={() => setIsOpen(false)}
       />
 
       <nav
@@ -118,7 +88,7 @@ const Navbar = () => {
         } z-50`}
       >
         <button
-          onClick={closeNav}
+          onClick={() => setIsOpen(false)}
           className="absolute right-4 top-4 flex items-center justify-center gap-2 text-4xl text-black"
         >
           &times;

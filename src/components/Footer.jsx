@@ -7,6 +7,8 @@ import { RiInstagramFill } from 'react-icons/ri';
 
 import TestimonialSlider from './ui/TestimonialSlider';
 
+import { navLinks } from '../constants/data';
+
 const Footer = () => {
   return (
     <main className="bg-orange-50 p-0">
@@ -21,11 +23,7 @@ const Footer = () => {
         <div className="pointer-events-none absolute inset-0 -z-10 size-full bg-gradient-to-t from-white to-transparent"></div>
         <div className="z-10 flex items-center justify-center">
           <a href="/" className="cursor-pointer">
-            <img
-              src={logo}
-              alt=""
-              className="h-40 w-auto object-contain"
-            />
+            <img src={logo} alt="" className="h-40 w-auto object-contain" />
           </a>
         </div>
         <div className="mt-16 grid grid-cols-7">
@@ -34,31 +32,17 @@ const Footer = () => {
               Navigation
             </span>
             <ul className="links mt-8 flex flex-col items-start justify-start gap-2 md:gap-4">
-              <li className="group w-full">
-                <a href="#" className="navlink" aria-label="Stay">
-                  About Restaurant
-                </a>
-              </li>
-              <li className="group w-full">
-                <a href="#" className="navlink" aria-label="Menu">
-                  Food Menu
-                </a>
-              </li>
-              <li className="group w-full">
-                <a href="#" className="navlink" aria-label="Gallery">
-                  Food Gallery
-                </a>
-              </li>
-              <li className="group w-full">
-                <a href="#" className="navlink" aria-label="Contact">
-                  Contact Info
-                </a>
-              </li>
-              <li className="group w-full">
-                <a href="#" className="navlink" aria-label="Promotions">
-                  Promotions
-                </a>
-              </li>
+              {navLinks.map((link) => (
+                <li className="group w-full" key={link.id}>
+                  <a
+                    href={link.url}
+                    className="navlink"
+                    aria-label={link.title}
+                  >
+                    {link.title}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 

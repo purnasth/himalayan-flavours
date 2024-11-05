@@ -112,3 +112,31 @@ export const testimonialsContent = [
     link: '#',
   },
 ];
+
+export const navLinks = [
+  {
+    id: 1,
+    title: 'About Restaurant',
+    url: '/about',
+  },
+  {
+    id: 2,
+    title: 'Food Menu',
+    url: '/food-menu',
+  },
+  {
+    id: 3,
+    title: 'Food Gallery',
+    url: '/gallery',
+  },
+  {
+    id: 4,
+    title: 'Contact Info',
+    url: '/contact',
+  },
+  {
+    id: 5,
+    title: 'Promotions',
+    url: '/offers',
+  },
+];

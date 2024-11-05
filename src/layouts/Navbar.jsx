@@ -54,8 +54,8 @@ const Navbar = () => {
             className={`transition-1000 hidden items-center gap-2 rounded-full border border-light/50 bg-dark/50 px-4 py-2 font-bold text-light shadow backdrop-blur-sm md:inline-flex ${visible ? 'translate-y-0 scale-100' : '-translate-y-[200%] scale-0'}`}
             aria-label="View Menu"
             title="Menu"
-            target="_blank"
-            download
+            // target="_blank"
+            // download
           >
             <MdOutlineRoomService className="text-2xl" />
             View Menu

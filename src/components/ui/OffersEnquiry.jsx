@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
@@ -7,12 +7,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import fire from '../../assets/logos/fire.svg';
 
 const offersForm = [
-  //   {
-  //     name: 'offersTitle',
-  //     type: 'text',
-  //     label: 'Offer Title',
-  //     required: true,
-  //   },
   {
     name: 'fullName',
     type: 'text',
@@ -40,7 +34,6 @@ const offersForm = [
 ];
 
 const schema = yup.object().shape({
-  //   offersTitle: yup.string().required('Offer Title is required'),
   fullName: yup.string().required('Enter your full name*'),
   email: yup.string().email('Invalid email').required('Enter your email*'),
   phoneNumber: yup.string().required('Enter your phone number*'),
@@ -48,8 +41,15 @@ const schema = yup.object().shape({
 });
 
 const OffersEnquiry = ({ offerTitle, onClose }) => {
-  const handleOnSubmit = (e) => {
-    e.preventDefault();
+  const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    setShowModal(true);
+  }, []);
+
+  const closeWithAnimation = () => {
+    setShowModal(false);
+    setTimeout(onClose, 300); // Delay to allow animation to complete
   };
 
   const {
@@ -73,15 +73,19 @@ const OffersEnquiry = ({ offerTitle, onClose }) => {
   return (
     <>
       <div
-        className="fixed inset-0 z-50 flex items-center justify-center bg-dark/50 opacity-100 backdrop-blur-sm transition-opacity duration-300"
-        onClick={onClose}
+        className={`transition-700 fixed inset-0 z-50 flex items-center justify-center bg-dark/50 backdrop-blur-sm ${
+          showModal ? 'opacity-100' : 'opacity-0'
+        }`}
+        onClick={closeWithAnimation}
       >
         <div
-          className="relative w-full max-w-xl rounded-lg bg-light p-6 shadow-lg"
+          className={`transition-700 relative w-full max-w-xl transform rounded-lg bg-light p-6 shadow-lg ${
+            showModal ? 'scale-100 opacity-100' : 'scale-0 opacity-0'
+          }`}
           onClick={(e) => e.stopPropagation()}
         >
           <button
-            onClick={onClose}
+            onClick={closeWithAnimation}
             className="absolute right-5 top-5 text-xl text-gray-700"
           >
             &#x2715;

@@ -22,7 +22,7 @@ const Home = () => {
       <Facility />
       <LogoBar />
       <Offers />
-      <Gallery limit={12} />
+      <Gallery limit={9} />
       <Footer />
     </>
   );

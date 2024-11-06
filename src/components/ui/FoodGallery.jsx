@@ -31,9 +31,15 @@ const galleryImages = [
     alt: 'Gallery Image 3',
   },
   {
-    id: 'image4',
-    url: 'https://d2s742iet3d3t1.cloudfront.net/restaurants/restaurant-195528000000000000/menu/items/8/item-1100000000148966358_1708122178.png?size=medium',
-    alt: 'Gallery Image 4',
+    id: 'image6',
+    url: 'https://img.pikbest.com/origin/09/02/29/46NpIkbEsTeX3.png!sw800',
+    alt: 'Gallery Image 6',
+  },
+
+  {
+    id: 'image7',
+    url: newariCuisine,
+    alt: 'Gallery Image 7',
   },
   {
     id: 'image5',
@@ -41,14 +47,9 @@ const galleryImages = [
     alt: 'Gallery Image 5',
   },
   {
-    id: 'image6',
-    url: 'https://img.pikbest.com/origin/09/02/29/46NpIkbEsTeX3.png!sw800',
-    alt: 'Gallery Image 6',
-  },
-  {
-    id: 'image7',
-    url: newariCuisine,
-    alt: 'Gallery Image 7',
+    id: 'image4',
+    url: 'https://d2s742iet3d3t1.cloudfront.net/restaurants/restaurant-195528000000000000/menu/items/8/item-1100000000148966358_1708122178.png?size=medium',
+    alt: 'Gallery Image 4',
   },
   {
     id: 'image8',

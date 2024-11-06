@@ -18,7 +18,7 @@ const Offers = () => {
         </p>
       </div>
       <div className="flex items-start justify-between gap-y-12 md:gap-12">
-        <div className="grid grid-cols-2 gap-16">
+        <div className="grid grid-cols-2 gap-8">
           {offersContent.slice(0, 2).map((content, index) => (
             <div key={index} className="group relative">
               <div className="overlay transition-300 absolute inset-0 -z-0 size-full bg-black/70 group-hover:bg-black/80"></div>
@@ -68,8 +68,8 @@ const Offers = () => {
             <Link to="#" className="mx-1 bg-orange-300/50 px-2 font-extrabold">
               {offersContent.length} offers
             </Link>
-            available. Grab your favorite dish at a discounted price before it's
-            too late!
+            available with us. Grab your favorite dish at a discounted price
+            before it's too late!
           </p>
           <p className="mt-4 max-w-xs text-sm opacity-70">
             For more information, please feel free to enquiry us via the enquiry

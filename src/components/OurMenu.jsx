@@ -165,7 +165,7 @@ const OurMenu = () => {
 
       <div className="flex flex-col items-center justify-center gap-4">
         <div className="mx-auto h-20 w-px bg-orange-300/30" />
-        <FireButton value="View Full Menu" router="#" />
+        <FireButton value="View Full Menu" router="/food-menu" />
       </div>
     </main>
   );

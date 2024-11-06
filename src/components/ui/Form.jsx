@@ -1,18 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { submitForm } from '../../utils/api';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const schema = yup.object().shape({
-  name: yup.string().required('Name is required'),
-  email: yup.string().email('Invalid email').required('Email is required'),
-  phone: yup.string().required('Phone is required'),
-  message: yup.string().required('Message is required'),
+  fullName: yup.string().required('Enter your full name*'),
+  email: yup.string().email('Invalid email').required('Enter your email*'),
+  phoneNumber: yup.string().required('Enter your phone number*'),
+  message: yup.string().required('Enter your message*'),
 });
 
+const contactFormFields = [
+  { name: 'fullName', type: 'text', label: 'Full Name', required: true },
+  { name: 'email', type: 'email', label: 'Email', required: true },
+  {
+    name: 'phoneNumber',
+    type: 'text',
+    label: 'Phone Number',
+    required: true,
+  },
+  { name: 'message', type: 'textarea', label: 'Message', required: false },
+];
+
 const Form = () => {
+  const [recaptchaToken, setRecaptchaToken] = useState(null);
+
   const {
     register,
     handleSubmit,
@@ -23,26 +39,24 @@ const Form = () => {
   });
 
   const onSubmit = async (data) => {
+    if (!recaptchaToken) {
+      toast.error('Please complete the reCAPTCHA verification.');
+      return;
+    }
     try {
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-      console.log(data);
+      await submitForm('/enquery_mail_react.php', {
+        ...data,
+        recaptchaToken,
+      });
       toast.success('Form submitted successfully!');
-      reset();
     } catch (error) {
-      toast.error('Failed to submit form. Please try again later.');
+      toast.error(error);
     }
   };
 
-  const contactFormFields = [
-    { name: 'name', label: 'Name', type: 'text' },
-    { name: 'email', label: 'Email', type: 'email' },
-    { name: 'phone', label: 'Phone', type: 'text' },
-    {
-      name: 'message',
-      label: 'Message',
-      type: 'textarea',
-    },
-  ];
+  const handleRecaptchaChange = (token) => {
+    setRecaptchaToken(token);
+  };
 
   return (
     <>
@@ -57,7 +71,7 @@ const Form = () => {
                 {...register(input.name)}
                 rows={4}
                 id={input.name}
-                className={`w-full rounded-none border-b border-dark/20 bg-transparent py-1 text-base text-dark focus:border-dark focus:outline-none sm:py-2 md:text-xl ${
+                className={`w-full rounded-none border-b border-dark/20 bg-transparent py-0 text-base text-dark focus:border-dark focus:outline-none sm:py-2 md:text-xl ${
                   errors[input.name] ? 'border-red-500' : 'border-gray-200'
                 } `}
               />
@@ -66,7 +80,7 @@ const Form = () => {
                 {...register(input.name)}
                 id={input.name}
                 type={input.type}
-                className={`w-full rounded-none border-b border-dark/20 bg-transparent py-1 text-base text-dark focus:border-dark focus:outline-none sm:py-2 md:text-xl ${
+                className={`w-full rounded-none border-b border-dark/20 bg-transparent py-0 text-base text-dark focus:border-dark focus:outline-none sm:py-2 md:text-xl ${
                   errors[input.name] ? 'border-red-500' : 'border-gray-200'
                 } `}
               />
@@ -78,10 +92,13 @@ const Form = () => {
             )}
           </div>
         ))}
-
+        <ReCAPTCHA
+          sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+          onChange={handleRecaptchaChange}
+        />
         <button
           type="submit"
-          className={`mt-8 rounded-full bg-orange-300 px-8 py-2 ${
+          className={`mt-4 rounded-full bg-orange-300 px-8 py-2 ${
             isSubmitting ? 'cursor-not-allowed opacity-75' : ''
           }`}
           disabled={isSubmitting}

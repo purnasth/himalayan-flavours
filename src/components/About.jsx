@@ -38,7 +38,7 @@ const About = () => {
 
           {/* <button className="mt-12 bg-orange-300 px-8 py-2 rounded-full">Explore More</button> */}
 
-          <FireButton value="Explore More" router="#" />
+          <FireButton value="Explore More" router="/about" />
         </div>
         <div className="hidden space-y-24 pt-64 md:block">
           <div className="flex items-end justify-end">

@@ -16,6 +16,7 @@ import PromotionsPage from './pages/PromotionsPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import RouterToTop from './utils/RouterToTop';
+import CaptchaTest from './pages/CaptchaTest';
 
 const App = () => {
   useLenisScroll();
@@ -31,6 +32,7 @@ const App = () => {
           <Route path="/offers" element={<PromotionsPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/test" element={<CaptchaTest />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <WhatsApp />

@@ -5,32 +5,14 @@ import * as yup from 'yup';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import fire from '../../assets/logos/fire.svg';
+import ReCAPTCHA from 'react-google-recaptcha';
+import { submitForm } from '../../utils/api';
 
 const offersForm = [
-  {
-    name: 'fullName',
-    type: 'text',
-    label: 'Full Name',
-    required: true,
-  },
-  {
-    name: 'email',
-    type: 'email',
-    label: 'Email',
-    required: true,
-  },
-  {
-    name: 'phoneNumber',
-    type: 'text',
-    label: 'Phone Number',
-    required: true,
-  },
-  {
-    name: 'message',
-    type: 'textarea',
-    label: 'Message',
-    required: true,
-  },
+  { name: 'fullName', type: 'text', label: 'Full Name', required: true },
+  { name: 'email', type: 'email', label: 'Email', required: true },
+  { name: 'phoneNumber', type: 'text', label: 'Phone Number', required: true },
+  { name: 'message', type: 'textarea', label: 'Message', required: true },
 ];
 
 const schema = yup.object().shape({
@@ -42,6 +24,7 @@ const schema = yup.object().shape({
 
 const OffersEnquiry = ({ offerTitle, onClose }) => {
   const [showModal, setShowModal] = useState(false);
+  const [recaptchaToken, setRecaptchaToken] = useState(null);
 
   useEffect(() => {
     setShowModal(true);
@@ -49,7 +32,7 @@ const OffersEnquiry = ({ offerTitle, onClose }) => {
 
   const closeWithAnimation = () => {
     setShowModal(false);
-    setTimeout(onClose, 300); // Delay to allow animation to complete
+    setTimeout(onClose, 300);
   };
 
   const {
@@ -61,13 +44,25 @@ const OffersEnquiry = ({ offerTitle, onClose }) => {
   });
 
   const onSubmit = async (data) => {
+    if (!recaptchaToken) {
+      toast.error('Please complete the reCAPTCHA verification.');
+      return;
+    }
+
     try {
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-      console.log(data);
+      await submitForm('/offersEnquery_mail_react.php', {
+        ...data,
+        recaptchaToken,
+        offerTitle,
+      });
       toast.success('Form submitted successfully!');
     } catch (error) {
-      toast.error('Failed to submit form. Please try again later.');
+      toast.error(error);
     }
+  };
+
+  const handleRecaptchaChange = (token) => {
+    setRecaptchaToken(token);
   };
 
   return (
@@ -94,7 +89,7 @@ const OffersEnquiry = ({ offerTitle, onClose }) => {
             <h3 className="font-body text-xl font-bold">Enquiry Form</h3>
             <p>Send your information and query.</p>
           </div>
-          <h4 className="my-8 font-body text-xl font-bold">
+          <h4 className="my-4 font-body text-xl font-bold">
             {offerTitle || 'Special Offer'}
           </h4>
           <form onSubmit={handleSubmit(onSubmit)}>
@@ -108,7 +103,7 @@ const OffersEnquiry = ({ offerTitle, onClose }) => {
                     {...register(input.name)}
                     rows={2}
                     id={input.name}
-                    className={`w-full rounded-none border-b border-dark/20 bg-transparent py-1 text-base font-semibold text-dark focus:border-dark focus:outline-none sm:py-2 md:text-xl ${
+                    className={`w-full rounded-none border-b border-dark/20 bg-transparent py-0 text-base font-semibold text-dark focus:border-dark focus:outline-none sm:py-2 md:text-xl ${
                       errors[input.name] ? 'border-red-500' : 'border-gray-200'
                     } `}
                   />
@@ -117,7 +112,7 @@ const OffersEnquiry = ({ offerTitle, onClose }) => {
                     {...register(input.name)}
                     type={input.type}
                     id={input.name}
-                    className={`w-full rounded-none border-b border-dark/20 bg-transparent py-1 text-base font-semibold text-dark focus:border-dark focus:outline-none sm:py-2 md:text-xl ${
+                    className={`w-full rounded-none border-b border-dark/20 bg-transparent py-0 text-base font-semibold text-dark focus:border-dark focus:outline-none sm:py-2 md:text-xl ${
                       errors[input.name] ? 'border-red-500' : 'border-gray-200'
                     } `}
                   />
@@ -129,9 +124,13 @@ const OffersEnquiry = ({ offerTitle, onClose }) => {
                 )}
               </div>
             ))}
+            <ReCAPTCHA
+              sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+              onChange={handleRecaptchaChange}
+            />
             <button
               type="submit"
-              className={`transition-300 group mt-8 flex items-center gap-2 rounded-full border border-orange-300 bg-orange-300 px-5 py-2 font-semibold hover:bg-orange-200/80 hover:text-orange-500 ${
+              className={`transition-300 group mt-4 flex items-center gap-2 rounded-full border border-orange-300 bg-orange-300 px-5 py-2 font-semibold hover:bg-orange-200/80 hover:text-orange-500 ${
                 isSubmitting ? 'cursor-not-allowed opacity-75' : ''
               }`}
               disabled={isSubmitting}
@@ -142,7 +141,6 @@ const OffersEnquiry = ({ offerTitle, onClose }) => {
                 className="filter-black transition-300 size-4 scale-75 object-contain group-hover:scale-100 group-hover:filter-none"
               />
               {isSubmitting ? 'Sending...' : 'Submit'}
-
               <img
                 src={fire}
                 alt="Fire"
@@ -162,7 +160,6 @@ const OffersEnquiry = ({ offerTitle, onClose }) => {
           </form>
         </div>
       </div>
-
       <ToastContainer />
     </>
   );

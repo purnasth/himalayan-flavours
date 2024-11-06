@@ -25,7 +25,7 @@ const Offers = () => {
               <img
                 src={content.image}
                 alt=""
-                className="-z-10 min-h-[36rem] h-[70vh] w-full object-cover object-left-top shadow"
+                className="-z-10 h-[70vh] min-h-[36rem] w-full object-cover object-left-top shadow"
               />
 
               <div className="absolute inset-0 z-10 flex size-full flex-col items-center justify-between px-12 py-16 text-center text-light">
@@ -43,7 +43,7 @@ const Offers = () => {
                 </div>
 
                 <Link
-                  to="#"
+                  to="/offers"
                   className="transition-300 flex items-center justify-center gap-2 rounded-full border border-light/50 bg-light/10 px-4 py-2 text-light backdrop-blur group-hover:bg-light/30"
                 >
                   <img
@@ -77,20 +77,20 @@ const Offers = () => {
           </p>
           <div className="ml-16 h-20 w-px bg-orange-300/30" />
           <div className="flex flex-col items-start justify-center gap-2 text-black">
-            <FireButton value="Enquiry" router="#" />
+            <FireButton value="Enquiry" router="/offers#enquiry" />
             <div className="flex flex-col items-start justify-center gap-0">
               <p>
                 <span className="font-normal opacity-60">
                   or call us directly
                 </span>
-                <a
+                <Link
                   rel="noopener noreferrer"
                   className="transition-linear ml-2 text-xl font-semibold"
-                  href="tel:+12509861755"
+                  to="tel:+12509861755"
                   target="_blank"
                 >
                   +1 250 986 1755
-                </a>
+                </Link>
               </p>
               <a
                 rel="noopener noreferrer"

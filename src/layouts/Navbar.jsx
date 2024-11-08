@@ -45,6 +45,8 @@ const Navbar = () => {
           <button
             onClick={toggleNav}
             className="transition-300 rounded-full border border-white/50 bg-dark p-2 text-white hover:border-black/80 hover:bg-white hover:text-dark"
+            aria-label="Menu"
+            title="Menu"
           >
             <CgMenuHotdog className="text-2xl" />
           </button>
@@ -90,6 +92,8 @@ const Navbar = () => {
         <button
           onClick={() => setIsOpen(false)}
           className="absolute right-4 top-4 flex items-center justify-center gap-2 text-4xl text-black"
+          aria-label="Close"
+          title="Close"
         >
           &times;
         </button>

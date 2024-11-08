@@ -67,6 +67,9 @@ const PromotionsPage = () => {
                 <button
                   onClick={() => toggleOffersEnquiry(content.title)}
                   className="transition-300 flex items-center gap-2 rounded-full border border-light/50 bg-light/10 px-4 py-2 text-light backdrop-blur group-hover:bg-light/30"
+                  type="button"
+                  aria-label="Enquiry Now"
+                  title="Enquiry Now"
                 >
                   <img
                     src={fire}

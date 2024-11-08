@@ -87,12 +87,16 @@ const TestimonialSlider = () => {
         <button
           className="swiper-button-prev rounded-full border p-1 text-dark shadow backdrop-blur hover:bg-dark/10"
           onClick={handlePrev}
+          aria-label="Previous"
+          title="Previous"
         >
           <TbArrowNarrowLeft />
         </button>
         <button
           className="swiper-button-next rounded-full border p-1 text-dark shadow backdrop-blur hover:bg-dark/10"
           onClick={handleNext}
+          aria-label="Next"
+          title="Next"
         >
           <TbArrowNarrowRight />
         </button>

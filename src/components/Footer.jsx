@@ -22,7 +22,12 @@ const Footer = () => {
       <section className="relative p-24">
         <div className="pointer-events-none absolute inset-0 -z-10 size-full bg-gradient-to-t from-white to-transparent"></div>
         <div className="z-10 flex items-center justify-center">
-          <a href="/" className="cursor-pointer">
+          <a
+            href="/"
+            className="cursor-pointer"
+            aria-label="Himalayan Flavours"
+            title="Himalayan Flavours"
+          >
             <img src={logo} alt="" className="h-40 w-auto object-contain" />
           </a>
         </div>

@@ -62,10 +62,18 @@ const MasterSlider = ({
 
       {navigation && (
         <>
-          <button className="swiper-button-next transition-300 absolute right-4 top-1/2 z-10 flex size-11 -translate-y-1/2 transform items-center justify-center rounded-full border border-light/50 bg-light/20 p-2 text-light shadow-lg backdrop-blur-sm hover:bg-light/50">
+          <button
+            aria-label="Next"
+            title="Next"
+            className="swiper-button-next transition-300 absolute right-4 top-1/2 z-10 flex size-11 -translate-y-1/2 transform items-center justify-center rounded-full border border-light/50 bg-light/20 p-2 text-light shadow-lg backdrop-blur-sm hover:bg-light/50"
+          >
             <TbArrowNarrowRight />
           </button>
-          <button className="swiper-button-prev transition-300 absolute left-4 top-1/2 z-10 flex size-11 -translate-y-1/2 transform items-center justify-center rounded-full border border-light/50 bg-light/20 p-2 text-light shadow-lg backdrop-blur-sm hover:bg-light/50">
+          <button
+            aria-label="Previous"
+            title="Previous"
+            className="swiper-button-prev transition-300 absolute left-4 top-1/2 z-10 flex size-11 -translate-y-1/2 transform items-center justify-center rounded-full border border-light/50 bg-light/20 p-2 text-light shadow-lg backdrop-blur-sm hover:bg-light/50"
+          >
             <TbArrowNarrowLeft />
           </button>
         </>

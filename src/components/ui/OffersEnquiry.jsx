@@ -82,6 +82,8 @@ const OffersEnquiry = ({ offerTitle, onClose }) => {
           <button
             onClick={closeWithAnimation}
             className="absolute right-5 top-5 text-xl text-gray-700"
+            aria-label="Close"
+            title="Close"
           >
             &#x2715;
           </button>
@@ -130,6 +132,8 @@ const OffersEnquiry = ({ offerTitle, onClose }) => {
             />
             <button
               type="submit"
+              aria-label="Submit"
+              title="Submit"
               className={`transition-300 group mt-4 flex items-center gap-2 rounded-full border border-orange-300 bg-orange-300 px-5 py-2 font-semibold hover:bg-orange-200/80 hover:text-orange-500 ${
                 isSubmitting ? 'cursor-not-allowed opacity-75' : ''
               }`}

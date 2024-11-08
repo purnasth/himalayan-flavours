@@ -98,6 +98,8 @@ const Form = () => {
         />
         <button
           type="submit"
+          aria-label="Submit"
+          title="Submit"
           className={`mt-4 rounded-full bg-orange-300 px-8 py-2 ${
             isSubmitting ? 'cursor-not-allowed opacity-75' : ''
           }`}

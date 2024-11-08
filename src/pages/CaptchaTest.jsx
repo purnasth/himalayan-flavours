@@ -28,7 +28,9 @@ const CaptchaTest = () => {
           onChange={handleRecaptchaChange}
         />
 
-        <button type="submit">Submit</button>
+        <button type="submit" aria-label="Submit" title="Submit">
+          Submit
+        </button>
       </form>
 
       <ToastContainer />

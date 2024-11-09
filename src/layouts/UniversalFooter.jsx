@@ -1,10 +1,10 @@
 import React from 'react';
-import logo from '../assets/logos/logo.svg';
 import bgCuisine from '../assets/images/bg_cuisine.png';
 import { MdFacebook, MdStarRate } from 'react-icons/md';
 import { RiInstagramFill } from 'react-icons/ri';
 import TestimonialSlider from '../components/ui/TestimonialSlider';
 import { navLinks } from '../constants/data';
+import Logo from '../components/ui/Logo';
 
 const UniversalFooter = () => {
   return (
@@ -18,14 +18,7 @@ const UniversalFooter = () => {
       <div className="pointer-events-none absolute inset-0 -z-10 size-full bg-gradient-to-t from-white to-transparent"></div>
       <section className="container relative flex size-full flex-col items-center justify-evenly">
         <div className="z-10 flex items-center justify-center">
-          <a
-            href="/"
-            className="cursor-pointer"
-            aria-label="Himalayan Flavours"
-            title="Himalayan Flavours"
-          >
-            <img src={logo} alt="" className="h-40 w-auto object-contain" />
-          </a>
+          <Logo className="h-40 w-auto object-contain" />
         </div>
         <div className="grid grid-cols-7">
           <div className="col-span-2 w-full">

@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import logo from '../assets/logos/logo.svg';
 import { CgMenuHotdog } from 'react-icons/cg';
-import { MdOutlineRoomService, MdStarRate, MdFacebook } from 'react-icons/md';
-import { RiInstagramFill } from 'react-icons/ri';
+import { MdOutlineRoomService, MdStarRate } from 'react-icons/md';
 // import foodMenu from '../assets/menu/menu.pdf';
 import { PiChefHatBold } from 'react-icons/pi';
 import { navLinks } from '../constants/data';
 import { Link, NavLink, useLocation } from 'react-router-dom';
+import Logo from '../components/ui/Logo';
+import ContactInfo from '../components/ui/ContactInfo';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -63,20 +63,13 @@ const Navbar = () => {
             View Menu
           </Link>
         </div>
-        <a
-          href="/"
-          className={`transition-1000 pointer-events-auto object-contain ${
-            visible ? '' : ''
-          } ${window.scrollY > 0 ? '-translate-y-full scale-x-0' : 'translate-y-0 scale-100'}`}
-        >
-          <img
-            src={logo}
-            alt="Logo"
-            className={`transition-1000 h-16 w-auto object-contain md:h-32 ${
-              visible ? '-translate-y-0' : '-translate-y-full scale-0'
-            } ${window.scrollY > 0 ? '-translate-y-full scale-0' : 'translate-y-0'}`}
-          />
-        </a>
+
+        <Logo
+          aprops={`transition-1000 pointer-events-auto object-contain ${
+            visible ? '-translate-y-0' : '-translate-y-full scale-0'
+          } ${window.scrollY > 0 ? '-translate-y-full scale-0' : 'translate-y-0'}`}
+          className="transition-1000 h-16 w-auto object-contain md:h-32"
+        />
       </header>
 
       <div
@@ -123,65 +116,7 @@ const Navbar = () => {
           <div className="w-full space-y-4">
             <span className="text-xs uppercase text-dark/50">Contact Info</span>
             <div className="space-y-8">
-              <ul className="flex flex-col items-start justify-center gap-1 text-center">
-                <li>
-                  <a
-                    href="https://maps.app.goo.gl/ThmUvT8FABgwKMho7"
-                    className="inline-block text-sm font-bold hover:underline"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Victoria, British Columbia, Canada"
-                  >
-                    Victoria, British Columbia, Canada
-                  </a>
-                </li>
-                <li className="">
-                  <a
-                    href="tel:+12509861755 "
-                    className="number inline-block text-sm font-bold hover:underline"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={+12509861755}
-                  >
-                    +1 250 986 1755
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="mailto:info@himalayan-flavours.com"
-                    className="inline-block text-sm font-bold hover:underline"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="info@himalayan-flavours.com"
-                  >
-                    info@himalayan-flavours.com
-                  </a>
-                </li>
-              </ul>
-              <ul className="my-6 flex items-start justify-start gap-4 text-2xl">
-                <li className="group">
-                  <a
-                    rel="noreferrer noopener"
-                    aria-label="Facebook"
-                    title="Facebook"
-                    href="#"
-                    target="_blank"
-                  >
-                    <MdFacebook className="text-2xl transition-all duration-300 ease-linear group-hover:scale-125" />
-                  </a>
-                </li>
-                <li className="group">
-                  <a
-                    rel="noreferrer noopener"
-                    aria-label="Instagram"
-                    title="Instagram"
-                    href='#"'
-                    target="_blank"
-                  >
-                    <RiInstagramFill className="text-2xl transition-all duration-300 ease-linear group-hover:scale-125" />
-                  </a>
-                </li>
-              </ul>
+              <ContactInfo />
             </div>
           </div>
           {/* <hr className="my-8 w-full border-dark/20" /> */}

@@ -1,6 +1,5 @@
 import React from 'react';
 import Contact from './Contact';
-import logo from '../assets/logos/logo.svg';
 import bgCuisine from '../assets/images/bg_cuisine.png';
 import { MdFacebook, MdStarRate } from 'react-icons/md';
 import { RiInstagramFill } from 'react-icons/ri';
@@ -8,6 +7,7 @@ import { RiInstagramFill } from 'react-icons/ri';
 import TestimonialSlider from './ui/TestimonialSlider';
 
 import { navLinks } from '../constants/data';
+import Logo from './ui/Logo';
 
 const Footer = () => {
   return (
@@ -22,14 +22,7 @@ const Footer = () => {
       <section className="relative p-24">
         <div className="pointer-events-none absolute inset-0 -z-10 size-full bg-gradient-to-t from-white to-transparent"></div>
         <div className="z-10 flex items-center justify-center">
-          <a
-            href="/"
-            className="cursor-pointer"
-            aria-label="Himalayan Flavours"
-            title="Himalayan Flavours"
-          >
-            <img src={logo} alt="" className="h-40 w-auto object-contain" />
-          </a>
+          <Logo className="h-40 w-auto object-contain" />
         </div>
         <div className="mt-16 grid grid-cols-7">
           <div className="col-span-2 w-full">

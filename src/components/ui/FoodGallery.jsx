@@ -17,17 +17,17 @@ import newariKitchen from '../../assets/images/nepali_kitchen.jpg';
 const galleryImages = [
   {
     id: 'image1',
-    url: 'https://www.pngarts.com/files/18/Indian-Cuisine-Curry-Dishes-Background-PNG.png',
+    url: bgCuisine,
     alt: 'Gallery Image 1',
   },
   {
     id: 'image2',
-    url: 'https://www.nepalsanctuarytreks.com/wp-content/uploads/2018/07/Terai-Cuisine-nepal.png',
+    url: 'https://tb-static.uber.com/prod/image-proc/processed_images/1b9cf8ab8d7260b89009f07a935e33bb/fdf52d66534809b650058f41d517d74a.jpeg',
     alt: 'Gallery Image 2',
   },
   {
     id: 'image3',
-    url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx31aEDUEZttmqpjhb-T5VGVfjb7kAaYCk5sJj1hRML1VWOOYamVL04md5FG0lolywwLE&usqp=CAU',
+    url: 'https://hips.hearstapps.com/hmg-prod/images/chicken-tikka-masala1-1663341991.jpg?crop=0.681xw:1.00xh;0.196xw,0&resize=640:*',
     alt: 'Gallery Image 3',
   },
   {
@@ -48,17 +48,17 @@ const galleryImages = [
   },
   {
     id: 'image4',
-    url: 'https://d2s742iet3d3t1.cloudfront.net/restaurants/restaurant-195528000000000000/menu/items/8/item-1100000000148966358_1708122178.png?size=medium',
+    url: 'https://cdn.prod.website-files.com/64931d2aee18510b47f4bb1f/64ecfa1fad20286493de9568_r094aj5e10gjt9vzy87jjw7s3dq9xvy1.jpeg',
     alt: 'Gallery Image 4',
   },
   {
     id: 'image8',
-    url: bgCuisine,
+    url: 'https://hips.hearstapps.com/hmg-prod/images/220907-delish-seo-chicken-tikka-masala-0212-eb-1675093094.jpg',
     alt: 'Gallery Image 8',
   },
   {
     id: 'image9',
-    url: newariKitchen,
+    url: "https://www.tastingtable.com/img/gallery/20-delicious-indian-dishes-you-have-to-try-at-least-once/intro-1645057933.jpg",
     alt: 'Gallery Image 9',
   },
   {

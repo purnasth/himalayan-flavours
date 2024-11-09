@@ -8,6 +8,7 @@ import TestimonialSlider from './ui/TestimonialSlider';
 
 import { navLinks } from '../constants/data';
 import Logo from './ui/Logo';
+import ContactInfo from './ui/ContactInfo';
 
 const Footer = () => {
   return (
@@ -75,65 +76,7 @@ const Footer = () => {
               Contact Info
             </span>
             <div className="mt-8 space-y-8">
-              <ul className="flex flex-col items-end justify-center gap-1 text-center">
-                <li>
-                  <a
-                    href="https://maps.app.goo.gl/ThmUvT8FABgwKMho7"
-                    className="inline-block text-sm font-bold hover:underline"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Victoria, British Columbia, Canada"
-                  >
-                    Victoria, British Columbia, Canada
-                  </a>
-                </li>
-                <li className="">
-                  <a
-                    href="tel:+12509861755 "
-                    className="number inline-block text-sm font-bold hover:underline"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={+12509861755}
-                  >
-                    +1 250 986 1755
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="mailto:info@himalayan-flavours.com"
-                    className="inline-block text-sm font-bold hover:underline"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="info@himalayan-flavours.com"
-                  >
-                    info@himalayan-flavours.com
-                  </a>
-                </li>
-              </ul>
-              <ul className="my-6 flex items-end justify-end gap-4 text-2xl">
-                <li className="group">
-                  <a
-                    rel="noreferrer noopener"
-                    aria-label="Facebook"
-                    title="Facebook"
-                    href="#"
-                    target="_blank"
-                  >
-                    <MdFacebook className="text-2xl transition-all duration-300 ease-linear group-hover:scale-125" />
-                  </a>
-                </li>
-                <li className="group">
-                  <a
-                    rel="noreferrer noopener"
-                    aria-label="Instagram"
-                    title="Instagram"
-                    href='#"'
-                    target="_blank"
-                  >
-                    <RiInstagramFill className="text-2xl transition-all duration-300 ease-linear group-hover:scale-125" />
-                  </a>
-                </li>
-              </ul>
+              <ContactInfo align="justify-end items-end text-right" />
             </div>
           </div>
         </div>

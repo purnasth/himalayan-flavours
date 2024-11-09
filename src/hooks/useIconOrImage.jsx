@@ -1,13 +1,21 @@
 import React from 'react';
 import { getIconComponent } from '../utils/iconMap';
 
-const useIconOrImage = ({ icon, image }) => {
+const useIconOrImage = ({ icon, image, title, className }) => {
   if (icon) {
     const IconComponent = getIconComponent(icon);
-    return IconComponent ? <IconComponent className="text-2xl" /> : null;
+    return IconComponent ? (
+      <IconComponent className={className || 'text-2xl'} />
+    ) : null;
   }
   if (image) {
-    return <img src={image} alt="" className="h-6 w-6" />;
+    return (
+      <img
+        src={image}
+        alt={title}
+        className={className || 'size-6 object-contain'}
+      />
+    );
   }
   return null;
 };

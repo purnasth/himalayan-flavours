@@ -4,7 +4,7 @@ import * as MdIcons from 'react-icons/md';
 // import * as Io5Icons from 'react-icons/io5';
 // import * as FaIcons from 'react-icons/fa';
 // import * as GiIcons from 'react-icons/gi';
-// import { RiInstagramFill } from 'react-icons/ri';
+import { RiInstagramFill } from 'react-icons/ri';
 
 const iconMap = {
   ...TbIcons,

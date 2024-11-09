@@ -116,7 +116,7 @@ const Navbar = () => {
           <div className="w-full space-y-4">
             <span className="text-xs uppercase text-dark/50">Contact Info</span>
             <div className="space-y-8">
-              <ContactInfo />
+              <ContactInfo align="items-start justify-start"/>
             </div>
           </div>
           {/* <hr className="my-8 w-full border-dark/20" /> */}

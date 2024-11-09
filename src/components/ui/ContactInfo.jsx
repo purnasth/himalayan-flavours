@@ -1,11 +1,12 @@
 import React from 'react';
 import useIconOrImage from '../../hooks/useIconOrImage';
+import { Link } from 'react-router-dom';
 
 const contactInfo = [
   {
     id: 1,
     type: 'location',
-    title: 'Victoria, British Columbia, Canada',
+    title: '3945 Quadra St, Victoria, BC V8X 1J5, Canada',
     url: 'https://maps.app.goo.gl/ThmUvT8FABgwKMho7',
     icon: null,
     image: null,
@@ -15,7 +16,7 @@ const contactInfo = [
     type: 'phone',
     title: '+1 250 986 1755',
     url: 'tel:+12509861755',
-    icon: 'TbPhone',
+    icon: null,
     image: null,
   },
   {
@@ -30,7 +31,7 @@ const contactInfo = [
     id: 4,
     type: 'social',
     title: 'Facebook',
-    url: 'https://www.facebook.com/MithilaYatriNiwas',
+    url: '#',
     icon: 'MdFacebook',
     image: null,
   },
@@ -38,16 +39,16 @@ const contactInfo = [
     id: 5,
     type: 'social',
     title: 'Instagram',
-    url: 'https://instagram.com/mithilayatriniwas?igshid=MzRlODBiNWFlZA==',
+    url: '#',
     icon: 'RiInstagramFill',
     image: null,
   },
 ];
 
-const ContactInfo = () => {
+const ContactInfo = ({ align }) => {
   return (
     <>
-      <ul className="flex flex-col items-start justify-center gap-1 text-center">
+      <ul className={`flex flex-col ${align} gap-1 text-center`}>
         {contactInfo
           .filter((item) => item.type !== 'social')
           .map((item) => (
@@ -65,20 +66,26 @@ const ContactInfo = () => {
           ))}
       </ul>
 
-      <ul className="my-6 flex items-start justify-start gap-4 text-2xl">
+      <ul className={`my-6 flex ${align} gap-4 text-2xl`}>
         {contactInfo
           .filter((item) => item.type === 'social')
           .map((item) => (
             <li key={item.id} className="group">
-              <a
-                href={item.url}
+              <Link
+                to={item.url}
                 rel="noreferrer noopener"
                 aria-label={item.title}
                 title={item.title}
                 target="_blank"
               >
-                {useIconOrImage(item)}
-              </a>
+                {useIconOrImage({
+                  icon: item.icon,
+                  image: item.image,
+                  title: item.title,
+                  className:
+                    'text-2xl transition-all duration-300 ease-linear group-hover:scale-125',
+                })}
+              </Link>
             </li>
           ))}
       </ul>

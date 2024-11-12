@@ -31,7 +31,7 @@ const Hero = () => {
             alt="Fire Icon"
             className="size-12 rounded-full border border-orange-300 object-contain p-1"
           />
-          <div className="bottom-0 h-10 w-px bg-orange-300 md:h-12"></div>
+          <div className="bottom-0 h-10 w-px bg-orange-300 md:h-20"></div>
         </div>
       </section>
     </>

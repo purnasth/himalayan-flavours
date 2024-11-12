@@ -11,6 +11,8 @@ const schema = yup.object().shape({
   fullName: yup.string().required('Enter your full name*'),
   email: yup.string().email('Invalid email').required('Enter your email*'),
   phoneNumber: yup.string().required('Enter your phone number*'),
+  eventDate: yup.string().required('Enter your event date*'),
+  guests: yup.number().required('Enter number of guests*'),
   message: yup.string().required('Enter your message*'),
 });
 
@@ -23,6 +25,8 @@ const contactFormFields = [
     label: 'Phone Number',
     required: true,
   },
+  { name: 'eventDate', type: 'date', label: 'Event Date', required: true },
+  { name: 'guests', type: 'number', label: 'Number of Guests', required: true },
   { name: 'message', type: 'textarea', label: 'Message', required: false },
 ];
 
@@ -69,9 +73,9 @@ const Form = () => {
             {input.type === 'textarea' ? (
               <textarea
                 {...register(input.name)}
-                rows={4}
+                rows={2}
                 id={input.name}
-                className={`w-full rounded-none border-b border-dark/20 bg-transparent py-0 text-base text-dark focus:border-dark focus:outline-none sm:py-2 md:text-xl ${
+                className={`w-full rounded-none border-b border-dark/20 bg-transparent py-0 text-base text-dark focus:border-dark focus:outline-none sm:py-1 md:text-xl ${
                   errors[input.name] ? 'border-red-500' : 'border-gray-200'
                 } `}
               />
@@ -80,7 +84,7 @@ const Form = () => {
                 {...register(input.name)}
                 id={input.name}
                 type={input.type}
-                className={`w-full rounded-none border-b border-dark/20 bg-transparent py-0 text-base text-dark focus:border-dark focus:outline-none sm:py-2 md:text-xl ${
+                className={`w-full rounded-none border-b border-dark/20 bg-transparent py-0 text-base text-dark focus:border-dark focus:outline-none sm:py-1 md:text-xl ${
                   errors[input.name] ? 'border-red-500' : 'border-gray-200'
                 } `}
               />

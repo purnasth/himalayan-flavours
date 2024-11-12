@@ -65,10 +65,12 @@ const Navbar = () => {
         </div>
 
         <Logo
-          aprops={`transition-1000 pointer-events-auto object-contain ${
-            visible ? '-translate-y-0' : '-translate-y-full scale-0'
-          } ${window.scrollY > 0 ? '-translate-y-full scale-0' : 'translate-y-0'}`}
-          className="transition-1000 h-16 w-auto object-contain md:h-32"
+          aprops={`transition-1000 pointer-events-auto object-contain origin-top rounded-xl ${
+            visible
+              ? '-translate-y-0 bg-white'
+              : '-translate-y-[200%] scale-0 bg-white'
+          } ${window.scrollY > 0 ? '-translate-y-0' : '-translate-y-[200%]'}`}
+          className="transition-1000 h-16 w-auto object-contain p-1 md:h-24"
         />
       </header>
 
@@ -116,7 +118,7 @@ const Navbar = () => {
           <div className="w-full space-y-4">
             <span className="text-xs uppercase text-dark/50">Contact Info</span>
             <div className="space-y-8">
-              <ContactInfo align="items-start justify-start"/>
+              <ContactInfo align="items-start justify-start" />
             </div>
           </div>
           {/* <hr className="my-8 w-full border-dark/20" /> */}

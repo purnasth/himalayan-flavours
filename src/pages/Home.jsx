@@ -15,10 +15,10 @@ const Home = () => {
     <>
       <Hero />
       <About />
-      <Cuisine />
+      {/* <Cuisine /> */}
+      <LogoBar />
       <OurMenu />
       <Reservation />
-      {/* <LogoBar /> */}
       <Facility />
       <LogoBar />
       <Offers />

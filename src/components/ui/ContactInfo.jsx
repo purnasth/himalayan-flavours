@@ -32,7 +32,7 @@ const contactInfo = [
     type: 'social',
     title: 'Facebook',
     url: '#',
-    icon: 'MdFacebook',
+    icon: 'FaFacebookF',
     image: null,
   },
   {
@@ -41,6 +41,14 @@ const contactInfo = [
     title: 'Instagram',
     url: '#',
     icon: 'RiInstagramFill',
+    image: null,
+  },
+  {
+    id: 6,
+    type: 'social',
+    title: 'Tiktok',
+    url: '#',
+    icon: 'IoLogoTiktok',
     image: null,
   },
 ];
@@ -83,7 +91,7 @@ const ContactInfo = ({ align }) => {
                   image: item.image,
                   title: item.title,
                   className:
-                    'text-2xl transition-all duration-300 ease-linear group-hover:scale-125',
+                    'size-5 object-contain transition-all duration-300 ease-linear group-hover:scale-125',
                 })}
               </Link>
             </li>

@@ -3,10 +3,15 @@ import {
   TbWifi,
   TbArmchair,
   TbMicrophone,
-  TbBowlChopsticks,
+  // TbBowlChopsticks,
+  TbParkingCircle,
 } from 'react-icons/tb';
 import { MdOutlineLocationOn } from 'react-icons/md';
 import bgCuisine from '../assets/images/bg_cuisine.png';
+import { GiCryptEntrance } from 'react-icons/gi';
+import { MdOutlineDeliveryDining } from 'react-icons/md';
+import { TbPaperBag } from 'react-icons/tb';
+import liveMusic from '../assets/images/fridaylive.webp';
 
 const Facility = () => {
   return (
@@ -23,8 +28,31 @@ const Facility = () => {
         </p>
       </div>
 
-      <div className="container mt-24 max-w-5xl">
-        <div className="grid grid-cols-2 gap-12 md:grid-cols-4 lg:grid-cols-5">
+      <div className="container mt-12 max-w-5xl">
+        {/* <h5 className="mb-4 mt-16 text-center font-body text-3xl">We Offer</h5> */}
+        <div className="mx-12 grid grid-cols-2 gap-12 md:grid-cols-3">
+          <div className="flex flex-col items-center gap-4 p-4 text-center">
+            <GiCryptEntrance className="text-5xl text-dark/80" />
+            <p className="text-xs md:text-sm lg:text-base xl:text-xl">
+              Catering
+            </p>
+          </div>
+          <div className="flex flex-col items-center gap-4 p-4 text-center">
+            <MdOutlineDeliveryDining className="text-5xl text-dark/80" />
+            <p className="text-xs md:text-sm lg:text-base xl:text-xl">
+              Home Delivery
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center gap-4 p-4 text-center">
+            <TbPaperBag className="text-5xl text-dark/80" />
+            <p className="text-xs md:text-sm lg:text-base xl:text-xl">
+              Take Away
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-12 grid grid-cols-2 gap-12 md:grid-cols-4 lg:grid-cols-5">
           <div className="flex flex-col items-center gap-4 p-4 text-center">
             <TbWifi className="text-4xl text-dark/80" />
             <p className="text-xs md:text-xs xl:text-base">
@@ -40,12 +68,9 @@ const Facility = () => {
 
           <div className="flex flex-col items-center gap-4 p-4 text-center">
             <TbArmchair className="text-4xl text-dark/80" />
-            <p className="text-xs md:text-xs xl:text-base">Welcoming Hospitality</p>
-          </div>
-
-          <div className="flex flex-col items-center gap-4 p-4 text-center">
-            <TbBowlChopsticks className="text-4xl text-dark/80" />
-            <p className="text-xs md:text-xs xl:text-base">Authentic Cuisine</p>
+            <p className="text-xs md:text-xs xl:text-base">
+              Welcoming Hospitality
+            </p>
           </div>
 
           <div className="flex flex-col items-center gap-4 p-4 text-center">
@@ -54,12 +79,18 @@ const Facility = () => {
               Convenient Location
             </p>
           </div>
+          <div className="flex flex-col items-center gap-4 p-4 text-center">
+            <TbParkingCircle className="text-4xl text-dark/80" />
+            <p className="text-xs md:text-xs xl:text-base">
+              Free Vehicle Parking
+            </p>
+          </div>
         </div>
 
         <img
-          src={bgCuisine}
-          alt=""
-          className="mx-auto mt-12 h-[60vh] w-full rounded-3xl object-cover shadow"
+          src={liveMusic}
+          alt="Friday Live Music"
+          className="mx-auto mt-12 h-[60 vh] min-h-[28rem] w-full rounded-3xl object-cover shadow"
         />
       </div>
     </main>

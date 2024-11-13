@@ -385,7 +385,7 @@ const OurMenu = () => {
           <div key={cuisine.id}>
             {index === 1 ? (
               <>
-                <div className="rounded-2xl bg-orange-300/60 p-10 pb-40">
+                <div className="rounded-2xl bg-orange-300/40 p-10 pb-40">
                   <h4 className="mb-4 font-title text-3xl font-bold text-dark">
                     {cuisine.name} Dishes
                   </h4>
@@ -420,7 +420,7 @@ const OurMenu = () => {
                     draggable="false"
                   />
                 </div>
-                <div className="-mt-32 rounded-2xl bg-orange-300/60 p-10 pt-40">
+                <div className="-mt-32 rounded-2xl bg-orange-300/40 p-10 pt-40">
                   <h4 className="mb-4 font-title text-3xl font-bold text-dark">
                     {cuisine.name} Dishes
                   </h4>

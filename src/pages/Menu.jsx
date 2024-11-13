@@ -16,10 +16,10 @@ const Menu = () => {
           description="Check out our delicious menu. We have something for everyone. Grab your favorite dish before it's gone!"
         />
 
-        <div className="mt-8 flex justify-center">
+        <div className="mx-auto mt-8 flex justify-center">
           <iframe
             src={foodMenu}
-            className="h-[80vh] w-full border-none md:h-[90vh]"
+            className="h-[80vh] w-full border-none md:h-[110vh]"
             title="Food Menu"
           />
         </div>

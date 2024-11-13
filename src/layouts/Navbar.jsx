@@ -52,14 +52,14 @@ const Navbar = () => {
           </button>
           <Link
             to="https://mayurstay.com/himalayanflavours/menu.php"
-            className={`transition-1000 hidden items-center gap-2 rounded-full border border-light/50 bg-dark/50 px-4 py-2 font-bold text-light shadow backdrop-blur-sm md:inline-flex ${visible ? 'translate-y-0 scale-100' : '-translate-y-[200%] scale-0'}`}
+            className={`transition-1000 inline-flex items-center gap-2 rounded-full border border-light/50 bg-dark/50 px-4 py-2 font-bold text-light shadow backdrop-blur-sm ${visible ? 'translate-y-0 scale-100' : '-translate-y-[200%] scale-0'}`}
             aria-label="Order Now"
             title="Order Now"
             target="_blank"
             // download
           >
-            <MdOutlineRoomService className="text-2xl" />
             Order Now
+            <MdOutlineRoomService className="animate-bounce text-2xl" />
           </Link>
         </div>
 

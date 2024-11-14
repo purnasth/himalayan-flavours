@@ -21,6 +21,16 @@
     @apply w-0;
   }
 
+  .scroll::-webkit-scrollbar
+  {
+    @apply w-1 rounded-full bg-light;
+  }
+
+  .scroll::-webkit-scrollbar-thumb
+  {
+    @apply bg-orange-300 rounded-full;
+  }
+
     .nearby-scroll::-webkit-scrollbar {
       @apply h-2 rounded-full bg-light;
     }

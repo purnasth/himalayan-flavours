@@ -2,14 +2,20 @@ import React from 'react';
 import FireButton from './ui/FireButton';
 
 import nepali from '../assets/images/cuisine/nepali.png';
-import indian from '../assets/images/cuisine/indian.png';
-import chinese from '../assets/images/cuisine/chinese.png';
+// import indian from '../assets/images/cuisine/indian.png';
+// import chinese from '../assets/images/cuisine/chinese.png';
+
+import seafood from '../assets/images/menu/seafood.png';
+import chicken from '../assets/images/menu/butterchicken.png';
+import veg from '../assets/images/menu/veg.png';
+import lamb from '../assets/images/menu/lamb.png';
+import sizzler from '../assets/images/menu/sizzler.png';
 
 const menu = [{
   id: 1,
   name: 'Himalayan Sizzlers',
   description: 'Authentic Nepalese dishes made with traditional spices and flavors.',
-  imageUrl: nepali,
+  imageUrl: sizzler,
   foodMenu: [{
           name: 'Chicken Tikka'
       },
@@ -52,7 +58,7 @@ const menu = [{
   id: 2,
   name: 'Lamb Specialties',
   description: 'Experience the rich flavors of India with our authentic Indian dishes.',
-  imageUrl: indian,
+  imageUrl: lamb,
   foodMenu: [{
           name: 'Lamb Curry'
       },
@@ -89,7 +95,7 @@ const menu = [{
   id: 3,
   name: 'Seafood Specialties',
   description: 'Enjoy the delicious flavors of China with our authentic Chinese dishes.',
-  imageUrl: chinese,
+  imageUrl: seafood,
   foodMenu: [
     {
           name: 'Fish Curry'
@@ -133,7 +139,7 @@ const menu = [{
   id: 4,
   name: 'Vegetarian Specialties',
   description: 'Served with pure Basmati Rice',
-  imageUrl: chinese,
+  imageUrl: veg,
   foodMenu: [{
           name: 'Malai Kofta'
       },
@@ -189,7 +195,7 @@ const menu = [{
   id: 5,
   name: 'Chicken Specialties',
   description: 'Served with Special Basmati Rice',
-  imageUrl: chinese,
+  imageUrl: chicken,
   foodMenu: [{
           name: 'Butter Chicken'
       },
@@ -233,7 +239,7 @@ const menu = [{
   id: 6,
   name: "Himalayan Flavours Special Menu",
   description: "Served with Special Basmati Rice",
-  imageUrl: chinese,
+  imageUrl: nepali,
   foodMenu: [{
           name: "Himalayan Thali (Veg, Chicken, Goat, Lamb, Fish)"
       },

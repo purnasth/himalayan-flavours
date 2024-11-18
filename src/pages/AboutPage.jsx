@@ -5,6 +5,10 @@ import newariCuisine from '../assets/images/nepali_cuisine.jpg';
 import UniversalFooter from '../layouts/UniversalFooter';
 import FacilityList from '../components/ui/FacilityList';
 
+import img2 from '../assets/images/update/9.webp';
+import img3 from '../assets/images/update/thakali.webp';
+import img4 from '../assets/images/update/8.webp';
+
 const AboutPage = () => {
   return (
     <>
@@ -14,12 +18,8 @@ const AboutPage = () => {
           description="We are a family-owned restaurant that serves delicious food with love and care. Our mission is to provide the best dining experience to our customers."
         />
         <section className="mt-32 grid grid-cols-3 gap-12">
-          <img src={newariCuisine} alt="Newari Cusine" />
-          <img
-            src={newariCuisine}
-            alt="Newari Cusine"
-            className="translate-y-16"
-          />
+          <img src={img2} alt="Newari Cusine" />
+          <img src={img4} alt="Newari Cusine" className="translate-y-16" />
           <img src={newariCuisine} alt="Newari Cusine" />
         </section>
       </main>
@@ -28,7 +28,7 @@ const AboutPage = () => {
       </div>
       <main className="mx-auto grid w-4/5 grid-cols-2 gap-32">
         <img
-          src={newariCuisine}
+          src={img3}
           alt="Newari Cusine"
           className="sticky top-10 h-[90vh] w-full object-cover"
         />

@@ -1,6 +1,10 @@
 import React from 'react';
-import newariCuisine from '../assets/images/nepali_cuisine.jpg';
 import FireButton from './ui/FireButton';
+
+import img1 from '../assets/images/update/5.webp';
+import img2 from '../assets/images/update/9.webp';
+import img3 from '../assets/images/update/10.webp';
+import img4 from '../assets/images/update/8.webp';
 
 const About = () => {
   return (
@@ -9,16 +13,16 @@ const About = () => {
         <div className="hidden space-y-24 pt-64 md:block">
           <div className="flex items-end justify-end">
             <img
-              src={newariCuisine}
-              alt=""
-              className="h-60 w-44 2xl:w-52 2xl:h-72 object-cover"
+              src={img4}
+              alt="Foods"
+              className="h-60 w-44 object-cover 2xl:h-72 2xl:w-52"
             />
           </div>
           <div className="flex items-end">
             <img
-              src={newariCuisine}
-              alt=""
-              className="h-full w-80 2xl:w-96 object-cover"
+              src={img2}
+              alt="Foods"
+              className="h-full w-80 object-cover 2xl:w-96"
             />
           </div>
         </div>
@@ -43,16 +47,16 @@ const About = () => {
         <div className="hidden space-y-24 pt-64 md:block">
           <div className="flex items-end justify-end">
             <img
-              src={newariCuisine}
-              alt=""
-              className="h-full w-80 2xl:w-96 object-cover"
+              src={img1}
+              alt="Foods"
+              className="h-full w-80 object-cover 2xl:w-96"
             />
           </div>
           <div className="flex">
             <img
-              src={newariCuisine}
-              alt=""
-              className="h-60 w-44 2xl:w-52 2xl:h-72 object-cover"
+              src={img3}
+              alt="Foods"
+              className="h-60 w-44 object-cover 2xl:h-72 2xl:w-52"
             />
           </div>
         </div>

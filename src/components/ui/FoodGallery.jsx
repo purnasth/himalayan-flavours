@@ -14,16 +14,61 @@ import bgCuisine from '../../assets/images/bg_cuisine.png';
 import newariCuisine from '../../assets/images/nepali_cuisine.jpg';
 import newariKitchen from '../../assets/images/nepali_kitchen.jpg';
 
+import g1 from '../../assets/images/gallery/1.webp';
+import g2 from '../../assets/images/gallery/2.webp';
+import g3 from '../../assets/images/gallery/3.webp';
+import g4 from '../../assets/images/gallery/4.webp';
+import g5 from '../../assets/images/gallery/5.webp';
+import g7 from '../../assets/images/gallery/7.webp';
+import g8 from '../../assets/images/gallery/8.webp';
+import g9 from '../../assets/images/gallery/9.webp';
+
 const galleryImages = [
   {
     id: 'image1',
-    url: bgCuisine,
+    url: g1,
     alt: 'Gallery Image 1',
   },
   {
     id: 'image2',
-    url: 'https://tb-static.uber.com/prod/image-proc/processed_images/1b9cf8ab8d7260b89009f07a935e33bb/fdf52d66534809b650058f41d517d74a.jpeg',
+    url: g2,
     alt: 'Gallery Image 2',
+  },
+  {
+    id: 'image3',
+    url: g3,
+    alt: 'Gallery Image 3',
+  },
+  {
+    id: 'image6',
+    url: g4,
+    alt: 'Gallery Image 6',
+  },
+
+  {
+    id: 'image7',
+    url: g5,
+    alt: 'Gallery Image 7',
+  },
+  {
+    id: 'image5',
+    url: g7,
+    alt: 'Gallery Image 5',
+  },
+  {
+    id: 'image4',
+    url: 'https://hips.hearstapps.com/hmg-prod/images/220907-delish-seo-chicken-tikka-masala-0212-eb-1675093094.jpg',
+    alt: 'Gallery Image 4',
+  },
+  {
+    id: 'image8',
+    url: g9,
+    alt: 'Gallery Image 8',
+  },
+  {
+    id: 'image9',
+    url: g8,
+    alt: 'Gallery Image 9',
   },
   {
     id: 'image3',
@@ -34,17 +79,6 @@ const galleryImages = [
     id: 'image6',
     url: 'https://img.pikbest.com/origin/09/02/29/46NpIkbEsTeX3.png!sw800',
     alt: 'Gallery Image 6',
-  },
-
-  {
-    id: 'image7',
-    url: newariCuisine,
-    alt: 'Gallery Image 7',
-  },
-  {
-    id: 'image5',
-    url: bgCuisine,
-    alt: 'Gallery Image 5',
   },
   {
     id: 'image4',
@@ -58,13 +92,8 @@ const galleryImages = [
   },
   {
     id: 'image9',
-    url: "https://www.tastingtable.com/img/gallery/20-delicious-indian-dishes-you-have-to-try-at-least-once/intro-1645057933.jpg",
+    url: 'https://www.tastingtable.com/img/gallery/20-delicious-indian-dishes-you-have-to-try-at-least-once/intro-1645057933.jpg',
     alt: 'Gallery Image 9',
-  },
-  {
-    id: 'image10',
-    url: newariCuisine,
-    alt: 'Gallery Image 10',
   },
   {
     id: 'image11',
@@ -72,104 +101,14 @@ const galleryImages = [
     alt: 'Gallery Image 11',
   },
   {
-    id: 'image12',
-    url: bgCuisine,
-    alt: 'Gallery Image 12',
-  },
-  {
     id: 'image13',
     url: newariCuisine,
     alt: 'Gallery Image 13',
   },
   {
-    id: 'image14',
-    url: bgCuisine,
-    alt: 'Gallery Image 14',
-  },
-  {
     id: 'image15',
     url: newariCuisine,
     alt: 'Gallery Image 15',
-  },
-  {
-    id: 'image16',
-    url: bgCuisine,
-    alt: 'Gallery Image 16',
-  },
-  {
-    id: 'image17',
-    url: bgCuisine,
-    alt: 'Gallery Image 17',
-  },
-  {
-    id: 'image18',
-    url: newariCuisine,
-    alt: 'Gallery Image 18',
-  },
-  {
-    id: 'image19',
-    url: bgCuisine,
-    alt: 'Gallery Image 19',
-  },
-  {
-    id: 'image20',
-    url: bgCuisine,
-    alt: 'Gallery Image 20',
-  },
-  {
-    id: 'image21',
-    url: newariCuisine,
-    alt: 'Gallery Image 21',
-  },
-  {
-    id: 'image22',
-    url: bgCuisine,
-    alt: 'Gallery Image 22',
-  },
-  {
-    id: 'image23',
-    url: bgCuisine,
-    alt: 'Gallery Image 23',
-  },
-  {
-    id: 'image24',
-    url: bgCuisine,
-    alt: 'Gallery Image 24',
-  },
-  {
-    id: 'image25',
-    url: bgCuisine,
-    alt: 'Gallery Image 24',
-  },
-  {
-    id: 'image25',
-    url: bgCuisine,
-    alt: 'Gallery Image 24',
-  },
-  {
-    id: 'image25',
-    url: bgCuisine,
-    alt: 'Gallery Image 24',
-  },
-  {
-    id: 'image26',
-    url: bgCuisine,
-    alt: 'Gallery Image 24',
-  },
-  {
-    id: 'image27',
-    url: newariCuisine,
-    alt: 'Gallery Image 21',
-  },
-  {
-    id: 'image28',
-    url: newariKitchen,
-    alt: 'Gallery Image 11',
-  },
-  {
-    id: 'image29',
-    url: newariKitchen,
-    alt: 'Gallery Image 11',
   },
 ];
 

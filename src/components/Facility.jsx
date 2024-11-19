@@ -21,10 +21,9 @@ const Facility = () => {
           Convenience <br /> and Facility
         </h3>
         <p className="text-center text-sm text-dark/60">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cum
-          itaque nulla iste rem tempora, sequi ducimus a sit dicta, ullam minus
-          vero. Similique magni nihil, quia provident soluta illo harum
-          cupiditate.
+          Come and experience the flavors of the Himalayas at Himalayan Flavours
+          & enjoy the convenience of our facilities and services that fulfills
+          your every delicious desire & need.
         </p>
       </div>
 
@@ -90,7 +89,7 @@ const Facility = () => {
         <img
           src={liveMusic}
           alt="Friday Live Music"
-          className="mx-auto mt-12 h-[60 vh] min-h-[28rem] w-full rounded-3xl object-cover shadow"
+          className="h-[60 vh] mx-auto mt-12 min-h-[28rem] w-full rounded-3xl object-cover shadow"
         />
       </div>
     </main>

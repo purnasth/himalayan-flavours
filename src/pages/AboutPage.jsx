@@ -15,7 +15,7 @@ const AboutPage = () => {
       <main className="px-0">
         <Title
           title="Welcome to Himalayan Flavours"
-          description="We are a family-owned restaurant that serves delicious food with love and care. Our mission is to provide the best dining experience to our customers."
+          description="Himalayan Flavours is more than just a restaurant; it's a celebration of the rich and diverse culinary heritage of the Himalayan region. Nestled in the heart of Victoria, B.C., our restaurant offers an authentic taste of India, Nepal, and China, bringing together the vibrant and bold flavors that define these cultures."
         />
         <section className="mt-32 grid grid-cols-3 gap-12">
           <img src={img2} alt="Newari Cusine" />
@@ -34,16 +34,18 @@ const AboutPage = () => {
         />
         <div className="flex flex-col">
           <div className="flex h-screen flex-col items-start justify-center gap-4 text-pretty">
-            <span className="text-xl opacity-70">Himalayan Flavours</span>
+            <span className="text-xl opacity-70">Our Story</span>
             <h3 className="text-xl capitalize leading-snug sm:text-2xl md:text-4xl lg:text-7xl lg:leading-snug">
-              Why Choose Us?
+              Taste of Himalayas
             </h3>
             <p className="max-w-md text-pretty text-left text-dark/60">
-              We are a family-owned restaurant that serves delicious food with
-              love and care. Our mission is to provide the best dining
-              experience to our customers. We have a wide range of dishes to
-              choose from, including authentic Nepalese, Chinese, and Indian
-              dishes. We have something for everyone!
+              Inspired by the breathtaking landscapes and warm hospitality of
+              the Himalayan region, Himalayan Flavours was founded with a
+              passion for sharing the authentic tastes and culinary traditions
+              of India, Nepal, and China. Our chefs, with years of experience
+              and a deep love for these cuisines, carefully craft each dish
+              using the finest ingredients, traditional techniques, and a touch
+              of creativity.
             </p>
           </div>
           <div className="flex h-screen flex-col items-start justify-center gap-4 text-pretty">
@@ -52,12 +54,12 @@ const AboutPage = () => {
               Excellence in Every Dish
             </h3>
             <p className="max-w-md text-pretty text-left text-dark/60">
-              From the spices we grind in-house to the meats and vegetables we
-              prepare daily, we prioritize quality at every step. This ensures
-              that each bite is not only flavorful but also wholesome and
-              satisfying. Join us at Himalayan Flavours and experience the true
-              essence of Himalayan cuisine, where every dish is crafted with
-              care and passion.
+              Excellence in every dish is our promise to you. We meticulously
+              select the freshest and finest ingredients, sourced both locally
+              and from the regions that inspire our cuisine. From the spices we
+              grind in-house to the meats and vegetables we prepare daily, we
+              prioritize quality at every step. This ensures that each bite is
+              not only flavorful but also wholesome and satisfying.
             </p>
           </div>
         </div>

@@ -6,7 +6,7 @@ export const offersContent = [
     offer: 'On Every Dish 10% Off',
     title: 'Nepalese Cuisine',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit Lorem ipsum dolor',
+      'On every nepalese cuisine dish, you will get 10% off on your total bill.',
     image: bgCuisine,
     link: '/nepalese-cuisine',
   },
@@ -15,7 +15,7 @@ export const offersContent = [
     offer: 'On Every Dish 15% Off',
     title: 'Indian Cuisine',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit Lorem ipsum dolor',
+      'On every indian cuisine dish, you will get 15% off on your total bill.',
     image: bgCuisine,
     link: '/indian-cuisine',
   },
@@ -24,7 +24,7 @@ export const offersContent = [
     offer: 'On Every Dish 20% Off',
     title: 'Chinese Cuisine',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit Lorem ipsum dolor',
+      'On every chinese cuisine dish, you will get 20% off on your total bill.',
     image: bgCuisine,
     link: '/chinese-cuisine',
   },
@@ -33,7 +33,7 @@ export const offersContent = [
     offer: 'On Every Dish 25% Off',
     title: 'Nepalese Cuisine',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit Lorem ipsum dolor',
+      'On every nepalese cuisine dish, you will get 25% off on your total bill.',
     image: bgCuisine,
     link: '/nepalese-cuisine',
   },
@@ -42,7 +42,7 @@ export const offersContent = [
     offer: 'On Every Dish 30% Off',
     title: 'Indian Cuisine',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit Lorem ipsum dolor',
+      'On every indian cuisine dish, you will get 30% off on your total bill.',
     image: bgCuisine,
     link: '/indian-cuisine',
   },
@@ -51,7 +51,7 @@ export const offersContent = [
     offer: 'On Every Dish 35% Off',
     title: 'Chinese Cuisine',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit Lorem ipsum dolor',
+      'On every chinese cuisine dish, you will get 35% off on your total bill.',
     image: bgCuisine,
     link: '/chinese-cuisine',
   },
@@ -60,7 +60,7 @@ export const offersContent = [
     offer: 'On Every Dish 40% Off',
     title: 'Nepalese Cuisine',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit Lorem ipsum dolor',
+      'On every nepalese cuisine dish, you will get 40% off on your total bill.',
     image: bgCuisine,
     link: '/nepalese-cuisine',
   },
@@ -69,7 +69,7 @@ export const offersContent = [
     offer: 'On Every Dish 45% Off',
     title: 'Indian Cuisine',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit Lorem ipsum dolor',
+      'On every indian cuisine dish, you will get 45% off on your total bill.',
     image: bgCuisine,
     link: '/indian-cuisine',
   },
@@ -78,7 +78,7 @@ export const offersContent = [
     offer: 'On Every Dish 50% Off',
     title: 'Chinese Cuisine',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit Lorem ipsum dolor  ',
+      'On every chinese cuisine dish, you will get 50% off on your total bill.',
     image: bgCuisine,
     link: '/chinese-cuisine',
   },

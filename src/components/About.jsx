@@ -32,12 +32,10 @@ const About = () => {
             Himalayan Flavours
           </h3>
           <p className="mb-12 text-center text-sm text-dark/60 2xl:text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
-            cum itaque nulla iste rem tempora, sequi ducimus a sit dicta, ullam
-            minus vero. Similique magni nihil, quia provident soluta illo harum
-            cupiditate, excepturi totam nobis sunt assumenda, et eius porro a
-            sit perferendis fugit voluptate voluptas architecto exercitationem
-            saepe. Velit!
+            Discover the best place to enjoy authentic Himalayan cuisine at
+            Himalayan Flavours! Soon, we will become your favorite spot in the
+            city for genuine Himalayan dishes. Our commitment is to deliver
+            outstanding service and top-quality food.
           </p>
 
           {/* <button className="mt-12 bg-orange-300 px-8 py-2 rounded-full">Explore More</button> */}

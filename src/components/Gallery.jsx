@@ -45,10 +45,9 @@ const Gallery = ({ limit }) => {
             Taste the difference
           </h3>
           <p className="text-center text-sm text-dark/60">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
-            cum itaque nulla iste rem tempora, sequi ducimus a sit dicta, ullam
-            minus vero. Similique magni nihil, quia provident soluta illo harum
-            cupiditate.
+            Witness the flavors of the Himalayas captured in the frames of our
+            gallery. Our dishes are prepared with the finest ingredients and
+            authentic recipes to give you a taste of the Himalayas.
           </p>
         </div>
 

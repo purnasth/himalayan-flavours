@@ -32,7 +32,7 @@ const contactFormFields = [
     label: 'Number of Guests',
     required: true,
   },
-  { name: 'message', type: 'textarea', label: 'Message', required: false },
+  { name: 'message', type: 'textarea', label: 'Message', required: true },
 ];
 
 const Form = () => {
@@ -74,6 +74,7 @@ const Form = () => {
           <div key={input.name} className="relative mb-4">
             <label htmlFor={input.name} className="mb-2 block text-dark/80">
               {input.label}
+              {input.required && <span className="text-red-500">*</span>}
             </label>
             {input.type === 'textarea' ? (
               <textarea
@@ -95,7 +96,7 @@ const Form = () => {
               />
             )}
             {errors[input.name] && (
-              <span className="pointer-events-none absolute left-0 top-1/2 select-none bg-white m-px py-1 text-sm text-red-500">
+              <span className="pointer-events-none absolute left-0 top-1/2 m-px select-none bg-white py-1 text-sm text-red-500">
                 {errors[input.name].message}*
               </span>
             )}

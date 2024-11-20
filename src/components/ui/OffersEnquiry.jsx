@@ -99,6 +99,7 @@ const OffersEnquiry = ({ offerTitle, onClose }) => {
               <div key={input.name} className="relative mb-4">
                 <label htmlFor={input.name} className="block text-dark/80">
                   {input.label}
+                  {input.required && <span className="text-red-500">*</span>}
                 </label>
                 {input.type === 'textarea' ? (
                   <textarea

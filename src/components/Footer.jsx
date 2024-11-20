@@ -28,10 +28,10 @@ const Footer = () => {
         <div className="mt-16 grid grid-cols-7">
           <div className="col-span-2 w-full">
             <span className="text-xs font-bold uppercase text-dark/70">
-              Navigation
+              Web Pages
             </span>
             <ul className="links mt-8 flex flex-col items-start justify-start gap-2 md:gap-4">
-              {navLinks.map((link) => (
+              {navLinks.slice(1,6).map((link) => (
                 <li className="group w-full" key={link.id}>
                   <a
                     href={link.url}

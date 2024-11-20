@@ -116,26 +116,31 @@ export const testimonialsContent = [
 export const navLinks = [
   {
     id: 1,
+    title: 'Home',
+    url: '/',
+  },
+  {
+    id: 2,
     title: 'About Restaurant',
     url: '/about',
   },
   {
-    id: 2,
+    id: 3,
     title: 'Food Menu',
     url: '/food-menu',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Food Gallery',
     url: '/gallery',
   },
   {
-    id: 4,
+    id: 5,
     title: 'Reach to us',
     url: '/contact',
   },
   {
-    id: 5,
+    id: 6,
     title: 'Promotions',
     url: '/offers',
   },

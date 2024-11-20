@@ -12,7 +12,7 @@ const schema = yup.object().shape({
   email: yup.string().email('Invalid email').required('Enter your email*'),
   phoneNumber: yup.string().required('Enter your phone number*'),
   eventDate: yup.string().required('Enter your event date*'),
-  guests: yup.number().required('Enter number of guests*'),
+  guestsNumber: yup.string().required('Enter number of guests*'),
   message: yup.string().required('Enter your message*'),
 });
 
@@ -26,7 +26,12 @@ const contactFormFields = [
     required: true,
   },
   { name: 'eventDate', type: 'date', label: 'Event Date', required: true },
-  { name: 'guests', type: 'number', label: 'Number of Guests', required: true },
+  {
+    name: 'guestsNumber',
+    type: 'text',
+    label: 'Number of Guests',
+    required: true,
+  },
   { name: 'message', type: 'textarea', label: 'Message', required: false },
 ];
 
@@ -90,7 +95,7 @@ const Form = () => {
               />
             )}
             {errors[input.name] && (
-              <span className="pointer-events-none absolute left-0 top-1/2 select-none text-sm text-red-500">
+              <span className="pointer-events-none absolute left-0 top-1/2 select-none bg-white m-px py-1 text-sm text-red-500">
                 {errors[input.name].message}*
               </span>
             )}

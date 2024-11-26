@@ -31,7 +31,7 @@ const contactInfo = [
     id: 4,
     type: 'social',
     title: 'Facebook',
-    url: '#',
+    url: 'https://www.facebook.com/HimalayanFlavourRestaurant',
     icon: 'FaFacebookF',
     image: null,
   },

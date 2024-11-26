@@ -5,8 +5,8 @@ import {
   TbMicrophone,
   // TbBowlChopsticks,
   TbParkingCircle,
+  TbChefHat,
 } from 'react-icons/tb';
-import { MdOutlineLocationOn } from 'react-icons/md';
 import bgCuisine from '../assets/images/bg_cuisine.png';
 import { GiCryptEntrance } from 'react-icons/gi';
 import { MdOutlineDeliveryDining } from 'react-icons/md';
@@ -73,9 +73,9 @@ const Facility = () => {
           </div>
 
           <div className="flex flex-col items-center gap-4 p-4 text-center">
-            <MdOutlineLocationOn className="text-4xl text-dark/80" />
+            <TbChefHat className="text-4xl text-dark/80" />
             <p className="text-xs md:text-xs xl:text-base">
-              Convenient Location
+              11am - 3pm Lavish Buffet
             </p>
           </div>
           <div className="flex flex-col items-center gap-4 p-4 text-center">

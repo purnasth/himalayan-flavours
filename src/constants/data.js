@@ -89,7 +89,7 @@ export const testimonialsContent = [
     author: 'Purna Shrestha',
     source: 'via Tripadvisor',
     review:
-      'Himalayan Flavours is a great place to enjoy authentic Nepalese cuisine. The food is delicious and the service is excellent. The staff is very friendly and welcoming. I highly recommend this restaurant to anyone looking for a taste of Nepal.',
+      "I am excited for the opening of Himalayan Flavours. I've been hearing a lot of good things about this place and I can't wait to try it out. The food looks amazing and I'm sure it will be a hit with the locals. I wish the owners all the best and hope they have a successful opening.",
     sourceImage:
       'https://www.edigitalagency.com.au/wp-content/uploads/tripadvisor-logo-circle-owl-icon-black-green-858x858.png',
     link: '#',
@@ -98,7 +98,8 @@ export const testimonialsContent = [
     author: 'Purna Shrestha',
     source: 'via Google Reviews',
     review:
-      'Himalayan Flavours is a great place to enjoy authentic Nepalese cuisine. The food is delicious and the service is excellent. The staff is very friendly and welcoming. I highly recommend this restaurant to anyone looking for a taste of Nepal.',
+      // 'Himalayan Flavours is a great place to enjoy authentic Nepalese cuisine. The food is delicious and the service is excellent. The staff is very friendly and welcoming. I highly recommend this restaurant to anyone looking for a taste of Nepal.',
+      "I am excited for the opening of Himalayan Flavours. I've been hearing a lot of good things about this place and I can't wait to try it out. The food looks amazing and I'm sure it will be a hit with the locals. I wish the owners all the best and hope they have a successful opening.",
     sourceImage:
       'https://lh3.googleusercontent.com/YGSpPZtg5J-EB3okHfhQdtJObZxAf161I05Ja16W66lMsdLZDMb4AZxxW0G7Iq_FEa1v91cIOcX-bQ1k11TQeBe_ufSvfNjD7-Pkyg=w512-l90-sg-rj-c0xffffff',
     link: '#',
@@ -107,7 +108,8 @@ export const testimonialsContent = [
     author: 'Purna Shrestha',
     source: 'via Yelp',
     review:
-      'Himalayan Flavours is a great place to enjoy authentic Nepalese cuisine. The food is delicious and the service is excellent. The staff is very friendly and welcoming. I highly recommend this restaurant to anyone looking for a taste of Nepal.',
+      // 'Himalayan Flavours is a great place to enjoy authentic Nepalese cuisine. The food is delicious and the service is excellent. The staff is very friendly and welcoming. I highly recommend this restaurant to anyone looking for a taste of Nepal.',
+      "I am excited for the opening of Himalayan Flavours. I've been hearing a lot of good things about this place and I can't wait to try it out. The food looks amazing and I'm sure it will be a hit with the locals. I wish the owners all the best and hope they have a successful opening.",
     sourceImage: 'https://www.yelp.com/favicon.ico',
     link: '#',
   },

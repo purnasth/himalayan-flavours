@@ -50,7 +50,7 @@ const Navbar = () => {
           >
             <CgMenuHotdog className="text-2xl" />
           </button>
-          <Link
+          {/* <Link
             to="https://mayurstay.com/himalayanflavours/menu.php"
             className={`transition-1000 inline-flex items-center gap-2 rounded-full border border-light/50 bg-dark/50 px-4 py-2 font-bold text-light shadow backdrop-blur-sm ${visible ? 'translate-y-0 scale-100' : '-translate-y-[200%] scale-0'}`}
             aria-label="Order Now"
@@ -59,6 +59,16 @@ const Navbar = () => {
             // download
           >
             Order Now
+            <MdOutlineRoomService className="animate-bounce text-2xl" />
+          </Link> */}
+          <Link
+            to="/food-menu"
+            className={`transition-1000 inline-flex items-center gap-2 rounded-full border border-light/50 bg-dark/50 px-4 py-2 font-bold text-light shadow backdrop-blur-sm ${visible ? 'translate-y-0 scale-100' : '-translate-y-[200%] scale-0'}`}
+            aria-label="View Menu"
+            title="View Menu"
+            // download
+          >
+            View Menu
             <MdOutlineRoomService className="animate-bounce text-2xl" />
           </Link>
         </div>
@@ -130,8 +140,7 @@ const Navbar = () => {
               <MdStarRate />
             </span>
             <p className="my-4 text-sm text-dark/50">
-              <strong className="font-bold text-dark">5.0</strong>/ 5,753
-              reviews
+              <strong className="font-bold text-dark">5.0</strong>/ 0 review
             </p>
           </div>
         </div>

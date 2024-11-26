@@ -31,7 +31,7 @@ const Footer = () => {
               Web Pages
             </span>
             <ul className="links mt-8 flex flex-col items-start justify-start gap-2 md:gap-4">
-              {navLinks.slice(1,6).map((link) => (
+              {navLinks.slice(1, 6).map((link) => (
                 <li className="group w-full" key={link.id}>
                   <a
                     href={link.url}
@@ -65,8 +65,7 @@ const Footer = () => {
                 ))}
               </span>
               <p className="my-4 text-sm text-dark/50">
-                <strong className="font-bold text-dark">5.0</strong>/ 5,753
-                reviews
+                <strong className="font-bold text-dark">5.0</strong>/ 0 review
               </p>
             </div>
           </div>

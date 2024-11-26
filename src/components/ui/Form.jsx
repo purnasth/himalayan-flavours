@@ -8,12 +8,13 @@ import { submitForm } from '../../utils/api';
 import ReCAPTCHA from 'react-google-recaptcha';
 
 const schema = yup.object().shape({
-  fullName: yup.string().required('Enter your full name*'),
-  email: yup.string().email('Invalid email').required('Enter your email*'),
-  phoneNumber: yup.string().required('Enter your phone number*'),
-  eventDate: yup.string().required('Enter your event date*'),
-  guestsNumber: yup.string().required('Enter number of guests*'),
-  message: yup.string().required('Enter your message*'),
+  fullName: yup.string().required('Enter your full name'),
+  email: yup.string().email('Invalid email').required('Enter your email'),
+  phoneNumber: yup.string().required('Enter your phone number'),
+  eventTitle: yup.string().required('Enter your event title'),
+  eventDate: yup.string().required('Enter your event date'),
+  guestsNumber: yup.string().required('Enter number of guests'),
+  message: yup.string().required('Enter your message'),
 });
 
 const contactFormFields = [
@@ -25,10 +26,11 @@ const contactFormFields = [
     label: 'Phone Number',
     required: true,
   },
+  { name: 'eventTitle', type: 'text', label: 'Event Title', required: true },
   { name: 'eventDate', type: 'date', label: 'Event Date', required: true },
   {
     name: 'guestsNumber',
-    type: 'text',
+    type: 'number',
     label: 'Number of Guests',
     required: true,
   },

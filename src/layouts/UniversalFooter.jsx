@@ -61,8 +61,7 @@ const UniversalFooter = () => {
                 ))}
               </span>
               <p className="my-4 text-sm text-dark/50">
-                <strong className="font-bold text-dark">5.0</strong>/ 5,753
-                reviews
+                <strong className="font-bold text-dark">5.0</strong>/ 0 review
               </p>
             </div>
           </div>

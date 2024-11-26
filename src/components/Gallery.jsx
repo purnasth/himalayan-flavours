@@ -20,23 +20,27 @@ const Gallery = ({ limit }) => {
         <div className="absolute inset-0 flex h-28 -translate-y-1/3 flex-col items-center justify-center gap-2">
           <div className="mx-auto inline-flex items-center justify-center gap-4 overflow-hidden rounded-full bg-white p-12">
             <img
-              src="https://thekayonresort.com/wp-content/uploads/2023/05/Traveller-Choice-TripAdvisor-2023-Square.jpg"
+              // src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/48/de/67/caption.jpg?w=600&h=-1&s=1"
+              src="https://cdn.freelogovectors.net/wp-content/uploads/2023/04/skipthedishes-logo-freelogovectors.net_.png"
               alt=""
               className="size-24 bg-white object-contain p-2"
             />
             <img
-              src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/48/de/67/caption.jpg?w=600&h=-1&s=1"
+              // src="https://thekayonresort.com/wp-content/uploads/2023/05/Traveller-Choice-TripAdvisor-2023-Square.jpg"
+              src="https://pics.paypal.com/00/c/gifts/gb/ue.png"
               alt=""
               className="size-24 bg-white object-contain p-2"
             />
             <img
-              src="https://serendipitywilderness.com/wp-content/uploads/2024/03/2023-WLRA-Winner-Logo-1-1024x917.png"
+              // src="https://serendipitywilderness.com/wp-content/uploads/2024/03/2023-WLRA-Winner-Logo-1-1024x917.png"
+              src="https://cdn.prod.website-files.com/60414b21f1ffcdbb0d5ad688/63c95ba382cdf0a911766466_5e8ce484664eae0004085467.png"
               alt=""
               className="size-24 bg-white object-contain p-2"
             />
           </div>
           <p className="bg-orange-300/20 px-2 font-bold">
-            The Awards & Recognization
+            {/* The Awards & Recognization */}
+            Our Delivery Partners
           </p>
         </div>
 

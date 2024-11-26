@@ -1,87 +1,89 @@
 import bgCuisine from '../assets/images/bg_cuisine.png';
+import dessertOffer from '../assets/images/offers/dessert.jpg';
+import beerOffer from '../assets/images/offers/beer.jpg';
 
 export const offersContent = [
   {
     id: 1,
     offer: 'On Every Dish 10% Off',
-    title: 'Nepalese Cuisine',
+    title: 'Free Dessert',
     description:
       'On every nepalese cuisine dish, you will get 10% off on your total bill.',
-    image: bgCuisine,
+    image: dessertOffer,
     link: '/nepalese-cuisine',
   },
   {
     id: 2,
     offer: 'On Every Dish 15% Off',
-    title: 'Indian Cuisine',
+    title: 'Beer on MRP',
     description:
       'On every indian cuisine dish, you will get 15% off on your total bill.',
-    image: bgCuisine,
+    image: beerOffer,
     link: '/indian-cuisine',
   },
-  {
-    id: 3,
-    offer: 'On Every Dish 20% Off',
-    title: 'Chinese Cuisine',
-    description:
-      'On every chinese cuisine dish, you will get 20% off on your total bill.',
-    image: bgCuisine,
-    link: '/chinese-cuisine',
-  },
-  {
-    id: 4,
-    offer: 'On Every Dish 25% Off',
-    title: 'Nepalese Cuisine',
-    description:
-      'On every nepalese cuisine dish, you will get 25% off on your total bill.',
-    image: bgCuisine,
-    link: '/nepalese-cuisine',
-  },
-  {
-    id: 5,
-    offer: 'On Every Dish 30% Off',
-    title: 'Indian Cuisine',
-    description:
-      'On every indian cuisine dish, you will get 30% off on your total bill.',
-    image: bgCuisine,
-    link: '/indian-cuisine',
-  },
-  {
-    id: 6,
-    offer: 'On Every Dish 35% Off',
-    title: 'Chinese Cuisine',
-    description:
-      'On every chinese cuisine dish, you will get 35% off on your total bill.',
-    image: bgCuisine,
-    link: '/chinese-cuisine',
-  },
-  {
-    id: 7,
-    offer: 'On Every Dish 40% Off',
-    title: 'Nepalese Cuisine',
-    description:
-      'On every nepalese cuisine dish, you will get 40% off on your total bill.',
-    image: bgCuisine,
-    link: '/nepalese-cuisine',
-  },
-  {
-    id: 8,
-    offer: 'On Every Dish 45% Off',
-    title: 'Indian Cuisine',
-    description:
-      'On every indian cuisine dish, you will get 45% off on your total bill.',
-    image: bgCuisine,
-    link: '/indian-cuisine',
-  },
-  {
-    id: 9,
-    offer: 'On Every Dish 50% Off',
-    title: 'Chinese Cuisine',
-    description:
-      'On every chinese cuisine dish, you will get 50% off on your total bill.',
-    image: bgCuisine,
-    link: '/chinese-cuisine',
-  },
+  // {
+  //   id: 3,
+  //   offer: 'On Every Dish 20% Off',
+  //   title: 'Chinese Cuisine',
+  //   description:
+  //     'On every chinese cuisine dish, you will get 20% off on your total bill.',
+  //   image: bgCuisine,
+  //   link: '/chinese-cuisine',
+  // },
+  // {
+  //   id: 4,
+  //   offer: 'On Every Dish 25% Off',
+  //   title: 'Nepalese Cuisine',
+  //   description:
+  //     'On every nepalese cuisine dish, you will get 25% off on your total bill.',
+  //   image: bgCuisine,
+  //   link: '/nepalese-cuisine',
+  // },
+  // {
+  //   id: 5,
+  //   offer: 'On Every Dish 30% Off',
+  //   title: 'Indian Cuisine',
+  //   description:
+  //     'On every indian cuisine dish, you will get 30% off on your total bill.',
+  //   image: bgCuisine,
+  //   link: '/indian-cuisine',
+  // },
+  // {
+  //   id: 6,
+  //   offer: 'On Every Dish 35% Off',
+  //   title: 'Chinese Cuisine',
+  //   description:
+  //     'On every chinese cuisine dish, you will get 35% off on your total bill.',
+  //   image: bgCuisine,
+  //   link: '/chinese-cuisine',
+  // },
+  // {
+  //   id: 7,
+  //   offer: 'On Every Dish 40% Off',
+  //   title: 'Nepalese Cuisine',
+  //   description:
+  //     'On every nepalese cuisine dish, you will get 40% off on your total bill.',
+  //   image: bgCuisine,
+  //   link: '/nepalese-cuisine',
+  // },
+  // {
+  //   id: 8,
+  //   offer: 'On Every Dish 45% Off',
+  //   title: 'Indian Cuisine',
+  //   description:
+  //     'On every indian cuisine dish, you will get 45% off on your total bill.',
+  //   image: bgCuisine,
+  //   link: '/indian-cuisine',
+  // },
+  // {
+  //   id: 9,
+  //   offer: 'On Every Dish 50% Off',
+  //   title: 'Chinese Cuisine',
+  //   description:
+  //     'On every chinese cuisine dish, you will get 50% off on your total bill.',
+  //   image: bgCuisine,
+  //   link: '/chinese-cuisine',
+  // },
 ];
 
 export const testimonialsContent = [

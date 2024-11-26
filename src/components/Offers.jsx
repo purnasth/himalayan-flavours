@@ -17,19 +17,20 @@ const Offers = () => {
           and your family are all welcome to join us!
         </p>
       </div>
-      <div className="flex items-start justify-between gap-y-12 md:gap-12">
-        <div className="grid grid-cols-2 gap-8">
+      <div className="grid grid-cols-3 gap-y-12 md:gap-12">
+        <div className="col-span-2 grid grid-cols-2 gap-8">
           {offersContent.slice(0, 2).map((content, index) => (
             <div key={index} className="group relative">
-              <div className="overlay transition-300 absolute inset-0 -z-0 size-full bg-black/70 group-hover:bg-black/80"></div>
+              {/* <div className="overlay transition-300 absolute inset-0 -z-0 size-full bg-black/70 group-hover:bg-black/80"></div> */}
+              <div className="overlay transition-300 absolute inset-0 -z-0 bg-gradient-to-t from-black/50 to-transparent outline outline-1 -outline-offset-[12px] outline-light/40 group-hover:outline-offset-0" />
               <img
                 src={content.image}
                 alt=""
-                className="-z-10 h-[70vh] min-h-[36rem] w-full object-cover object-left-top shadow"
+                className="-z-10 aspect-square size-full object-cover shadow"
               />
 
-              <div className="absolute inset-0 z-10 flex size-full flex-col items-center justify-between px-12 py-16 text-center text-light">
-                <span className="text-sm font-light uppercase tracking-wider md:text-sm">
+              <div className="absolute inset-0 z-10 flex size-full flex-col items-center justify-end px-12 py-8 text-center text-light">
+                {/* <span className="text-sm font-light uppercase tracking-wider md:text-sm">
                   {content.offer}
                 </span>
                 <div>
@@ -40,7 +41,7 @@ const Offers = () => {
                   <p className="line-clamp-2 text-center text-sm opacity-80">
                     {content.description}
                   </p>
-                </div>
+                </div> */}
 
                 <Link
                   to="/offers"
@@ -62,7 +63,7 @@ const Offers = () => {
             </div>
           ))}
         </div>
-        <div className="px-8">
+        <div className="px-4">
           <p className="font-normal">
             We currently have
             <Link to="#" className="mx-1 bg-orange-300/50 px-2 font-extrabold">
@@ -71,7 +72,7 @@ const Offers = () => {
             available with us. Grab your favorite dish at a discounted price
             before it's too late!
           </p>
-          <p className="mt-4 max-w-xs text-sm opacity-70">
+          <p className="mt-4 max-w-xs text-base opacity-70">
             For more information, please feel free to enquiry us via the enquiry
             button below.
           </p>
@@ -102,7 +103,7 @@ const Offers = () => {
               </a>
             </div>
           </div>
-        </div>                                                                                                                                                             
+        </div>
       </div>
     </main>
   );

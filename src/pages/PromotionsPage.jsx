@@ -46,14 +46,15 @@ const PromotionsPage = () => {
               key={index}
               className="transition-300 group relative outline outline-1 outline-offset-[12px] outline-dark/0 hover:outline-offset-0"
             >
-              <div className="overlay transition-300 absolute inset-0 -z-0 bg-black/70 outline outline-1 -outline-offset-[12px] outline-light/40 group-hover:bg-black/80 group-hover:outline-offset-0" />
+              {/* <div className="overlay transition-300 absolute inset-0 -z-0 bg-black/70 outline outline-1 -outline-offset-[12px] outline-light/40 group-hover:bg-black/80 group-hover:outline-offset-0" /> */}
+              <div className="overlay transition-300 absolute inset-0 -z-0 bg-gradient-to-t from-black/50 to-transparent outline outline-1 -outline-offset-[12px] outline-light/40 group-hover:outline-offset-0" />
               <img
                 src={content.image}
                 alt=""
                 className="-z-10 aspect-square w-full object-cover shadow"
               />
-              <div className="absolute inset-0 z-10 flex flex-col items-center justify-between px-12 py-16 text-center text-light">
-                <span className="text-sm font-light uppercase tracking-wider">
+              <div className="absolute inset-0 z-10 flex flex-col items-center justify-end px-12 py-8 text-center text-light">
+                {/* <span className="text-sm font-light uppercase tracking-wider">
                   {content.offer}
                 </span>
                 <div>
@@ -63,7 +64,7 @@ const PromotionsPage = () => {
                   <p className="line-clamp-2 text-sm opacity-80">
                     {content.description}
                   </p>
-                </div>
+                </div> */}
                 <button
                   onClick={() => toggleOffersEnquiry(content.title)}
                   className="transition-300 flex items-center gap-2 rounded-full border border-light/50 bg-light/10 px-4 py-2 text-light backdrop-blur group-hover:bg-light/30"

@@ -83,10 +83,10 @@ const Navbar = () => {
         />
       </header>
 
-      {/* <div
+      <div
         className={`transition-700 fixed inset-0 z-30 bg-black/50 backdrop-blur-sm ${isOpen ? 'opacity-100' : 'pointer-events-none opacity-0'}`}
         onClick={() => setIsOpen(false)}
-      /> */}
+      />
 
       <nav
         className={`transition-700 fixed left-0 top-0 h-screen w-full overflow-y-auto bg-light md:w-[28rem] ${

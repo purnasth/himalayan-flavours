@@ -35,12 +35,12 @@ const PromotionsPage = () => {
 
   return (
     <>
-      <main className="px-8">
+      <main className="px-4 lg:px-8">
         <Title
           title="Special Offers & Promotions"
           description="Check out our special offers and promotions. We have something for everyone. Grab your favorite deal before it's gone!"
         />
-        <div className="mt-16 grid grid-cols-3 gap-8">
+        <div className="mt-12 md:mt-16 grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-8">
           {offersContent.map((content, index) => (
             <div
               key={index}

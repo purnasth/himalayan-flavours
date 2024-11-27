@@ -32,7 +32,7 @@ const Preloader = ({ onFinish }: { onFinish: () => void }) => {
             transition={{ duration: 0.8, ease: 'easeOut' }}
             className="text-center"
           >
-            <h1 className="font-body text-7xl font-bold">
+            <h1 className="font-body text-4xl md:text-7xl font-bold">
               We Are Opening Soon
             </h1>
             {/* <p className="mt-4 text-lg text-gray-600">

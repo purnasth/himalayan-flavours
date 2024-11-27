@@ -12,7 +12,7 @@ const GalleryPage = () => {
           description="At Himalayan Flavours, we believe that every bite should bring joy and satisfaction. Our diverse menu is crafted with the finest ingredients and traditional recipes to offer you an unforgettable dining experience. Join us and discover the true essence of culinary happiness."
         />
 
-        <FoodGallery galleryClassName="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4" />
+        <FoodGallery galleryClassName="columns-2 sm:columns-2 lg:columns-3 xl:columns-4 gap-2 md:gap-4" />
       </main>
       <UniversalFooter />
     </>

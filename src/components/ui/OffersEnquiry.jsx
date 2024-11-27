@@ -121,7 +121,7 @@ const OffersEnquiry = ({ offerTitle, onClose }) => {
                   />
                 )}
                 {errors[input.name] && (
-                  <p className="pointer-events-none absolute bottom-3 select-none text-sm text-red-500">
+                  <p className="pointer-events-none absolute bottom-[6px] select-none text-sm text-red-500 md:bottom-3">
                     {errors[input.name].message}
                   </p>
                 )}

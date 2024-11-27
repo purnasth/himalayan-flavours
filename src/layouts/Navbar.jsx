@@ -83,10 +83,10 @@ const Navbar = () => {
         />
       </header>
 
-      <div
+      {/* <div
         className={`transition-700 fixed inset-0 z-30 bg-black/50 backdrop-blur-sm ${isOpen ? 'opacity-100' : 'pointer-events-none opacity-0'}`}
         onClick={() => setIsOpen(false)}
-      />
+      /> */}
 
       <nav
         className={`transition-700 fixed left-0 top-0 h-screen w-full overflow-y-auto bg-light md:w-[28rem] ${
@@ -102,7 +102,7 @@ const Navbar = () => {
           &times;
         </button>
 
-        <div className="justify -evenly flex size-full flex-col items-start gap-0 px-8 text-dark">
+        <div className="justify -evenly flex size-full flex-col items-start gap-0 px-4 text-dark md:px-8">
           <div className="mt-12 w-full">
             <span className="text-xs uppercase text-dark/50">Web Pages</span>
 

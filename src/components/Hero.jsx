@@ -14,12 +14,12 @@ const Hero = () => {
           // src="https://wallpapers.com/images/hd/food-4k-anl1yr892h6ccjeb.jpg"
           src={bgCuisine}
           alt="Himalayan Flavours Restaurant"
-          className="h-screen w-full object-cover object-center contrast-125"
+          className="h-[70vh] w-full object-cover object-center contrast-125 lg:h-screen"
         />
 
         {/* <div className="pointer-events-none absolute inset-0 z-10 flex size-full flex-col items-center justify-end bg-gradient-to-t from-black/60 to-black/0 text-light"> */}
         <div className="pointer-events-none absolute inset-0 z-10 flex size-full flex-col items-center justify-end">
-          <Logo className="h-64 w-auto object-contain p-1" />
+          <Logo className="h-40 lg:h-64 w-auto object-contain p-1" />
           {/* <span className="text-sm font-light uppercase tracking-wider md:text-sm">
             Himalayan Flavours
           </span> */}

@@ -129,7 +129,7 @@ const FoodGallery = ({ limit, galleryClassName }) => {
         {displayedImages.map((image, index) => (
           <div
             key={index}
-            className="group mb-4 break-inside-avoid overflow-hidden rounded-2xl border border-dark/20 bg-white shadow-md"
+            className="group mb-2 md:mb-4 break-inside-avoid overflow-hidden rounded-lg md:rounded-2xl border border-dark/20 bg-white shadow-md"
             data-src={image.url}
           >
             <img

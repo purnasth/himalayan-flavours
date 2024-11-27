@@ -17,7 +17,7 @@ const Reservation = () => {
         />
         <div className="z-10 contents text-white">
           <div className="container mx-auto my-16 max-w-xl text-center">
-            <h3 className="text-4xl font-semibold tracking-wide">
+            <h3 className="text-3xl md:text-4xl font-semibold">
               Reserve a Table
             </h3>
             <p className="mt-4 text-base font-light text-gray-300">
@@ -37,7 +37,7 @@ const Reservation = () => {
                 </span>
                 <a
                   rel="noopener noreferrer"
-                  className="transition-linear ml-2 text-xl font-semibold"
+                  className="transition-linear ml-2 text-base md:text-xl font-semibold"
                   href="tel:+12509861755"
                   target="_blank"
                 >
@@ -46,7 +46,7 @@ const Reservation = () => {
               </p>
               <a
                 rel="noopener noreferrer"
-                className="transition-linear text-lg font-semibold"
+                className="transition-linear text-base md:text-lg font-semibold"
                 href="mailto:info@himalayan-flavours.com"
                 target="_blank"
               >

@@ -7,7 +7,7 @@ const FireButton = ({ value, router }) => {
     <>
       <Link
         to={router}
-        className="transition-300 group flex items-center justify-center gap-2 rounded-full border border-orange-300 bg-orange-300 px-4 py-2 hover:bg-light hover:text-orange-400"
+        className="transition-300 group flex items-center justify-center gap-2 rounded-full border border-orange-300 bg-orange-300 px-4 py-2 text-sm hover:bg-light hover:text-orange-400 md:text-base"
       >
         <img
           src={fire}

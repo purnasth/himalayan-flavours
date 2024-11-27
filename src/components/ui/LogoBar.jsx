@@ -8,7 +8,7 @@ const LogoBar = () => {
       <img
         src={logo}
         alt="Fire"
-        className="z-10 size-14 object-contain opacity-70"
+        className="z-10 size-8 md:size-14 object-contain opacity-70"
       />
     </div>
   );

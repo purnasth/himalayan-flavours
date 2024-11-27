@@ -20,17 +20,17 @@ const Footer = () => {
       ></div>
       <Contact />
 
-      <section className="relative p-24">
+      <section className="relative px-6 lg:p-24">
         <div className="pointer-events-none absolute inset-0 -z-10 size-full bg-gradient-to-t from-white to-transparent"></div>
         <div className="z-10 flex items-center justify-center">
           <Logo className="h-40 w-auto object-contain" />
         </div>
-        <div className="mt-16 grid grid-cols-7">
-          <div className="col-span-2 w-full">
+        <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-7 lg:gap-0">
+          <div className="col-span-1 w-full lg:col-span-2">
             <span className="text-xs font-bold uppercase text-dark/70">
               Web Pages
             </span>
-            <ul className="links mt-8 flex flex-col items-start justify-start gap-2 md:gap-4">
+            <ul className="links mt-4 flex flex-col items-start justify-start gap-2 md:mt-8 md:gap-4">
               {navLinks.slice(1, 6).map((link) => (
                 <li className="group w-full" key={link.id}>
                   <a
@@ -45,13 +45,13 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="col-span-3">
-            <div className="w-full text-center">
+          <div className="col-span-1 lg:col-span-3">
+            <div className="w-full text-left lg:text-center">
               {/* <img
                 src="https://www.manigrambishrambatika.com/template/web/img/testi-qoute-1.png"
                 alt=""
               /> */}
-              <span className="text-center text-xs font-bold uppercase text-dark/70">
+              <span className="text-left text-xs font-bold uppercase text-dark/70 lg:text-center">
                 Reviews
               </span>
 
@@ -70,19 +70,19 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="col-span-2 w-full text-right">
+          <div className="col-span-1 w-full text-left lg:col-span-2 lg:text-right">
             <span className="text-xs font-bold uppercase text-dark/70">
               Contact Info
             </span>
-            <div className="mt-8 space-y-8">
-              <ContactInfo align="justify-end items-end text-right" />
+            <div className="mt-4 space-y-8 md:mt-8">
+              <ContactInfo align="justify-start lg:justify-end items-start lg:items-end text-left lg:text-right" />
             </div>
           </div>
         </div>
 
         {/* <hr className="my-8 w-full border-dark/20" /> */}
 
-        <div className="mt-16 flex flex-col items-center justify-center gap-2 text-sm md:flex-row md:justify-between md:text-base">
+        <div className="my-12 flex flex-col items-start justify-start gap-2 text-base md:flex-row md:justify-between md:text-base lg:mb-0 lg:mt-16 lg:items-center lg:justify-between lg:text-sm">
           <span>© 2024 Himalayan Flavours </span>
           <span>
             Website by: &nbsp;

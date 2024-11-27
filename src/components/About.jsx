@@ -9,29 +9,29 @@ import img4 from '../assets/images/update/8.webp';
 const About = () => {
   return (
     <main className="pt-0">
-      <div className="grid grid-cols-1 content-center gap-16 md:grid-cols-3">
-        <div className="hidden space-y-24 pt-64 md:block">
+      <div className="grid grid-cols-1 content-center gap-8 md:grid-cols-3">
+        <div className="flex items-center justify-center gap-8 pt-12 md:block md:space-y-24 md:pt-64">
           <div className="flex items-end justify-end">
             <img
               src={img4}
               alt="Foods"
-              className="h-60 w-44 object-cover 2xl:h-72 2xl:w-52"
+              className="h-64 w-auto object-cover sm:h-60 sm:w-44 2xl:h-72 2xl:w-52"
             />
           </div>
           <div className="flex items-end">
             <img
               src={img2}
               alt="Foods"
-              className="h-full w-80 object-cover 2xl:w-96"
+              className="h-64 w-auto object-cover sm:h-full sm:w-80 2xl:w-96"
             />
           </div>
         </div>
-        <div className="sticky top-0 flex max-h-fit flex-col items-center gap-4 text-center">
-          <div className="bottom-0 h-10 w-px bg-dark/50 md:h-40"></div>
-          <h3 className="mt-16 text-xl capitalize leading-snug sm:text-2xl md:text-4xl lg:text-6xl lg:leading-snug 2xl:text-8xl 2xl:leading-normal">
+        <div className="top-0 flex max-h-fit flex-col items-center gap-4 text-center md:sticky">
+          <div className="bottom-0 h-0 w-px bg-dark/50 sm:h-10 md:h-40"></div>
+          <h3 className="mt-5 text-3xl capitalize leading-snug sm:text-2xl md:mt-16 md:text-4xl lg:text-6xl lg:leading-snug 2xl:text-8xl 2xl:leading-normal">
             Himalayan Flavours
           </h3>
-          <p className="mb-12 text-center text-sm text-dark/60 2xl:text-base">
+          <p className="mb-3 text-center text-sm text-dark/60 md:mb-12 2xl:text-base">
             Discover the best place to enjoy authentic Himalayan cuisine at
             Himalayan Flavours! Soon, we will become your favorite spot in the
             city for genuine Himalayan dishes. Our commitment is to deliver
@@ -42,19 +42,19 @@ const About = () => {
 
           <FireButton value="Explore More" router="/about" />
         </div>
-        <div className="hidden space-y-24 pt-64 md:block">
+        <div className="flex items-center justify-center gap-8 pt-12 md:block md:space-y-24 md:pt-64">
           <div className="flex items-end justify-end">
             <img
               src={img1}
               alt="Foods"
-              className="h-full w-80 object-cover 2xl:w-96"
+              className="h-64 w-auto object-cover sm:h-full sm:w-80 2xl:w-96"
             />
           </div>
           <div className="flex">
             <img
               src={img3}
               alt="Foods"
-              className="h-60 w-44 object-cover 2xl:h-72 2xl:w-52"
+              className="h-64 w-auto object-cover sm:h-60 sm:w-44 2xl:h-72 2xl:w-52"
             />
           </div>
         </div>

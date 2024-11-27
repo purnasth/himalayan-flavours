@@ -98,7 +98,7 @@ const Form = () => {
               />
             )}
             {errors[input.name] && (
-              <span className="pointer-events-none absolute left-0 top-1/2 m-px select-none bg-white py-1 text-sm text-red-500">
+              <span className="pointer-events-none absolute left-0 top-1/2 m-px select-none bg-white py-0 text-sm text-red-500 md:py-1">
                 {errors[input.name].message}*
               </span>
             )}

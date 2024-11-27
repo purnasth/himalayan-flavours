@@ -13,11 +13,13 @@ const AboutPage = () => {
   return (
     <>
       <main className="px-0">
-        <Title
-          title="Welcome to Himalayan Flavours"
-          description="Himalayan Flavours is more than just a restaurant; it's a celebration of the rich and diverse culinary heritage of the Himalayan region. Nestled in the heart of Victoria, B.C., our restaurant offers an authentic taste of India, Nepal, and China, bringing together the vibrant and bold flavors that define these cultures."
-        />
-        <section className="mt-32 grid grid-cols-3 gap-12">
+        <div className="px-4">
+          <Title
+            title="Welcome to Himalayan Flavours"
+            description="Himalayan Flavours is more than just a restaurant; it's a celebration of the rich and diverse culinary heritage of the Himalayan region. Nestled in the heart of Victoria, B.C., our restaurant offers an authentic taste of India, Nepal, and China, bringing together the vibrant and bold flavors that define these cultures."
+          />
+        </div>
+        <section className="mt-12 grid grid-cols-3 gap-3 md:mt-32 md:gap-12">
           <img src={img2} alt="Newari Cusine" />
           <img src={img4} alt="Newari Cusine" className="translate-y-16" />
           <img src={newariCuisine} alt="Newari Cusine" />
@@ -26,14 +28,14 @@ const AboutPage = () => {
       <div className="mt-20">
         <LogoBar />
       </div>
-      <main className="mx-auto grid w-4/5 grid-cols-2 gap-32">
+      <main className="mx-auto grid w-full grid-cols-1 gap-8 md:w-4/5 md:grid-cols-2 md:gap-32">
         <img
           src={img3}
           alt="Newari Cusine"
-          className="sticky top-10 h-[90vh] w-full object-cover"
+          className="top-10 h-64 w-full object-cover md:sticky md:h-[90vh]"
         />
-        <div className="flex flex-col">
-          <div className="flex h-screen flex-col items-start justify-center gap-4 text-pretty">
+        <div className="flex flex-col gap-8">
+          <div className="flex h-auto flex-col items-start justify-center gap-4 text-pretty md:h-screen">
             <span className="text-xl opacity-70">Our Story</span>
             <h3 className="text-xl capitalize leading-snug sm:text-2xl md:text-4xl lg:text-7xl lg:leading-snug">
               Taste of Himalayas
@@ -48,7 +50,7 @@ const AboutPage = () => {
               of creativity.
             </p>
           </div>
-          <div className="flex h-screen flex-col items-start justify-center gap-4 text-pretty">
+          <div className="flex h-auto flex-col items-start justify-center gap-4 text-pretty md:h-screen">
             <span className="text-xl opacity-70">Our Values</span>
             <h3 className="text-xl capitalize leading-snug sm:text-2xl md:text-4xl lg:text-7xl lg:leading-snug">
               Excellence in Every Dish
@@ -64,9 +66,7 @@ const AboutPage = () => {
           </div>
         </div>
       </main>
-      <div className="mt-20">
-        <LogoBar />
-      </div>
+      <LogoBar />
       <FacilityList />
       <UniversalFooter />
     </>

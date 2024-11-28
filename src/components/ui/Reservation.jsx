@@ -1,6 +1,6 @@
 import React from 'react';
 import bgCuisine from '../../assets/images/bg_cuisine.png';
-import bgFoods from '../../assets/images/bg_foods.png';
+import bgFoods from '../../assets/images/bg_foods.webp';
 import FireButton from './FireButton';
 import ReservationWhatsApp from './ReservationWhatsApp';
 

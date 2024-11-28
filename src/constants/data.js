@@ -1,6 +1,6 @@
 import bgCuisine from '../assets/images/bg_cuisine.png';
-import dessertOffer from '../assets/images/offers/dessert.jpg';
-import beerOffer from '../assets/images/offers/beer.jpg';
+import dessertOffer from '../assets/images/offers/dessert.webp';
+import beerOffer from '../assets/images/offers/beer.webp';
 
 export const offersContent = [
   {

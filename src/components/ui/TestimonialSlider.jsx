@@ -73,7 +73,7 @@ const TestimonialSlider = () => {
               <img
                 src={content.sourceImage}
                 alt={content.author}
-                className="size-12 rounded-full border object-cover shadow"
+                className="size-12 rounded-full border object-contain shadow bg-white"
               />
               <div className="text-left">
                 <p className="caps text-base font-bold">{content.author}</p>

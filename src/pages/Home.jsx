@@ -2,7 +2,7 @@ import React from 'react';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import LogoBar from '../components/ui/LogoBar';
-import Cuisine from '../components/Cuisine';
+// import Cuisine from '../components/Cuisine';
 import Facility from '../components/Facility';
 import Offers from '../components/Offers';
 import Gallery from '../components/Gallery';

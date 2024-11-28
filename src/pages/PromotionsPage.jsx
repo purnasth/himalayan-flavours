@@ -40,7 +40,7 @@ const PromotionsPage = () => {
           title="Special Offers & Promotions"
           description="Check out our special offers and promotions. We have something for everyone. Grab your favorite deal before it's gone!"
         />
-        <div className="mt-12 md:mt-16 grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-8">
+        <div className="mt-12 lg:mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8">
           {offersContent.map((content, index) => (
             <div
               key={index}

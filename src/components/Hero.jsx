@@ -53,7 +53,7 @@ const Hero = () => {
         <img
           src={bgCuisine}
           alt="Himalayan Flavours Restaurant"
-          className="h-[70vh] w-full object-cover object-center contrast-125 lg:h-screen"
+          className="min-h-[34rem] sm:h-[50vh] md:h-[70vh] w-full object-cover object-center contrast-125 lg:h-screen"
         />
         <div className="pointer-events-none absolute inset-0 z-10 flex size-full flex-col items-center justify-end">
           {/* Typewriter Effect */}

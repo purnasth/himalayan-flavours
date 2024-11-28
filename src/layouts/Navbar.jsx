@@ -33,7 +33,7 @@ const Navbar = () => {
 
   const toggleNav = () => {
     setIsOpen(!isOpen);
-    document.body.style.overflow = !isOpen ? 'hidden' : 'auto';
+    // document.body.style.overflow = !isOpen ? 'hidden' : 'auto'; //! this caused an error on mobile devices when the nav is closed and the user tries to scroll it is not possible
   };
 
   return (

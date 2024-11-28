@@ -279,8 +279,8 @@ const menu = [
 const OurMenu = () => {
   return (
     <main>
-      <div className="mx-auto mb-8 flex max-w-lg flex-col items-center justify-center gap-4 text-center md:mb-32">
-        <h3 className="text-3xl capitalize leading-snug sm:text-2xl md:text-4xl lg:text-6xl lg:leading-snug">
+      <div className="mx-auto mb-8 flex max-w-lg flex-col items-center justify-center gap-4 text-center md:mb-12 lg:mb-32">
+        <h3 className="text-3xl capitalize leading-snug md:text-4xl md:leading-snug lg:text-6xl lg:leading-snug">
           Highlighted Dishes & Specialties
         </h3>
         <p className="text-center text-sm text-dark/60">
@@ -294,7 +294,7 @@ const OurMenu = () => {
         {menu.map((cuisine, index) => (
           <div key={cuisine.id}>
             {/* Mobile devices: unified design */}
-            <div className="block md:hidden">
+            <div className="block lg:hidden">
               <div className="flex items-center justify-center">
                 <img
                   src={cuisine.imageUrl}
@@ -322,7 +322,7 @@ const OurMenu = () => {
             </div>
 
             {/* Non-mobile devices: conditional design */}
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
               {index === 1 || index === 4 ? (
                 <>
                   <div className="rounded-2xl bg-orange-300/40 p-4 pb-36 md:p-8 md:pb-40">

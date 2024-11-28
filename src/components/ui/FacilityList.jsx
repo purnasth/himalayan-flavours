@@ -7,7 +7,7 @@ const facilities = [
   { id: 2, name: 'Outdoor Patio Seating' },
   { id: 3, name: 'Live Entertainment' },
   { id: 4, name: 'Private Event Space' },
-  { id: 5, name: 'Wheelchair Accessible' },
+  // { id: 5, name: 'Wheelchair Accessible' },
   { id: 6, name: 'Parking Available' },
   { id: 7, name: 'Pet-Friendly Patio' },
   { id: 8, name: 'Family-Friendly Dining' },
@@ -16,10 +16,10 @@ const facilities = [
   { id: 11, name: 'Vegetarian Options' },
   { id: 12, name: 'Gluten-Free Options' },
   { id: 13, name: 'Licensed Full Bar' },
-  { id: 14, name: 'Takeout and Curbside Pickup' },
+  // { id: 14, name: 'Takeout and Curbside Pickup' },
   { id: 15, name: 'Catering & Event Services' },
-  { id: 16, name: 'Free Birthday Dessert' },
-  { id: 17, name: 'Loyalty Rewards Program' },
+  // { id: 16, name: 'Free Birthday Dessert' },
+  // { id: 17, name: 'Loyalty Rewards Program' },
   { id: 18, name: 'Chef’s Tasting Menu' },
   { id: 19, name: 'Seasonal Specialties' },
   { id: 20, name: 'Scenic View Dining' },
@@ -29,13 +29,13 @@ const FacilityList = () => {
   return (
     <>
       <main>
-        <div className="mb-10 flex flex-col items-start justify-start gap-4 text-pretty md:mb-24">
+        <div className="mb-10 flex flex-col items-start justify-start gap-4 text-pretty md:mb-16 lg:mb-24">
           <span className="text-xl opacity-70">Facilities</span>
           <h3 className="max-w-3xl text-xl leading-snug sm:text-2xl md:text-4xl lg:text-7xl lg:leading-tight">
             The restaurant is equipped with:
           </h3>
         </div>
-        <ul className="grid grid-cols-2 gap-3 md:gap-6 md:grid-cols-4 lg:grid-cols-4">
+        <ul className="grid grid-cols-2 gap-3 md:gap-6 md:grid-cols-3 lg:grid-cols-4">
           {facilities.map((facility) => (
             <li
               key={facility.id}

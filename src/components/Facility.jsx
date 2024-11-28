@@ -17,7 +17,7 @@ const Facility = () => {
   return (
     <main className="container">
       <div className="mx-auto flex max-w-lg flex-col items-center justify-center gap-4 text-center">
-        <h3 className="text-3xl capitalize leading-snug sm:text-2xl md:text-4xl lg:text-6xl lg:leading-snug">
+        <h3 className="text-3xl capitalize leading-snug md:text-4xl lg:text-6xl md:leading-snug">
           Convenience and Facility
         </h3>
         <p className="text-center text-sm text-dark/60">
@@ -51,7 +51,7 @@ const Facility = () => {
           </div>
         </div>
 
-        <div className="mt-0 grid grid-cols-5 gap-12 md:mt-12 md:grid-cols-4 lg:grid-cols-5">
+        <div className="mt-0 grid grid-cols-5 gap-12 md:mt-12 lg:grid-cols-5">
           <div className="flex flex-col items-center gap-4 p-4 text-center">
             <TbWifi className="text-2xl text-dark/80 md:text-4xl" />
             <p className="hidden text-xs md:block md:text-xs xl:text-base">
@@ -89,7 +89,7 @@ const Facility = () => {
         <img
           src={liveMusic}
           alt="Friday Live Music"
-          className="mx-auto mt-8 h-52 w-full rounded-3xl object-cover shadow md:mt-12 md:h-[55vh] md:min-h-[28rem]"
+          className="mx-auto mt-8 h-52 md:h-96 w-full rounded-3xl object-cover shadow lg:mt-12 lg:h-[55vh] lg:min-h-[28rem]"
         />
       </div>
     </main>

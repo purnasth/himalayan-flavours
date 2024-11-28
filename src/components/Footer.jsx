@@ -20,7 +20,7 @@ const Footer = () => {
       ></div>
       <Contact />
 
-      <section className="relative px-6 lg:p-24">
+      <section className="relative px-6 lg:p-24 lg:px-6">
         <div className="pointer-events-none absolute inset-0 -z-10 size-full bg-gradient-to-t from-white to-transparent"></div>
         <div className="z-10 flex items-center justify-center">
           <Logo className="h-40 w-auto object-contain" />

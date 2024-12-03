@@ -5,19 +5,19 @@ import beerOffer from '../assets/images/offers/beer.webp';
 export const offersContent = [
   {
     id: 1,
-    offer: 'On Every Dish 10% Off',
+    offer: '',
     title: 'Free Dessert',
     description:
-      'On every nepalese cuisine dish, you will get 10% off on your total bill.',
+      'After every lunch or dinner, you will get a free dessert on your total bill.',
     image: dessertOffer,
     link: '/nepalese-cuisine',
   },
   {
     id: 2,
-    offer: 'On Every Dish 15% Off',
-    title: 'Beer on MRP',
+    offer: '',
+    title: 'Beer on Market Price',
     description:
-      'On every indian cuisine dish, you will get 15% off on your total bill.',
+      '5pm onwards every day, you will get beer on market price on your total bill.',
     image: beerOffer,
     link: '/indian-cuisine',
   },

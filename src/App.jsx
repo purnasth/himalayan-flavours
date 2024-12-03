@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   Navigate,
 } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+
 // import { motion } from 'framer-motion';
 import Navbar from './layouts/Navbar';
 // import Footer from './components/Footer';
@@ -17,7 +19,7 @@ import PromotionsPage from './pages/PromotionsPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import RouterToTop from './utils/RouterToTop';
-import CaptchaTest from './pages/CaptchaTest';
+import ArticlePage from './pages/ArticlePage';
 // import Preloader from './layouts/Preloader';
 
 const App = () => {
@@ -31,7 +33,8 @@ const App = () => {
 
   return (
     <>
-      {/* {isPreloading ? (
+      <HelmetProvider>
+        {/* {isPreloading ? (
         <Preloader onFinish={handlePreloaderFinish} />
       ) : (
         <motion.div
@@ -39,23 +42,25 @@ const App = () => {
           animate={{ clipPath: 'inset(0% 0% 0% 0%)' }}
           transition={{ duration: 2, delay: 0, ease: 'easeOut' }}
         > */}
-          <Router>
-            <RouterToTop />
-            <Navbar />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/food-menu" element={<Menu />} />
-              <Route path="/gallery" element={<GalleryPage />} />
-              <Route path="/offers" element={<PromotionsPage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/test" element={<CaptchaTest />} />
-              <Route path="*" element={<Navigate to="/" />} />
-            </Routes>
-            <WhatsApp />
-          </Router>
+        <Router>
+          <RouterToTop />
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/food-menu" element={<Menu />} />
+            <Route path="/gallery" element={<GalleryPage />} />
+            <Route path="/offers" element={<PromotionsPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/:slug" element={<ArticlePage />} />
+            {/* <Route path="*" element={<Navigate to="/" />} /> */}
+            <Route path="*" element={<h1>Not Found</h1>} />
+          </Routes>
+          <WhatsApp />
+        </Router>
         {/* </motion.div>
       )} */}
+      </HelmetProvider>
     </>
   );
 };

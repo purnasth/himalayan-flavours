@@ -103,8 +103,7 @@ export const testimonialsContent = [
     review:
       // 'Himalayan Flavours is a great place to enjoy authentic Nepalese cuisine. The food is delicious and the service is excellent. The staff is very friendly and welcoming. I highly recommend this restaurant to anyone looking for a taste of Nepal.',
       "I am excited for the opening of Himalayan Flavours. I've been hearing a lot of good things about this place and I can't wait to try it out. The food looks amazing and I'm sure it will be a hit with the locals. I wish the owners all the best and hope they have a successful opening.",
-    sourceImage:
-      'https://legacy.purnashrestha.com.np/assets/icon/favicon.ico',
+    sourceImage: 'https://legacy.purnashrestha.com.np/assets/icon/favicon.ico',
     link: '#',
   },
   // {
@@ -150,3 +149,22 @@ export const navLinks = [
     url: '/offers',
   },
 ];
+
+export const articlePageContents = {
+  'article-page': {
+    meta_title: 'Article Page | Himalayan Flavour',
+    meta_description: 'Whatever',
+    meta_keywords: 'Whatever',
+    title: 'Article Page',
+    html: `
+    <div class="container space-y-8 text-center">
+      <p class="max-w-lg text-center text-sm text-black/60 mx-auto">
+      Himalayan Flavours is more than just a restaurant; it's a celebration of the rich and diverse culinary heritage of the Himalayan region. Nestled in the heart of Victoria, B.C., our restaurant offers an authentic taste of India, Nepal, and China, bringing together the vibrant and bold flavors that define the cultures.
+      </p>
+      <p class="max-w-lg text-center text-sm text-black/60 mx-auto">
+      Excellence in every dish is our promise to you. We meticulously select the freshest and finest ingredients, sourced both locally and from the regions that inspire our cuisine. From the spices we grind in-house to the meats and vegetables we prepare daily, we prioritize quality at every step. This ensures that each bite is not only flavorful but also wholesome and satisfying.
+      </p>
+    </div>
+    `,
+  },
+};

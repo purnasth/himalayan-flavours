@@ -43,7 +43,7 @@
 import React from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import fire from '../assets/logos/fire.png';
-import bgCuisine from '../assets/images/bg_cuisine.png';
+import bgCuisine from '../assets/images/bg_cuisine.webp';
 import Logo from './ui/Logo';
 
 const Hero = () => {

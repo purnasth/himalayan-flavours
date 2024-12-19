@@ -128,11 +128,11 @@ export const navLinks = [
     title: 'About Restaurant',
     url: '/about',
   },
-  {
-    id: 3,
-    title: 'Food Menu',
-    url: '/food-menu',
-  },
+  // {
+  //   id: 3,
+  //   title: 'Food Menu',
+  //   url: '/food-menu',
+  // },
   {
     id: 4,
     title: 'Food Gallery',

@@ -42,7 +42,7 @@ const App = () => {
           animate={{ clipPath: 'inset(0% 0% 0% 0%)' }}
           transition={{ duration: 2, delay: 0, ease: 'easeOut' }}
         > */}
-        <Router>
+        <Router basename='himalayanflavours'>
           <RouterToTop />
           <Navbar />
           <Routes>

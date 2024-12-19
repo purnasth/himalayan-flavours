@@ -62,7 +62,8 @@ const Navbar = () => {
             <MdOutlineRoomService className="animate-bounce text-2xl" />
           </Link> */}
           <Link
-            to="/food-menu"
+            to="#"
+            // to="/food-menu"
             className={`transition-1000 inline-flex items-center gap-2 rounded-full border border-light/50 bg-dark/50 px-4 py-2 font-bold text-light shadow backdrop-blur-sm ${visible ? 'translate-y-0 scale-100' : '-translate-y-[200%] scale-0'}`}
             aria-label="View Menu"
             title="View Menu"

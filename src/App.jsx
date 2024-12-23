@@ -20,6 +20,7 @@ import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import RouterToTop from './utils/RouterToTop';
 import ArticlePage from './pages/ArticlePage';
+import Booking from './components/ui/Booking';
 // import Preloader from './layouts/Preloader';
 
 const App = () => {
@@ -57,6 +58,7 @@ const App = () => {
             <Route path="*" element={<h1>Not Found</h1>} />
           </Routes>
           <WhatsApp />
+          <Booking />
         </Router>
         {/* </motion.div>
       )} */}

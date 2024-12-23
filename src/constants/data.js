@@ -125,12 +125,12 @@ export const navLinks = [
   },
   {
     id: 2,
-    title: 'About Restaurant',
+    title: 'About',
     url: '/about',
   },
   // {
   //   id: 3,
-  //   title: 'Food Menu',
+  //   title: 'Menus',
   //   url: '/food-menu',
   // },
   {
@@ -140,7 +140,7 @@ export const navLinks = [
   },
   {
     id: 5,
-    title: 'Reach to us',
+    title: 'Hours & Location',
     url: '/contact',
   },
   {

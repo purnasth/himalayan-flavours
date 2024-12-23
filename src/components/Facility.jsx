@@ -17,7 +17,7 @@ const Facility = () => {
   return (
     <main className="container">
       <div className="mx-auto flex max-w-lg flex-col items-center justify-center gap-4 text-center">
-        <h3 className="text-3xl capitalize leading-snug md:text-4xl lg:text-6xl md:leading-snug">
+        <h3 className="text-3xl capitalize leading-snug md:text-4xl md:leading-snug lg:text-6xl lg:leading-snug">
           Convenience and Facility
         </h3>
         <p className="text-center text-sm text-dark/60">
@@ -89,7 +89,7 @@ const Facility = () => {
         <img
           src={liveMusic}
           alt="Friday Live Music"
-          className="mx-auto mt-8 h-52 md:h-96 w-full rounded-3xl object-cover shadow lg:mt-12 lg:h-[55vh] lg:min-h-[28rem]"
+          className="mx-auto mt-8 h-52 w-full rounded-3xl object-cover shadow md:h-96 lg:mt-12 lg:h-[55vh] lg:min-h-[28rem]"
         />
       </div>
     </main>

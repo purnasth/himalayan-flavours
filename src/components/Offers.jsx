@@ -7,8 +7,8 @@ import FireButton from './ui/FireButton';
 const Offers = () => {
   return (
     <main>
-      <div className="mx-auto mb-12 md:mb-16 xl:mb-32 flex max-w-lg flex-col items-center justify-center gap-4 text-center">
-        <h3 className="text-3xl capitalize leading-snug md:text-4xl lg:text-6xl md:leading-snug">
+      <div className="mx-auto mb-12 flex max-w-lg flex-col items-center justify-center gap-4 text-center md:mb-16 xl:mb-32">
+        <h3 className="text-3xl capitalize leading-snug md:text-4xl md:leading-snug lg:text-6xl lg:leading-snug">
           Special Offers & Promotions
         </h3>
         <p className="text-center text-sm text-dark/60">
@@ -17,8 +17,8 @@ const Offers = () => {
           and your family are all welcome to join us!
         </p>
       </div>
-      <div className="grid grid-cols-1 xl:grid-cols-3 gap-y-12 md:gap-12">
-        <div className="col-span-2 grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 gap-y-12 md:gap-12 xl:grid-cols-3">
+        <div className="col-span-2 grid grid-cols-1 gap-8 lg:grid-cols-2">
           {offersContent.slice(0, 2).map((content, index) => (
             <div key={index} className="group relative">
               {/* <div className="overlay transition-300 absolute inset-0 -z-0 size-full bg-black/70 group-hover:bg-black/80"></div> */}
@@ -63,7 +63,7 @@ const Offers = () => {
             </div>
           ))}
         </div>
-        <div className="px-4 max-w-md">
+        <div className="max-w-md px-4">
           <p className="font-normal">
             We currently have
             <Link to="#" className="mx-1 bg-orange-300/50 px-2 font-extrabold">

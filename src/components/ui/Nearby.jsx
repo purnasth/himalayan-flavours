@@ -68,7 +68,7 @@ const Nearby = () => {
 
   return (
     <div className="flex flex-col items-center">
-      <ul className="nearby-scroll sticky top-0 z-30 mb-12 flex max-w-full flex-nowrap items-start justify-start gap-3 overflow-x-auto bg-orange-50 pb-1">
+      <ul className="nearby-scroll sticky top-0 z-30 mb-12 flex max-w-full flex-nowrap items-center justify-center gap-3 overflow-x-auto bg-orange-50 w-full pb-1">
         {nearbyLocations.map((location) => (
           <li
             key={location.name}

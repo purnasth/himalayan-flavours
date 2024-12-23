@@ -71,7 +71,7 @@ const Form = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)} className="">
+      <form onSubmit={handleSubmit(onSubmit)} className="scroll-mt-12" id="contactForm">
         {contactFormFields.map((input) => (
           <div key={input.name} className="relative mb-4">
             <label htmlFor={input.name} className="mb-2 block text-dark/80">

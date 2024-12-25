@@ -63,7 +63,7 @@ const useFetchAPI = (key, url) => {
       setCachedData(key, data);
     },
     cacheTime: 0, // Disable caching by react-query
-    staleTime: 1000 * 60 * 60, // Keep data fresh for 1 hour
+    staleTime: 0, // Force fetching on every mount
   });
 };
 

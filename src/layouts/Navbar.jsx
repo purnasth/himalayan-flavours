@@ -1,20 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import { CgMenuHotdog } from 'react-icons/cg';
 import { MdOutlineRoomService, MdStarRate } from 'react-icons/md';
-// import foodMenu from '../assets/menu/menu.pdf';
 import { PiChefHatBold } from 'react-icons/pi';
-import { navLinks } from '../constants/data';
-import { Link, NavLink, useLocation } from 'react-router-dom';
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import Logo from '../components/ui/Logo';
 import ContactInfo from '../components/ui/ContactInfo';
-import { useNavigate } from 'react-router-dom';
+import useFetchAPI from '../hooks/useFetchAPI';
 
 const Navbar = () => {
+  const {
+    data: navLinks = [],
+    isLoading,
+    isError,
+  } = useFetchAPI(
+    'navLinks',
+    'https://mayurstay.com/himalayanflavours/api/api_menu.php',
+  );
+
   const [isOpen, setIsOpen] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
   const location = useLocation();
+  const navigate = useNavigate();
 
+  // Handle scroll visibility
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
@@ -27,6 +36,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [prevScrollPos]);
 
+  // Close nav on route change
   useEffect(() => {
     setIsOpen(false);
     document.body.style.overflow = 'auto';
@@ -34,21 +44,22 @@ const Navbar = () => {
 
   const toggleNav = () => {
     setIsOpen(!isOpen);
-    // document.body.style.overflow = !isOpen ? 'hidden' : 'auto'; //! this caused an error on mobile devices when the nav is closed and the user tries to scroll it is not possible
   };
-
-  const navigate = useNavigate();
 
   const handleScroll = (e) => {
     e.preventDefault();
     navigate('/contact#contactForm');
     setTimeout(() => {
-      document
-        .querySelector('#contactForm')
-        // .scrollIntoView({ behavior: 'smooth' });
-        .scrollIntoView();
+      document.querySelector('#contactForm')?.scrollIntoView();
     }, 0);
   };
+
+  // Render fallback for loading or error states
+  if (isLoading) return null;
+  if (isError) {
+    console.error(isError);
+    return null;
+  }
 
   return (
     <>
@@ -64,25 +75,16 @@ const Navbar = () => {
           >
             <CgMenuHotdog className="text-2xl" />
           </button>
-          {/* <Link
-            to="https://mayurstay.com/himalayanflavours/menu.php"
-            className={`transition-1000 inline-flex items-center gap-2 rounded-full border border-light/50 bg-dark/50 px-4 py-2 font-bold text-light shadow backdrop-blur-sm ${visible ? 'translate-y-0 scale-100' : '-translate-y-[200%] scale-0'}`}
-            aria-label="Order Now"
-            title="Order Now"
-            target="_blank"
-            // download
-          >
-            Order Now
-            <MdOutlineRoomService className="animate-bounce text-2xl" />
-          </Link> */}
           <Link
             to="#contactForm"
-            // to="/food-menu"
-            className={`transition-1000 inline-flex items-center gap-2 rounded-full border border-light/50 bg-dark/50 px-4 py-2 font-bold text-light shadow backdrop-blur-sm ${visible ? 'translate-y-0 scale-100' : '-translate-y-[200%] scale-0'}`}
+            className={`transition-1000 inline-flex items-center gap-2 rounded-full border border-light/50 bg-dark/50 px-4 py-2 font-bold text-light shadow backdrop-blur-sm ${
+              visible
+                ? 'translate-y-0 scale-100'
+                : '-translate-y-[200%] scale-0'
+            }`}
             aria-label="Reservation"
             title="Reservation"
             onClick={handleScroll}
-            // download
           >
             Reservation
             <MdOutlineRoomService className="animate-bounce text-2xl" />
@@ -100,7 +102,9 @@ const Navbar = () => {
       </header>
 
       <div
-        className={`transition-700 fixed inset-0 z-30 bg-black/50 backdrop-blur-sm ${isOpen ? 'opacity-100' : 'pointer-events-none opacity-0'}`}
+        className={`transition-700 fixed inset-0 z-30 bg-black/50 backdrop-blur-sm ${
+          isOpen ? 'opacity-100' : 'pointer-events-none opacity-0'
+        }`}
         onClick={() => setIsOpen(false)}
       />
 
@@ -124,7 +128,7 @@ const Navbar = () => {
 
             <ul className="links mt-6 flex flex-col items-start justify-start gap-2 md:gap-4">
               {navLinks.map((link) => (
-                <li className="group w-full">
+                <li className="group w-full" key={link.id}>
                   <NavLink
                     to={link.url}
                     className={({ isActive }) =>
@@ -146,7 +150,6 @@ const Navbar = () => {
               <ContactInfo align="items-start justify-start" />
             </div>
           </div>
-          {/* <hr className="my-8 w-full border-dark/20" /> */}
           <div className="mt-12 flex w-full items-center justify-between border-t-2 border-dark/10">
             <span className="flex gap-0 text-base text-dark">
               <MdStarRate />

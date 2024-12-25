@@ -39,8 +39,20 @@ import 'swiper/css/autoplay';
 import { TbArrowNarrowLeft, TbArrowNarrowRight } from 'react-icons/tb';
 
 import { testimonialsContent } from '../../constants/data';
+import useFetchAPI from '../../hooks/useFetchAPI';
 
 const TestimonialSlider = () => {
+  const {
+    data: testimonialsContent,
+    isLoading,
+    isError,
+  } = useFetchAPI(
+    'testimonials',
+    'https://mayurstay.com/himalayanflavours/api/api_testimonial.php',
+  );
+
+  console.log('Testimonials:', testimonialsContent);
+
   const swiperRef = useRef(null);
 
   const handleNext = () => {
@@ -50,6 +62,9 @@ const TestimonialSlider = () => {
   const handlePrev = () => {
     swiperRef.current.swiper.slidePrev();
   };
+
+  if (isLoading) return <></>;
+  if (isError) return console.error(isError);
 
   return (
     <div className="relative mt-8">
@@ -67,13 +82,13 @@ const TestimonialSlider = () => {
         {testimonialsContent.map((content, index) => (
           <SwiperSlide key={index} className="flex flex-col items-center">
             <p className="review text-justify text-sm sm:text-base md:text-pretty">
-              {content.review}
+              {content.description}
             </p>
             <div className="mt-6 flex items-center justify-center gap-3">
               <img
                 src={content.sourceImage}
                 alt={content.author}
-                className="size-12 rounded-full border object-contain shadow bg-white"
+                className="size-12 rounded-full border bg-white object-contain shadow"
               />
               <div className="text-left">
                 <p className="caps text-base font-bold">{content.author}</p>

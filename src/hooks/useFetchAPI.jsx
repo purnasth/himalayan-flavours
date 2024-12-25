@@ -46,20 +46,22 @@ const setCachedData = (key, data) => {
   localStorage.setItem(key, JSON.stringify(data));
 };
 
-// Reusable API fetching hook
 const useFetchAPI = (key, url) => {
   return useQuery({
     queryKey: [key],
     queryFn: async () => {
       const response = await axios.get(url);
-      setCachedData(key, response.data); // Save to localStorage with dynamic key
+      console.log('API Response:', response.data); // Log response
+      setCachedData(key, response.data); // Save to localStorage
       return response.data;
     },
     initialData: () => {
       const cachedData = getCachedData(key);
+      console.log('Cached Data:', cachedData); // Log cached data
       return cachedData;
     },
     onSuccess: (data) => {
+      console.log('Data fetched successfully:', data); // Log success
       setCachedData(key, data);
     },
     cacheTime: 0, // Disable caching by react-query

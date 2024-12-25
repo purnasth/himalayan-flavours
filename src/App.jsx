@@ -20,6 +20,7 @@ import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import RouterToTop from './utils/RouterToTop';
 import ArticlePage from './pages/ArticlePage';
+import Booking from './components/ui/Booking';
 // import Preloader from './layouts/Preloader';
 
 const App = () => {
@@ -42,7 +43,7 @@ const App = () => {
           animate={{ clipPath: 'inset(0% 0% 0% 0%)' }}
           transition={{ duration: 2, delay: 0, ease: 'easeOut' }}
         > */}
-        <Router>
+        <Router basename='himalayanflavours'>
           <RouterToTop />
           <Navbar />
           <Routes>
@@ -57,6 +58,7 @@ const App = () => {
             <Route path="*" element={<h1>Not Found</h1>} />
           </Routes>
           <WhatsApp />
+          <Booking />
         </Router>
         {/* </motion.div>
       )} */}

@@ -7,6 +7,7 @@ import { navLinks } from '../constants/data';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import Logo from '../components/ui/Logo';
 import ContactInfo from '../components/ui/ContactInfo';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,6 +37,19 @@ const Navbar = () => {
     // document.body.style.overflow = !isOpen ? 'hidden' : 'auto'; //! this caused an error on mobile devices when the nav is closed and the user tries to scroll it is not possible
   };
 
+  const navigate = useNavigate();
+
+  const handleScroll = (e) => {
+    e.preventDefault();
+    navigate('/contact#contactForm');
+    setTimeout(() => {
+      document
+        .querySelector('#contactForm')
+        // .scrollIntoView({ behavior: 'smooth' });
+        .scrollIntoView();
+    }, 0);
+  };
+
   return (
     <>
       <header
@@ -62,13 +76,15 @@ const Navbar = () => {
             <MdOutlineRoomService className="animate-bounce text-2xl" />
           </Link> */}
           <Link
-            to="/food-menu"
+            to="#contactForm"
+            // to="/food-menu"
             className={`transition-1000 inline-flex items-center gap-2 rounded-full border border-light/50 bg-dark/50 px-4 py-2 font-bold text-light shadow backdrop-blur-sm ${visible ? 'translate-y-0 scale-100' : '-translate-y-[200%] scale-0'}`}
-            aria-label="View Menu"
-            title="View Menu"
+            aria-label="Reservation"
+            title="Reservation"
+            onClick={handleScroll}
             // download
           >
-            View Menu
+            Reservation
             <MdOutlineRoomService className="animate-bounce text-2xl" />
           </Link>
         </div>

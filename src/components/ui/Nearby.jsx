@@ -2,14 +2,13 @@ import React, { useState, useEffect } from 'react';
 import useFetchAPI from '../../hooks/useFetchAPI';
 
 const Nearby = () => {
+  const apiUrl = import.meta.env.VITE_API_URL;
+
   const {
     data: nearbyLocations,
     isLoading,
     isError,
-  } = useFetchAPI(
-    'nearby',
-    'https://mayurstay.com/himalayanflavours/api/api_nearby.php',
-  );
+  } = useFetchAPI('nearby', `${apiUrl}api_nearby.php`);
 
   if (isLoading) return <></>;
   if (isError) return console.error(isError);

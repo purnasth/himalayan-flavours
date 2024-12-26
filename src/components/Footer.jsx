@@ -11,23 +11,19 @@ import ContactInfo from './ui/ContactInfo';
 import useFetchAPI from '../hooks/useFetchAPI';
 
 const Footer = () => {
+  const apiUrl = import.meta.env.VITE_API_URL;
+
   const {
     data: navLinks = [],
     isLoading: navLoading,
     isError: navError,
-  } = useFetchAPI(
-    'navLinks',
-    'https://mayurstay.com/himalayanflavours/api/api_menu.php',
-  );
+  } = useFetchAPI('navLinks', `${apiUrl}api_menu.php`);
 
   const {
     data: siteRegulars = [],
     isLoading: regularsLoading,
     isError: regularsError,
-  } = useFetchAPI(
-    'siteRegulars',
-    'https://mayurstay.com/himalayanflavours/api/api_siteregulars.php',
-  );
+  } = useFetchAPI('siteRegulars', `${apiUrl}api_siteregulars.php`);
 
   const isLoading = navLoading || regularsLoading;
   const isError = navError || regularsError;
@@ -119,7 +115,9 @@ const Footer = () => {
         {/* <hr className="my-8 w-full border-dark/20" /> */}
 
         <div className="my-12 flex flex-col items-start justify-start gap-2 text-base md:flex-row md:justify-between md:text-base lg:mb-0 lg:mt-16 lg:items-center lg:justify-between lg:text-sm">
-          <span>© {new Date().getFullYear()} {sitetitle} </span>
+          <span>
+            © {new Date().getFullYear()} {sitetitle}{' '}
+          </span>
           <span>
             Website by: &nbsp;
             <a

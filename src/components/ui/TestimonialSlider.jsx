@@ -38,18 +38,19 @@ import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 import { TbArrowNarrowLeft, TbArrowNarrowRight } from 'react-icons/tb';
 
-import { testimonialsContent } from '../../constants/data';
+// import { testimonialsContent } from '../../constants/data';
 import useFetchAPI from '../../hooks/useFetchAPI';
 
 const TestimonialSlider = () => {
+  const apiUrl = import.meta.env.VITE_API_URL;
+
+  console.log('API URL:', apiUrl);
+
   const {
     data: testimonialsContent,
     isLoading,
     isError,
-  } = useFetchAPI(
-    'testimonials',
-    'https://mayurstay.com/himalayanflavours/api/api_testimonial.php',
-  );
+  } = useFetchAPI('testimonials', `${apiUrl}api_testimonial.php`);
 
   console.log('Testimonials:', testimonialsContent);
 

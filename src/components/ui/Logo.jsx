@@ -3,14 +3,13 @@ import { Link } from 'react-router-dom';
 import useFetchAPI from '../../hooks/useFetchAPI';
 
 const Logo = ({ aprops, className }) => {
+  const apiUrl = import.meta.env.VITE_API_URL;
+
   const {
     data: siteRegulars,
     isLoading,
     isError,
-  } = useFetchAPI(
-    'siteRegulars',
-    'https://mayurstay.com/himalayanflavours/api/api_siteregulars.php',
-  );
+  } = useFetchAPI('siteRegulars', `${apiUrl}api_siteregulars.php`);
 
   if (isLoading) return null;
   if (isError) {

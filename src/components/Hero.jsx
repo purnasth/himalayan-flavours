@@ -43,18 +43,38 @@
 import React from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import fire from '../assets/logos/fire.png';
-import bgCuisine from '../assets/images/bg_cuisine.webp';
+// import bgCuisine from '../assets/images/bg_cuisine.webp';
 import Logo from './ui/Logo';
+import MasterSlider from './ui/MasterSlider';
+import useFetchAPI from '../hooks/useFetchAPI';
 
 const Hero = () => {
+  const {
+    data: slideShow,
+    isLoading,
+    isError,
+  } = useFetchAPI('slideShow', '/himalayanflavours/api/slideshow.json');
+
+  if (isLoading) return <></>;
+  if (isError) return console.error(isError);
+
   return (
     <>
       <section className="group relative m-0 p-0">
-        <img
+        {/* <img
           src={bgCuisine}
           alt="Himalayan Flavours Restaurant"
-          className="min-h-[34rem] sm:h-[50vh] md:h-[70vh] w-full object-cover object-center contrast-125 lg:h-screen"
+          className="min-h-[34rem] w-full object-cover object-center contrast-125 sm:h-[50vh] md:h-[70vh] lg:h-screen"
+        /> */}
+
+        <MasterSlider
+          slides={slideShow}
+          speed={5000}
+          hasContent={false}
+          navigation={false}
+          sizeClassName="min-h-[34rem] w-full object-cover object-center contrast-125 sm:h-[50vh] md:h-[70vh] lg:h-screen"
         />
+
         <div className="pointer-events-none absolute inset-0 z-10 flex size-full flex-col items-center justify-end">
           {/* Typewriter Effect */}
           <Logo className="h-40 w-auto object-contain p-1 lg:h-64" />

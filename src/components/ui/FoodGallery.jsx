@@ -12,14 +12,13 @@ import 'lightgallery/css/lg-fullscreen.css';
 import useFetchAPI from '../../hooks/useFetchAPI';
 
 const FoodGallery = ({ limit, galleryClassName }) => {
+  const apiUrl = import.meta.env.VITE_API_URL;
+
   const {
     data: galleryImages,
     isLoading,
     isError,
-  } = useFetchAPI(
-    'gallery',
-    'https://mayurstay.com/himalayanflavours/api/api_gallery.php',
-  );
+  } = useFetchAPI('gallery', `${apiUrl}api_gallery.php`);
 
   if (isLoading) return <></>;
   if (isError) return console.error(isError);

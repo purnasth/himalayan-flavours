@@ -33,7 +33,7 @@ const FacilityList = () => {
     data: facilities,
     isLoading,
     isError,
-  } = useFetchAPI('facilities', `/himalayanflavours/api/facilities.json`);
+  } = useFetchAPI('facilities', `${apiUrl}api_facilities.php`);
 
   if (isLoading) return null;
   if (isError) {

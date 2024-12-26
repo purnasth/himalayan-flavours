@@ -79,7 +79,7 @@ const MasterSlider = ({
         </>
       )}
     </Swiper>
-    <style jsx>{`
+    <style>{`
       .swiper-button-next::after,
       .swiper-button-prev::after {
         display: none !important;

@@ -56,7 +56,7 @@ const OurMenu = () => {
                 <ul className="scroll flex h-24 flex-wrap gap-2 gap-y-0 overflow-y-auto">
                   {cuisine.foodMenu.map((dish, idx) => (
                     <li
-                      key={dish.id}
+                      key={idx}
                       className="text-sm text-gray-600 2xl:text-base"
                     >
                       {dish.name}
@@ -78,7 +78,7 @@ const OurMenu = () => {
                     <ul className="flex flex-wrap gap-2 gap-y-0">
                       {cuisine.foodMenu.map((dish, idx) => (
                         <li
-                          key={dish.id}
+                          key={idx}
                           className="text-sm text-gray-600 2xl:text-base"
                         >
                           {dish.name}
@@ -113,7 +113,7 @@ const OurMenu = () => {
                     <ul className="scroll flex h-24 flex-wrap gap-2 gap-y-0 overflow-y-auto">
                       {cuisine.foodMenu.map((dish, idx) => (
                         <li
-                          key={dish.id}
+                          key={idx}
                           className="text-sm text-gray-600 2xl:text-base"
                         >
                           {dish.name}

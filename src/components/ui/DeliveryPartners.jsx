@@ -10,7 +10,8 @@ const DeliveryPartners = () => {
     isError,
   } = useFetchAPI(
     'deliveryPartners',
-    '/himalayanflavours/api/deliveryPartners.json',
+    // '/himalayanflavours/api/deliveryPartners.json',
+    `${apiUrl}api_delivery_partners.php`,
   );
 
   if (isLoading) return null;

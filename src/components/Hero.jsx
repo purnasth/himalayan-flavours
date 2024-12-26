@@ -49,14 +49,18 @@ import MasterSlider from './ui/MasterSlider';
 import useFetchAPI from '../hooks/useFetchAPI';
 
 const Hero = () => {
+  const apiUrl = import.meta.env.VITE_API_URL;
+
   const {
     data: slideShow,
     isLoading,
     isError,
-  } = useFetchAPI('slideShow', '/himalayanflavours/api/slideshow.json');
+  } = useFetchAPI('slideShow', `${apiUrl}api_slideshow.php`);
 
   if (isLoading) return <></>;
   if (isError) return console.error(isError);
+
+  console.log(slideShow);
 
   return (
     <>

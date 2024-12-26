@@ -1,24 +1,35 @@
 import React from 'react';
 import UniversalFooter from '../layouts/UniversalFooter';
 import Title from '../components/ui/Title';
-import foodMenu from '../assets/menu/menu.pdf';
-import FireButton from '../components/ui/FireButton';
-import { Link } from 'react-router-dom';
-import { TbBrandWhatsapp } from 'react-icons/tb';
+// import foodMenu from '../assets/menu/menu.pdf';
 import ReservationWhatsApp from '../components/ui/ReservationWhatsApp';
+import useFetchAPI from '../hooks/useFetchAPI';
 
 const Menu = () => {
+  const apiUrl = import.meta.env.VITE_API_URL;
+
+  const {
+    data: menuPage,
+    isLoading,
+    isError,
+  } = useFetchAPI('menuPage', `/himalayanflavours/api/menuPage.json`);
+
+  if (isLoading) return null;
+  if (isError) {
+    console.error(isError);
+    return null;
+  }
+
+  const { heading, description, menuPdf } = menuPage;
+
   return (
     <>
       <main>
-        <Title
-          title="Cuisines inspired by the Himalayas"
-          description="Check out our delicious menu. We have something for everyone. Grab your favorite dish before it's gone!"
-        />
+        <Title title={heading} description={description} />
 
         <div className="mx-auto mt-8 flex justify-center">
           <iframe
-            src={foodMenu}
+            src={menuPdf}
             className="h-[80vh] w-full border-none md:h-[110vh]"
             title="Food Menu"
           />

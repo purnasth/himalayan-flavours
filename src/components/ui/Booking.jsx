@@ -1,9 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { TbBrandWhatsapp } from 'react-icons/tb';
 import { MdOutlineRoomService } from 'react-icons/md';
+import useFetchAPI from '../../hooks/useFetchAPI';
 
 const WhatsApp = () => {
+  const apiUrl = import.meta.env.VITE_API_URL;
+
+  const {
+    data: siteRegulars,
+    isLoading,
+    isError,
+  } = useFetchAPI('siteRegulars', `${apiUrl}api_siteregulars.php`);
+
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
@@ -22,11 +30,19 @@ const WhatsApp = () => {
     };
   }, []);
 
+  if (isLoading) return null;
+  if (isError) {
+    console.error(isError);
+    return null;
+  }
+
+  const { booking_code } = siteRegulars;
+
   return (
     <Link
-      to="#"
-    //   target="_blank"
-    //   rel="noreferrer"
+      to={`${booking_code}`}
+      //   target="_blank"
+      //   rel="noreferrer"
       className={`${
         showButton ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
       } transition-300 transition-1000 fixed bottom-4 right-1/2 z-40 inline-flex translate-x-1/2 translate-y-0 scale-100 animate-pulse items-center justify-center gap-2 rounded-full border border-orange-300/50 bg-dark/50 bg-orange-300 px-6 py-2 font-bold text-dark shadow backdrop-blur-sm`}

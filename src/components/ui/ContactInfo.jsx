@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import useFetchAPI from '../../hooks/useFetchAPI';
 
 import { FaFacebookF } from 'react-icons/fa';
+import { RiInstagramFill } from 'react-icons/ri';
+import { IoLogoTiktok } from 'react-icons/io5';
 import { AiFillInstagram } from 'react-icons/ai';
 import { FaXTwitter } from 'react-icons/fa6';
 import { FaLinkedinIn } from 'react-icons/fa';
@@ -13,6 +15,8 @@ import { TbPhone } from 'react-icons/tb';
 
 const iconMap = {
   FaFacebookF,
+  RiInstagramFill,
+  IoLogoTiktok,
   AiFillInstagram,
   FaXTwitter,
   FaLinkedinIn,
@@ -23,14 +27,13 @@ const iconMap = {
 };
 
 const ContactInfo = ({ align }) => {
+  const apiUrl = import.meta.env.VITE_API_URL;
+
   const {
     data: contactInfo = [],
     isLoading,
     isError,
-  } = useFetchAPI(
-    'contactInfo',
-    'https://mayurstay.com/himalayanflavours/api/api_location.php',
-  );
+  } = useFetchAPI('contactInfo', `${apiUrl}api_location.php`);
 
   if (isLoading) return null;
   if (isError) {
@@ -91,7 +94,7 @@ const ContactInfo = ({ align }) => {
                   target="_blank"
                 >
                   {IconComponent ? (
-                    <IconComponent className="transition-all duration-300 ease-linear group-hover:scale-125" />
+                    <IconComponent className="text-lg transition-all duration-300 ease-linear group-hover:scale-125" />
                   ) : item.image ? (
                     <img
                       src={item.image}

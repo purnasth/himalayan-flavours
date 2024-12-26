@@ -9,6 +9,7 @@ import TestimonialSlider from './ui/TestimonialSlider';
 import Logo from './ui/Logo';
 import ContactInfo from './ui/ContactInfo';
 import useFetchAPI from '../hooks/useFetchAPI';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const apiUrl = import.meta.env.VITE_API_URL;
@@ -65,13 +66,13 @@ const Footer = () => {
             <ul className="links mt-4 flex flex-col items-start justify-start gap-2 md:mt-8 md:gap-4">
               {navLinks.slice(1, 6).map((link) => (
                 <li className="group w-full" key={link.id}>
-                  <a
-                    href={link.url}
+                  <Link
+                    to={link.url}
                     className="navlink"
                     aria-label={link.title}
                   >
                     {link.title}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

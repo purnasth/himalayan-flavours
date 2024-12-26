@@ -2,7 +2,6 @@ import React from 'react';
 import Title from '../components/ui/Title';
 import Nearby from '../components/ui/Nearby';
 import Footer from '../components/Footer';
-import LogoBar from '../components/ui/LogoBar';
 
 const ContactPage = () => {
   return (

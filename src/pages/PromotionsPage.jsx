@@ -1,12 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Title from '../components/ui/Title';
-import { offersContent } from '../constants/data';
+// import { offersContent } from '../constants/data';
 import fire from '../assets/logos/fire.svg';
 import UniversalFooter from '../layouts/UniversalFooter';
 import OffersEnquiry from '../components/ui/OffersEnquiry';
+import useFetchAPI from '../hooks/useFetchAPI';
 
 const PromotionsPage = () => {
+  const apiUrl = import.meta.env.VITE_API_URL;
+
+  const {
+    data: offersContent,
+    isLoading,
+    isError,
+  } = useFetchAPI('offers', `/himalayanflavours/api/offersContent.json`);
+
   const [showOffersEnquiry, setShowOffersEnquiry] = useState(false);
   const [selectedOffer, setSelectedOffer] = useState(null);
   const location = useLocation();
@@ -33,6 +42,12 @@ const PromotionsPage = () => {
     }
   }, [location]);
 
+  if (isLoading) return null;
+  if (isError) {
+    console.error(isError);
+    return null;
+  }
+
   return (
     <>
       <main className="px-4 lg:px-8">
@@ -40,7 +55,7 @@ const PromotionsPage = () => {
           title="Special Offers & Promotions"
           description="Check out our special offers and promotions. We have something for everyone. Grab your favorite deal before it's gone!"
         />
-        <div className="mt-12 lg:mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8">
+        <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-2 lg:mt-16 lg:grid-cols-3 lg:gap-8">
           {offersContent.map((content, index) => (
             <div
               key={index}
@@ -50,7 +65,7 @@ const PromotionsPage = () => {
               <div className="overlay transition-300 absolute inset-0 -z-0 bg-gradient-to-t from-black/50 to-transparent outline outline-1 -outline-offset-[12px] outline-light/40 group-hover:outline-offset-0" />
               <img
                 src={content.image}
-                alt=""
+                alt={content.title}
                 className="-z-10 aspect-square w-full object-cover shadow"
               />
               <div className="absolute inset-0 z-10 flex flex-col items-center justify-end px-12 py-8 text-center text-light">

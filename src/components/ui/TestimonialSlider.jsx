@@ -44,15 +44,11 @@ import useFetchAPI from '../../hooks/useFetchAPI';
 const TestimonialSlider = () => {
   const apiUrl = import.meta.env.VITE_API_URL;
 
-  console.log('API URL:', apiUrl);
-
   const {
     data: testimonialsContent,
     isLoading,
     isError,
   } = useFetchAPI('testimonials', `${apiUrl}api_testimonial.php`);
-
-  console.log('Testimonials:', testimonialsContent);
 
   const swiperRef = useRef(null);
 

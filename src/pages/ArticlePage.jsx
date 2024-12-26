@@ -4,16 +4,15 @@ import Meta from '../utils/Meta';
 import useFetchAPI from '../hooks/useFetchAPI';
 
 const ArticlePage = () => {
+  const apiUrl = import.meta.env.VITE_API_URL;
+
   const { slug } = useParams();
   const key = `articlePage-${slug}`;
   const {
     data: articlePageContents,
     isLoading,
     isError,
-  } = useFetchAPI(
-    key,
-    'https://mayurstay.com/himalayanflavours/api/api_article.php',
-  );
+  } = useFetchAPI(key, `${apiUrl}api_article.php`);
 
   if (isLoading) return <></>;
   if (isError) {
@@ -40,8 +39,8 @@ const ArticlePage = () => {
         meta_keywords={meta_keywords}
         canonicalUrl={`https://himalayan-flavours.com/${slug}`}
       />
-      <main>
-        <h1 className="my-10 text-center text-3xl capitalize leading-snug sm:text-3xl md:text-4xl lg:text-7xl lg:leading-snug">
+      <main className="text-center">
+        <h1 className="text-3xl capitalize leading-snug sm:text-3xl md:text-4xl lg:text-7xl lg:leading-snug">
           {title}
         </h1>
         <div

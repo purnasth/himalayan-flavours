@@ -3,11 +3,45 @@ import bgCuisine from '../assets/images/bg_cuisine.png';
 import { MdFacebook, MdStarRate } from 'react-icons/md';
 import { RiInstagramFill } from 'react-icons/ri';
 import TestimonialSlider from '../components/ui/TestimonialSlider';
-import { navLinks } from '../constants/data';
+// import { navLinks } from '../constants/data';
 import Logo from '../components/ui/Logo';
 import ContactInfo from '../components/ui/ContactInfo';
+import useFetchAPI from '../hooks/useFetchAPI';
+import { Link } from 'react-router-dom';
 
 const UniversalFooter = () => {
+  const apiUrl = import.meta.env.VITE_API_URL;
+
+  const {
+    data: navLinks = [],
+    isLoading: navLoading,
+    isError: navError,
+  } = useFetchAPI('navLinks', `${apiUrl}api_menu.php`);
+
+  const {
+    data: siteRegulars = [],
+    isLoading: regularsLoading,
+    isError: regularsError,
+  } = useFetchAPI('siteRegulars', `${apiUrl}api_siteregulars.php`);
+
+  const isLoading = navLoading || regularsLoading;
+  const isError = navError || regularsError;
+
+  if (isLoading) {
+    return <div className="text-center">Loading...</div>;
+  }
+
+  if (isError) {
+    console.error('Error fetching data:', { navError, regularsError });
+    return (
+      <div className="text-center">
+        An error occurred. Please try again later.
+      </div>
+    );
+  }
+
+  const { sitetitle } = siteRegulars;
+  
   return (
     <main className="h-auto overflow-hidden p-0 md:h-screen">
       {/* <div className="absolute bottom-0 h-3/4 w-full bg-red-600 -z-10"></div> */}
@@ -29,13 +63,13 @@ const UniversalFooter = () => {
             <ul className="links mt-4 flex flex-col items-start justify-start gap-2 md:mt-8 md:gap-4">
               {navLinks.slice(1, 6).map((link) => (
                 <li className="group w-full" key={link.id}>
-                  <a
-                    href={link.url}
+                  <Link
+                    to={link.url}
                     className="navlink"
                     aria-label={link.title}
                   >
                     {link.title}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -76,7 +110,9 @@ const UniversalFooter = () => {
           </div>
         </div>
         <div className="my-12 flex w-full flex-col items-start justify-start gap-2 text-base md:flex-row md:justify-between md:text-base lg:mb-0 lg:mt-16 lg:items-center lg:justify-between lg:text-sm">
-          <span>© 2024 Himalayan Flavours </span>
+          <span>
+            © {new Date().getFullYear()} {sitetitle}{' '}
+          </span>
           <span>
             Website by: &nbsp;
             <a

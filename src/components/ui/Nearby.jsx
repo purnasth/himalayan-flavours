@@ -10,9 +10,6 @@ const Nearby = () => {
     isError,
   } = useFetchAPI('nearby', `${apiUrl}api_nearby.php`);
 
-  if (isLoading) return <></>;
-  if (isError) return console.error(isError);
-
   const [isMapOpen, setIsMapOpen] = useState(false);
   const [mapUrl, setMapUrl] = useState('');
   const [selectedLocation, setSelectedLocation] = useState(null);
@@ -44,6 +41,9 @@ const Nearby = () => {
   const handleLocationClick = (location) => {
     openMapModal(location.map, location);
   };
+
+  if (isLoading) return <></>;
+  if (isError) return console.error(isError);
 
   return (
     <div className="flex flex-col items-center">

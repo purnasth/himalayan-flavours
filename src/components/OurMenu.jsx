@@ -1,15 +1,15 @@
 import React from 'react';
 import FireButton from './ui/FireButton';
 
-import nepali from '../assets/images/cuisine/nepali.png';
+// import nepali from '../assets/images/cuisine/nepali.png';
 // import indian from '../assets/images/cuisine/indian.png';
 // import chinese from '../assets/images/cuisine/chinese.png';
 
-import seafood from '../assets/images/menu/seafood.png';
-import chicken from '../assets/images/menu/butterchicken.png';
-import veg from '../assets/images/menu/veg.png';
-import lamb from '../assets/images/menu/lamb.png';
-import sizzler from '../assets/images/menu/sizzler.png';
+// import seafood from '../assets/images/menu/seafood.png';
+// import chicken from '../assets/images/menu/butterchicken.png';
+// import veg from '../assets/images/menu/veg.png';
+// import lamb from '../assets/images/menu/lamb.png';
+// import sizzler from '../assets/images/menu/sizzler.png';
 import useFetchAPI from '../hooks/useFetchAPI';
 
 const OurMenu = () => {

@@ -3,7 +3,7 @@
         "id": 1,
         "name": "Himalayan Sizzlers",
         "description": "Authentic Nepalese dishes made with traditional spices and flavors.",
-        "imageUrl": "sizzler",
+        "imageUrl": "https://mayurstay.com/himalayanflavours/assets/sizzler-T6f82DsD.png",
         "foodMenu": [
             {
                 "name": "Chicken Tikka"
@@ -47,7 +47,7 @@
         "id": 2,
         "name": "Lamb Specialties",
         "description": "Experience the rich flavors of India with our authentic Indian dishes.",
-        "imageUrl": "lamb",
+        "imageUrl": "https://mayurstay.com/himalayanflavours/assets/lamb--SB3fKBK.png",
         "foodMenu": [
             {
                 "name": "Lamb Curry"
@@ -85,7 +85,7 @@
         "id": 3,
         "name": "Seafood Specialties",
         "description": "Enjoy the delicious flavors of China with our authentic Chinese dishes.",
-        "imageUrl": "seafood",
+        "imageUrl": "https://mayurstay.com/himalayanflavours/assets/seafood-DM2P2rzX.png",
         "foodMenu": [
             {
                 "name": "Fish Curry"
@@ -129,7 +129,7 @@
         "id": 4,
         "name": "Vegetarian Specialties",
         "description": "Served with pure Basmati Rice",
-        "imageUrl": "veg",
+        "imageUrl": "https://mayurstay.com/himalayanflavours/assets/veg-B8teV5uY.png",
         "foodMenu": [
             {
                 "name": "Malai Kofta"
@@ -185,7 +185,7 @@
         "id": 5,
         "name": "Chicken Specialties",
         "description": "Served with Special Basmati Rice",
-        "imageUrl": "chicken",
+        "imageUrl": "https://mayurstay.com/himalayanflavours/assets/butterchicken-2SEsFBsb.png",
         "foodMenu": [
             {
                 "name": "Butter Chicken"
@@ -229,7 +229,7 @@
         "id": 6,
         "name": "Himalayan Flavours Special Menu",
         "description": "Served with Special Basmati Rice",
-        "imageUrl": "nepali",
+        "imageUrl": "https://mayurstay.com/himalayanflavours/assets/nepali-ChUIJ4-G.png",
         "foodMenu": [
             {
                 "name": "Himalayan Thali (Veg, Chicken, Goat, Lamb, Fish)"

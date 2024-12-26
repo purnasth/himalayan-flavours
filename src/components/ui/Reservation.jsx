@@ -1,10 +1,25 @@
 import React from 'react';
-import bgCuisine from '../../assets/images/bg_cuisine.png';
 import bgFoods from '../../assets/images/bg_foods.webp';
-import FireButton from './FireButton';
 import ReservationWhatsApp from './ReservationWhatsApp';
+import useFetchAPI from '../../hooks/useFetchAPI';
 
 const Reservation = () => {
+  const {
+    data: siteRegulars,
+    isLoading,
+    isError,
+  } = useFetchAPI(
+    'siteRegulars',
+    'https://mayurstay.com/himalayanflavours/api/api_siteregulars.php',
+  );
+
+  if (isLoading) return null;
+  if (isError) {
+    console.error(isError);
+    return null;
+  }
+
+  const { email_address, contact_info } = siteRegulars;
   return (
     <>
       <div className="bg-alt-bg/40 container relative max-w-5xl p-8 shadow">
@@ -17,7 +32,7 @@ const Reservation = () => {
         />
         <div className="z-10 contents text-white">
           <div className="container mx-auto my-16 max-w-xl text-center">
-            <h3 className="text-3xl md:text-4xl font-semibold">
+            <h3 className="text-3xl font-semibold md:text-4xl">
               Reserve a Table
             </h3>
             <p className="mt-4 text-base font-light text-gray-300">
@@ -37,20 +52,20 @@ const Reservation = () => {
                 </span>
                 <a
                   rel="noopener noreferrer"
-                  className="transition-linear ml-2 text-base md:text-xl font-semibold"
-                  href="tel:+12509861755"
+                  className="transition-linear ml-2 text-base font-semibold md:text-xl"
+                  href={`tel:${contact_info}`}
                   target="_blank"
                 >
-                  +1 250 986 1755
+                  {contact_info}
                 </a>
               </p>
               <a
                 rel="noopener noreferrer"
-                className="transition-linear text-base md:text-lg font-semibold"
-                href="mailto:info@himalayan-flavours.com"
+                className="transition-linear text-base font-semibold md:text-lg"
+                href={`mailto:${email_address}`}
                 target="_blank"
               >
-                info@himalayan-flavours.com
+                {email_address}
               </a>
             </div>
           </div>

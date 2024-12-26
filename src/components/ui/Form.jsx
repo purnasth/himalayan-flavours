@@ -119,7 +119,7 @@ const Form = () => {
         >
           {isSubmitting ? 'Sending...' : 'Submit'}
         </button>
-        <p className="mt-4 text-sm text-dark/80">
+        {/* <p className="mt-4 text-sm text-dark/80">
           or Call us at
           <a
             href="tel:+12509861755"
@@ -128,7 +128,7 @@ const Form = () => {
             +1 250 986 1755
           </a>
           for direct booking.
-        </p>
+        </p> */}
       </form>
 
       <ToastContainer />

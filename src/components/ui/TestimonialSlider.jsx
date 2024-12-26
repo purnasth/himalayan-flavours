@@ -82,7 +82,7 @@ const TestimonialSlider = () => {
         {testimonialsContent.map((content, index) => (
           <SwiperSlide key={index} className="flex flex-col items-center">
             <p className="review text-justify text-sm sm:text-base md:text-pretty">
-              {content.description}
+              {content.review}
             </p>
             <div className="mt-6 flex items-center justify-center gap-3">
               <img

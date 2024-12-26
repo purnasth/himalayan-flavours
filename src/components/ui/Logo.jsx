@@ -1,16 +1,37 @@
 import React from 'react';
-import logo from '../../assets/logos/logo.svg';
 import { Link } from 'react-router-dom';
+import useFetchAPI from '../../hooks/useFetchAPI';
 
 const Logo = ({ aprops, className }) => {
+  const {
+    data: siteRegulars,
+    isLoading,
+    isError,
+  } = useFetchAPI(
+    'siteRegulars',
+    'https://mayurstay.com/himalayanflavours/api/api_siteregulars.php',
+  );
+
+  if (isLoading) return null;
+  if (isError) {
+    console.error(isError);
+    return null;
+  }
+
+  const { logo_upload, sitetitle } = siteRegulars;
+
   return (
     <Link
       to="/"
       className={aprops ? aprops : 'cursor-pointer'}
-      aria-label="Himalayan Flavours"
-      title="Himalayan Flavours"
+      aria-label={sitetitle}
+      title={sitetitle}
     >
-      <img src={logo} alt="Himalayan Flavours Logo" className={className} />
+      <img
+        src={logo_upload}
+        alt={`${sitetitle} Logo`}
+        className={`${className}`}
+      />
     </Link>
   );
 };

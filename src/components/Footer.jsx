@@ -1,16 +1,52 @@
 import React from 'react';
 import Contact from './Contact';
 import bgCuisine from '../assets/images/bg_cuisine.png';
-import { MdFacebook, MdStarRate } from 'react-icons/md';
-import { RiInstagramFill } from 'react-icons/ri';
+import { MdStarRate } from 'react-icons/md';
 
 import TestimonialSlider from './ui/TestimonialSlider';
 
-import { navLinks } from '../constants/data';
+// import { navLinks } from '../constants/data';
 import Logo from './ui/Logo';
 import ContactInfo from './ui/ContactInfo';
+import useFetchAPI from '../hooks/useFetchAPI';
 
 const Footer = () => {
+  const {
+    data: navLinks = [],
+    isLoading: navLoading,
+    isError: navError,
+  } = useFetchAPI(
+    'navLinks',
+    'https://mayurstay.com/himalayanflavours/api/api_menu.php',
+  );
+
+  const {
+    data: siteRegulars = [],
+    isLoading: regularsLoading,
+    isError: regularsError,
+  } = useFetchAPI(
+    'siteRegulars',
+    'https://mayurstay.com/himalayanflavours/api/api_siteregulars.php',
+  );
+
+  const isLoading = navLoading || regularsLoading;
+  const isError = navError || regularsError;
+
+  if (isLoading) {
+    return <div className="text-center">Loading...</div>;
+  }
+
+  if (isError) {
+    console.error('Error fetching data:', { navError, regularsError });
+    return (
+      <div className="text-center">
+        An error occurred. Please try again later.
+      </div>
+    );
+  }
+
+  const { sitetitle } = siteRegulars;
+
   return (
     <main className="bg-orange-50 p-0">
       {/* <div className="absolute bottom-0 h-3/4 w-full bg-red-600 -z-10"></div> */}
@@ -83,7 +119,7 @@ const Footer = () => {
         {/* <hr className="my-8 w-full border-dark/20" /> */}
 
         <div className="my-12 flex flex-col items-start justify-start gap-2 text-base md:flex-row md:justify-between md:text-base lg:mb-0 lg:mt-16 lg:items-center lg:justify-between lg:text-sm">
-          <span>© 2024 Himalayan Flavours </span>
+          <span>© {new Date().getFullYear()} {sitetitle} </span>
           <span>
             Website by: &nbsp;
             <a

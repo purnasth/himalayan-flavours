@@ -2,6 +2,7 @@ import React from 'react';
 import bgFoods from '../../assets/images/bg_foods.webp';
 import ReservationWhatsApp from './ReservationWhatsApp';
 import useFetchAPI from '../../hooks/useFetchAPI';
+import OrCallUs from './OrCallUs';
 
 const Reservation = () => {
   const apiUrl = import.meta.env.VITE_API_URL;
@@ -44,29 +45,7 @@ const Reservation = () => {
               <ReservationWhatsApp />
             </div>
 
-            <div className="flex flex-col items-center justify-center gap-2">
-              <p>
-                <span className="font-light text-gray-300">
-                  or call us directly
-                </span>
-                <a
-                  rel="noopener noreferrer"
-                  className="transition-linear ml-2 text-base font-semibold md:text-xl"
-                  href={`tel:${contact_info}`}
-                  target="_blank"
-                >
-                  {contact_info}
-                </a>
-              </p>
-              <a
-                rel="noopener noreferrer"
-                className="transition-linear text-base font-semibold md:text-lg"
-                href={`mailto:${email_address}`}
-                target="_blank"
-              >
-                {email_address}
-              </a>
-            </div>
+            <OrCallUs />
           </div>
         </div>
       </div>

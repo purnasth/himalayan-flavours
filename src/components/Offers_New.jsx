@@ -60,7 +60,7 @@ const Offers_New = () => {
                   className="filter-white transition-300 size-4 scale-75 object-contain group-hover:scale-100 group-hover:filter-none"
                 />
               </Link>
-            </div>
+          </div>
           </div>
         ))}
       </div>

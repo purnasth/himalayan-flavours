@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import fire from '../../assets/logos/fire.svg';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { submitForm } from '../../utils/api';
+import OrCallUs from './OrCallUs';
 
 const offersForm = [
   { name: 'fullName', type: 'text', label: 'Full Name', required: true },
@@ -135,7 +136,7 @@ const OffersEnquiry = ({ offerTitle, onClose }) => {
               type="submit"
               aria-label="Submit"
               title="Submit"
-              className={`transition-300 group mt-4 flex items-center gap-2 rounded-full border border-orange-300 bg-orange-300 px-5 py-2 font-semibold hover:bg-orange-200/80 hover:text-orange-500 ${
+              className={`transition-300 group my-4 flex items-center gap-2 rounded-full border border-orange-300 bg-orange-300 px-5 py-2 font-semibold hover:bg-orange-200/80 hover:text-orange-500 ${
                 isSubmitting ? 'cursor-not-allowed opacity-75' : ''
               }`}
               disabled={isSubmitting}
@@ -152,7 +153,7 @@ const OffersEnquiry = ({ offerTitle, onClose }) => {
                 className="filter-black transition-300 size-4 scale-75 object-contain group-hover:scale-100 group-hover:filter-none"
               />
             </button>
-            <p className="mt-4 text-sm text-dark/80">
+            {/* <p className="mt-4 text-sm text-dark/80">
               or Call us at
               <a
                 href="tel:+12509861755"
@@ -161,7 +162,8 @@ const OffersEnquiry = ({ offerTitle, onClose }) => {
                 +1 250 986 1755
               </a>
               for direct booking.
-            </p>
+            </p> */}
+            <OrCallUs />
           </form>
         </div>
       </div>

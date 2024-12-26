@@ -3,6 +3,7 @@ import { offersContent, testimonialsContent } from '../constants/data';
 import { Link } from 'react-router-dom';
 import fire from '../assets/logos/fire.svg';
 import FireButton from './ui/FireButton';
+import OrCallUs from './ui/OrCallUs';
 
 const Offers = () => {
   return (
@@ -79,29 +80,7 @@ const Offers = () => {
           <div className="ml-16 h-20 w-px bg-orange-300/30" />
           <div className="flex flex-col items-start justify-center gap-2 text-black">
             <FireButton value="Enquiry" router="/offers#enquiry" />
-            <div className="flex flex-col items-start justify-center gap-0">
-              <p>
-                <span className="font-normal opacity-60">
-                  or call us directly
-                </span>
-                <Link
-                  rel="noopener noreferrer"
-                  className="transition-linear ml-2 text-xl font-semibold"
-                  to="tel:+12509861755"
-                  target="_blank"
-                >
-                  +1 250 986 1755
-                </Link>
-              </p>
-              <a
-                rel="noopener noreferrer"
-                className="transition-linear text-lg font-semibold"
-                href="mailto:info@himalayan-flavours.com"
-                target="_blank"
-              >
-                info@himalayan-flavours.com
-              </a>
-            </div>
+            <OrCallUs />
           </div>
         </div>
       </div>

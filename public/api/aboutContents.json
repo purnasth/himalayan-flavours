@@ -30,5 +30,27 @@
             "heading": "Excellence in Every Dish",
             "content": "Excellence in every dish is our promise to you. We meticulously select the freshest and finest ingredients, sourced both locally and from the regions that inspire our cuisine. From the spices we grind in-house to the meats and vegetables we prepare daily, we prioritize quality at every step. This ensures that each bite is not only flavorful but also wholesome and satisfying."
         }
-    ]
+    ],
+    "home_page": {
+        "title": "Himalayan Flavours",
+        "description": "Discover the best place to enjoy authentic Himalayan cuisine at Himalayan Flavours! Soon, we will become your favorite spot in the city for genuine Himalayan dishes. Our commitment is to deliver outstanding service and top-quality food.",
+        "images": [
+            {
+                "src": "https://mayurstay.com/himalayanflavours/assets/8-Du-4mWs8.webp",
+                "alt": "Foods"
+            },
+            {
+                "src": "https://mayurstay.com/himalayanflavours/assets/9-CK46Wcbh.webp",
+                "alt": "Foods"
+            },
+            {
+                "src": "https://mayurstay.com/himalayanflavours/assets/5-B5RKD94v.webp",
+                "alt": "Foods"
+            },
+            {
+                "src": "https://mayurstay.com/himalayanflavours/assets/10-DPrIXW9F.webp",
+                "alt": "Foods"
+            }
+        ]
+    }
 }

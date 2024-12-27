@@ -1,11 +1,25 @@
 import React from 'react';
-import { offersContent, testimonialsContent } from '../constants/data';
+// import { offersContent, testimonialsContent } from '../constants/data';
 import { Link } from 'react-router-dom';
 import fire from '../assets/logos/fire.svg';
 import FireButton from './ui/FireButton';
 import OrCallUs from './ui/OrCallUs';
+import useFetchAPI from '../hooks/useFetchAPI';
 
 const Offers = () => {
+  const apiUrl = import.meta.env.VITE_API_URL;
+
+  const {
+    data: offersContent,
+    isLoading,
+    isError,
+  } = useFetchAPI('offers', `${apiUrl}/api_offers.php`);
+
+  if (isLoading) return null;
+  if (isError) {
+    console.error(isError);
+    return null;
+  }
   return (
     <main>
       <div className="mx-auto mb-12 flex max-w-lg flex-col items-center justify-center gap-4 text-center md:mb-16 xl:mb-32">

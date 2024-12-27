@@ -14,7 +14,7 @@ const PromotionsPage = () => {
     data: offersContent,
     isLoading,
     isError,
-  } = useFetchAPI('offers', `/himalayanflavours/api/offersContent.json`);
+  } = useFetchAPI('offers', `${apiUrl}/api_offers.php`);
 
   const [showOffersEnquiry, setShowOffersEnquiry] = useState(false);
   const [selectedOffer, setSelectedOffer] = useState(null);
@@ -90,13 +90,13 @@ const PromotionsPage = () => {
                   <img
                     src={fire}
                     alt="Fire"
-                    className="size-4 scale-75 group-hover:scale-100"
+                    className="transition-300 size-4 scale-75 group-hover:scale-100"
                   />
                   Enquiry Now
                   <img
                     src={fire}
                     alt="Fire"
-                    className="size-4 scale-75 group-hover:scale-100"
+                    className="transition-300 size-4 scale-75 group-hover:scale-100"
                   />
                 </button>
               </div>

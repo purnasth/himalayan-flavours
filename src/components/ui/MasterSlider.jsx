@@ -15,7 +15,7 @@ const MasterSlider = ({
   speed = 2000,
   delay = 5000,
   navigation = true,
-  sizeClassName = 'relative flex h-screen items-center justify-center',
+  sizeClassName = 'relative flex h-auto items-center justify-center',
 }) => (
   <>
     <Swiper
@@ -38,7 +38,7 @@ const MasterSlider = ({
           <img
             src={slide.image}
             alt={slide.title || `Slide ${index + 1}`}
-            className="absolute inset-0 -z-10 h-full w-full object-cover"
+            className="absolute inset-0 -z-10 size-full object-cover"
           />
           {hasContent && (
             <div className="mt-12 flex max-w-lg flex-col items-center justify-center gap-4 text-center">
@@ -65,14 +65,14 @@ const MasterSlider = ({
           <button
             aria-label="Next"
             title="Next"
-            className="swiper-button-next transition-300 absolute right-4 top-1/2 z-10 flex size-11 -translate-y-1/2 transform items-center justify-center rounded-full border border-light/50 bg-light/20 p-2 text-light shadow-lg backdrop-blur-sm hover:bg-light/50"
+            className="swiper-button-next transition-300 absolute right-4 top-1/2 z-10 flex size-11 translate-y-1/2 transform items-center justify-center rounded-full border border-light/50 bg-light/20 p-2 text-light shadow-lg backdrop-blur-sm hover:bg-light/50"
           >
             <TbArrowNarrowRight />
           </button>
           <button
             aria-label="Previous"
             title="Previous"
-            className="swiper-button-prev transition-300 absolute left-4 top-1/2 z-10 flex size-11 -translate-y-1/2 transform items-center justify-center rounded-full border border-light/50 bg-light/20 p-2 text-light shadow-lg backdrop-blur-sm hover:bg-light/50"
+            className="swiper-button-prev transition-300 absolute left-4 top-1/2 z-10 flex size-11 translate-y-1/2 transform items-center justify-center rounded-full border border-light/50 bg-light/20 p-2 text-light shadow-lg backdrop-blur-sm hover:bg-light/50"
           >
             <TbArrowNarrowLeft />
           </button>

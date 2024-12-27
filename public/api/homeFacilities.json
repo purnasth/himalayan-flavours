@@ -45,8 +45,12 @@
     ],
     "images": [
         {
-            "src": "https://mayurstay.com/himalayanflavours/assets/fridaylive-BZqLyC8W.webp",
-            "alt": "Every Friday Live Music"
+            "image": "https://mayurstay.com/himalayanflavours/assets/fridaylive-BZqLyC8W.webp",
+            "title": "Every Friday Live Music"
+        },
+        {
+            "image": "https://mayurstay.com/himalayanflavours/assets/fridaylive-BZqLyC8W.webp",
+            "title": "Every Friday Live Music"
         }
     ]
 }

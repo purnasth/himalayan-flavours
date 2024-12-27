@@ -10,6 +10,7 @@ import {
 import { GiCryptEntrance } from 'react-icons/gi';
 import { MdOutlineDeliveryDining } from 'react-icons/md';
 import useFetchAPI from '../hooks/useFetchAPI';
+import MasterSlider from './ui/MasterSlider';
 
 const iconMap = {
   GiCryptEntrance,
@@ -86,14 +87,21 @@ const Facility = () => {
           })}
         </div>
 
-        {images.map((image, index) => (
+        {/* {images.map((image, index) => (
           <img
             key={index}
             src={image.src}
             alt={image.alt}
             className="mx-auto mt-8 h-52 w-full rounded-3xl object-cover shadow md:h-96 lg:mt-12 lg:h-[55vh] lg:min-h-[28rem]"
           />
-        ))}
+        ))} */}
+        <MasterSlider
+          slides={images}
+          speed={500}
+          hasContent={false}
+          navigation={false}
+          sizeClassName="mx-auto mt-8 h-52 w-full rounded-3xl object-cover shadow md:h-96 lg:mt-12 lg:h-[55vh] lg:min-h-[28rem]"
+        />
       </div>
     </main>
   );

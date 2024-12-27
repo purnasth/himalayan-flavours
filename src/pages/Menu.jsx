@@ -12,7 +12,7 @@ const Menu = () => {
     data: menuPage,
     isLoading,
     isError,
-  } = useFetchAPI('menuPage', `/himalayanflavours/api/menuPage.json`);
+  } = useFetchAPI('menuPage', `${apiUrl}api_menu_page.php`);
 
   if (isLoading) return null;
   if (isError) {

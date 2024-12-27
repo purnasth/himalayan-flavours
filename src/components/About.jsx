@@ -1,10 +1,6 @@
 import React from 'react';
 import FireButton from './ui/FireButton';
 
-import img1 from '../assets/images/update/5.webp';
-import img2 from '../assets/images/update/9.webp';
-import img3 from '../assets/images/update/10.webp';
-import img4 from '../assets/images/update/8.webp';
 import useFetchAPI from '../hooks/useFetchAPI';
 
 const About = () => {
@@ -14,7 +10,7 @@ const About = () => {
     data: aboutContents,
     isLoading,
     isError,
-  } = useFetchAPI('aboutContents', `/himalayanflavours/api/aboutContents.json`);
+  } = useFetchAPI('aboutContents', `${apiUrl}api_about_content.php`);
 
   if (isLoading) return null;
   if (isError) {
@@ -22,11 +18,7 @@ const About = () => {
     return null;
   }
 
-  console.log(aboutContents);
-
-  const { home_page } = aboutContents;
-
-  const { title, description, images } = home_page;
+  const { title, description, images } = aboutContents;
 
   return (
     <main className="pt-0">

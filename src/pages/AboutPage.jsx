@@ -12,15 +12,13 @@ const AboutPage = () => {
     data: aboutContents,
     isLoading,
     isError,
-  } = useFetchAPI('aboutContents', `/himalayanflavours/api/aboutContents.json`);
+  } = useFetchAPI('aboutContents', `${apiUrl}api_about_content.php`);
 
   if (isLoading) return null;
   if (isError) {
     console.error(isError);
     return null;
   }
-
-  console.log(aboutContents);
 
   const { title, description, images, sections } = aboutContents;
 

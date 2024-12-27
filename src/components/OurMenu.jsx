@@ -13,11 +13,13 @@ import FireButton from './ui/FireButton';
 import useFetchAPI from '../hooks/useFetchAPI';
 
 const OurMenu = () => {
+  const apiUrl = import.meta.env.VITE_API_URL;
+
   const {
     data: menu,
     isLoading,
     isError,
-  } = useFetchAPI('foodMenu', '/himalayanflavours/api/foodMenu.json');
+  } = useFetchAPI('foodMenu', `${apiUrl}api_food_menus.php`);
 
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>Error loading menu.</div>;

@@ -30,10 +30,7 @@ const Facility = () => {
     data: homeFacilities,
     isLoading,
     isError,
-  } = useFetchAPI(
-    'homeFacilities',
-    '/himalayanflavours/api/homeFacilities.json',
-  );
+  } = useFetchAPI('homeFacilities', `${apiUrl}api_home_facilities.php`);
 
   if (isLoading) return null;
   if (isError) {
@@ -61,7 +58,15 @@ const Facility = () => {
                 key={facility.id}
                 className="flex flex-col items-center gap-4 p-4 text-center"
               >
-                <IconComponent className="text-3xl text-dark/80 md:text-5xl" />
+                {IconComponent ? (
+                  <IconComponent className="text-3xl text-dark/80 md:text-5xl" />
+                ) : facility.image ? (
+                  <img
+                    src={facility.image}
+                    alt={facility.title}
+                    className="size-8 object-contain md:size-12"
+                  />
+                ) : null}
                 <p className="text-xs md:text-sm lg:text-base xl:text-xl">
                   {facility.name}
                 </p>
@@ -78,7 +83,18 @@ const Facility = () => {
                 key={facility.id}
                 className="flex flex-col items-center gap-4 p-4 text-center"
               >
-                <IconComponent className="text-2xl text-dark/80 md:text-4xl" />
+                {/* <IconComponent className="text-2xl text-dark/80 md:text-4xl" /> */}
+
+                {IconComponent ? (
+                  <IconComponent className="text-2xl text-dark/80 md:text-4xl" />
+                ) : facility.image ? (
+                  <img
+                    src={facility.image}
+                    alt={facility.title}
+                    className="size-6 object-contain md:size-9"
+                  />
+                ) : null}
+
                 <p className="hidden text-xs md:block md:text-xs xl:text-base">
                   {facility.name}
                 </p>

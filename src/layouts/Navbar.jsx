@@ -8,14 +8,13 @@ import ContactInfo from '../components/ui/ContactInfo';
 import useFetchAPI from '../hooks/useFetchAPI';
 
 const Navbar = () => {
+  const apiUrl = import.meta.env.VITE_API_URL;
+
   const {
     data: navLinks = [],
     isLoading,
     isError,
-  } = useFetchAPI(
-    'navLinks',
-    'https://mayurstay.com/himalayanflavours/api/api_menu.php',
-  );
+  } = useFetchAPI('navLinks', `${apiUrl}api_nav_links.php`);
 
   const [isOpen, setIsOpen] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);

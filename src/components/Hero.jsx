@@ -60,8 +60,6 @@ const Hero = () => {
   if (isLoading) return <></>;
   if (isError) return console.error(isError);
 
-  console.log(slideShow);
-
   return (
     <>
       <section className="group relative m-0 p-0">

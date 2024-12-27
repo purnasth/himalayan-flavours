@@ -64,7 +64,7 @@ const UniversalFooter = () => {
               {navLinks.slice(1, 6).map((link) => (
                 <li className="group w-full" key={link.id}>
                   <Link
-                    to={link.url}
+                    to={link.link}
                     className="navlink"
                     aria-label={link.title}
                   >

@@ -2,26 +2,26 @@
     {
         "id": 1,
         "title": "Home",
-        "url": "/"
+        "link": "/"
     },
     {
         "id": 2,
         "title": "About",
-        "url": "/about"
+        "link": "/about"
     },
     {
         "id": 4,
         "title": "Food Gallery",
-        "url": "/gallery"
+        "link": "/gallery"
     },
     {
         "id": 5,
         "title": "Hours & Location",
-        "url": "/contact"
+        "link": "/contact"
     },
     {
         "id": 6,
         "title": "Promotions",
-        "url": "/offers"
+        "link": "/offers"
     }
 ]

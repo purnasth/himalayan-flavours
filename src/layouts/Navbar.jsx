@@ -14,7 +14,8 @@ const Navbar = () => {
     data: navLinks = [],
     isLoading,
     isError,
-  } = useFetchAPI('navLinks', `${apiUrl}api_nav_links.php`);
+  } = useFetchAPI('navLinks', `${apiUrl}api_menu.php`);
+  // } = useFetchAPI('navLinks', `/himalayanflavours/api/navLinks.json`);
 
   const [isOpen, setIsOpen] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -129,7 +130,7 @@ const Navbar = () => {
               {navLinks.map((link) => (
                 <li className="group w-full" key={link.id}>
                   <NavLink
-                    to={link.url}
+                    to={link.link}
                     className={({ isActive }) =>
                       `navlink ${isActive ? 'text-orange-400' : 'text-dark'}`
                     }

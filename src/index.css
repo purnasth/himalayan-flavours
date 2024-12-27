@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
-
 @font-face {
   font-family: 'Cotta';
   src: url('./assets/fonts/cotta.otf') format('opentype');
+  font-display: swap;
 }
 
 @tailwind base;
@@ -36,6 +35,7 @@
   .nearby-scroll::-webkit-scrollbar-thumb {
     @apply rounded-full bg-orange-300;
   }
+
   /* ::-webkit-scrollbar {
     @apply w-2 rounded-full bg-transparent;
   }
@@ -61,6 +61,7 @@
   div {
     @apply font-body;
   }
+
   .navlink,
   h1,
   h2,
@@ -92,13 +93,11 @@
   } */
 
   .filter-white {
-    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%)
-      hue-rotate(288deg) brightness(102%) contrast(102%);
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
   }
 
   .filter-black {
-    filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(7500%)
-      hue-rotate(327deg) brightness(96%) contrast(104%);
+    filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(7500%) hue-rotate(327deg) brightness(96%) contrast(104%);
   }
 
   .transition-300 {
@@ -152,16 +151,18 @@ html.lenis body {
 .swiper-rtl .swiper-button-prev:after {
   display: none;
 }
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   transition: background-color 5000s ease-in-out 0s;
 }
+
 .animate-spin {
   animation: spin 60s linear infinite;
 }
 
-.hmm > span {
+.hmm>span {
   font-weight: bolder;
 }

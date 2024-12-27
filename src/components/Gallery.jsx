@@ -1,5 +1,5 @@
 import React from 'react';
-import foodGallery from '../assets/images/foods_gallery.png';
+import foodGallery from '../assets/images/foods_gallery.webp';
 import FoodGallery from './ui/FoodGallery';
 import DeliveryPartners from './ui/DeliveryPartners';
 

@@ -10,7 +10,7 @@ module.exports = {
         "logo-red": '#ff3130'
       },
       fontFamily: {
-        title: ['"Cotta"', 'Georgia', 'Cambria', 'serif'],
+        title: ['"Cotta"', 'Mulish', 'Georgia', 'Cambria', 'serif'],
         body: ['"Mulish"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       fontSize: {

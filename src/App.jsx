@@ -21,6 +21,7 @@ import ContactPage from './pages/ContactPage';
 import RouterToTop from './utils/RouterToTop';
 import ArticlePage from './pages/ArticlePage';
 import Booking from './components/ui/Booking';
+import Error404 from './layouts/Error404';
 // import Preloader from './layouts/Preloader';
 
 const App = () => {
@@ -43,7 +44,7 @@ const App = () => {
           animate={{ clipPath: 'inset(0% 0% 0% 0%)' }}
           transition={{ duration: 2, delay: 0, ease: 'easeOut' }}
         > */}
-        <Router basename='himalayanflavours'>
+        <Router basename="himalayanflavours">
           <RouterToTop />
           <Navbar />
           <Routes>
@@ -55,7 +56,7 @@ const App = () => {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/:slug" element={<ArticlePage />} />
             {/* <Route path="*" element={<Navigate to="/" />} /> */}
-            <Route path="*" element={<h1>Not Found</h1>} />
+            <Route path="*" element={<Error404 />} />
           </Routes>
           <WhatsApp />
           <Booking />

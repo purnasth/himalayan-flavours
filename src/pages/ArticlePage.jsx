@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import Meta from '../utils/Meta';
 import useFetchAPI from '../hooks/useFetchAPI';
+import Error404 from '../layouts/Error404';
 
 const ArticlePage = () => {
   const apiUrl = import.meta.env.VITE_API_URL;
@@ -26,7 +27,7 @@ const ArticlePage = () => {
     : articlePageContents?.[slug];
 
   if (!article) {
-    return <div>No article found for slug: {slug}</div>;
+    return <Error404 />;
   }
 
   const { html, title, meta_title, meta_description, meta_keywords } = article;

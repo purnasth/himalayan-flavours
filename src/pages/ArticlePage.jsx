@@ -15,10 +15,11 @@ const ArticlePage = () => {
     isError,
   } = useFetchAPI(key, `${apiUrl}api_article.php`);
 
-  if (isLoading) return <></>;
+  if (isLoading) return null;
+
   if (isError) {
     console.error('Error fetching data:', isError);
-    return <></>;
+    return null;
   }
 
   // Adjust logic based on the API response structure

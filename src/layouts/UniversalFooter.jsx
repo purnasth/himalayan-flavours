@@ -27,21 +27,15 @@ const UniversalFooter = () => {
   const isLoading = navLoading || regularsLoading;
   const isError = navError || regularsError;
 
-  if (isLoading) {
-    return <div className="text-center">Loading...</div>;
-  }
+  if (isLoading) return null;
 
   if (isError) {
-    console.error('Error fetching data:', { navError, regularsError });
-    return (
-      <div className="text-center">
-        An error occurred. Please try again later.
-      </div>
-    );
+    console.error({ navError, regularsError });
+    return null;
   }
 
   const { sitetitle } = siteRegulars;
-  
+
   return (
     <main className="h-auto overflow-hidden p-0 md:h-screen">
       {/* <div className="absolute bottom-0 h-3/4 w-full bg-red-600 -z-10"></div> */}

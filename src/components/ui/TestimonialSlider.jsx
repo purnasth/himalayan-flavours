@@ -60,7 +60,7 @@ const TestimonialSlider = () => {
     swiperRef.current.swiper.slidePrev();
   };
 
-  if (isLoading) return <></>;
+  if (isLoading) return null;
   if (isError) return console.error(isError);
 
   return (

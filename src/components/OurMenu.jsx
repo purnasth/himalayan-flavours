@@ -21,9 +21,12 @@ const OurMenu = () => {
     isError,
   } = useFetchAPI('foodMenu', `${apiUrl}api_food_menus.php`);
 
-  if (isLoading) return <div>Loading...</div>;
-  if (isError) return <div>Error loading menu.</div>;
-  if (!menu || menu.length === 0) return <div>No menu available.</div>;
+  if (isLoading) return null;
+  if (isError) {
+    console.error(isError);
+    return null;
+  }
+  if (!menu || menu.length === 0) return null;
 
   return (
     <main>

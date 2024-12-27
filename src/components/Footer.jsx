@@ -29,17 +29,11 @@ const Footer = () => {
   const isLoading = navLoading || regularsLoading;
   const isError = navError || regularsError;
 
-  if (isLoading) {
-    return <div className="text-center">Loading...</div>;
-  }
+  if (isLoading) return null;
 
   if (isError) {
-    console.error('Error fetching data:', { navError, regularsError });
-    return (
-      <div className="text-center">
-        An error occurred. Please try again later.
-      </div>
-    );
+    console.error(isError);
+    return null;
   }
 
   const { sitetitle } = siteRegulars;

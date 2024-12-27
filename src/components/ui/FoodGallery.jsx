@@ -20,7 +20,7 @@ const FoodGallery = ({ limit, galleryClassName }) => {
     isError,
   } = useFetchAPI('gallery', `${apiUrl}api_gallery.php`);
 
-  if (isLoading) return <></>;
+  if (isLoading) return null;
   if (isError) return console.error(isError);
 
   // Ensure galleryImages is always an array before calling map

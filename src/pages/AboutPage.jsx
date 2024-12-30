@@ -4,6 +4,7 @@ import LogoBar from '../components/ui/LogoBar';
 import UniversalFooter from '../layouts/UniversalFooter';
 import FacilityList from '../components/ui/FacilityList';
 import useFetchAPI from '../hooks/useFetchAPI';
+import Meta from '../utils/Meta';
 
 const AboutPage = () => {
   const apiUrl = import.meta.env.VITE_API_URL;
@@ -20,10 +21,25 @@ const AboutPage = () => {
     return null;
   }
 
-  const { title, description, images, sections } = aboutContents;
+  const {
+    title,
+    description,
+    images,
+    sections,
+    meta_title,
+    meta_description,
+    meta_keywords,
+  } = aboutContents;
 
   return (
     <>
+      <Meta
+        meta_title={meta_title}
+        meta_description={meta_description}
+        meta_keywords={meta_keywords}
+        canonicalUrl="https://himalayan-flavours.com/about"
+      />
+
       <main className="px-0">
         <div className="px-4">
           <Title title={title} description={description} />

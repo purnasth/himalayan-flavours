@@ -4,6 +4,7 @@ import Title from '../components/ui/Title';
 // import foodMenu from '../assets/menu/menu.pdf';
 import ReservationWhatsApp from '../components/ui/ReservationWhatsApp';
 import useFetchAPI from '../hooks/useFetchAPI';
+import Meta from '../utils/Meta';
 
 const Menu = () => {
   const apiUrl = import.meta.env.VITE_API_URL;
@@ -20,10 +21,23 @@ const Menu = () => {
     return null;
   }
 
-  const { heading, description, menuPdf } = menuPage;
+  const {
+    heading,
+    description,
+    menuPdf,
+    meta_title,
+    meta_description,
+    meta_keywords,
+  } = menuPage;
 
   return (
     <>
+    <Meta
+        meta_title={meta_title}
+        meta_description={meta_description}
+        meta_keywords={meta_keywords}
+        canonicalUrl="https://himalayan-flavours.com/food-menu"
+      />
       <main>
         <Title title={heading} description={description} />
 

@@ -2,10 +2,33 @@ import React from 'react';
 import Title from '../components/ui/Title';
 import Nearby from '../components/ui/Nearby';
 import Footer from '../components/Footer';
+import useFetchAPI from '../hooks/useFetchAPI';
+import Meta from '../utils/Meta';
 
 const ContactPage = () => {
+  const apiUrl = import.meta.env.VITE_API_URL;
+
+  const {
+    data: siteRegulars,
+    isLoading,
+    isError,
+  } = useFetchAPI('siteRegulars', `${apiUrl}api_siteregulars.php`);
+
+  if (isLoading) return null;
+  if (isError) {
+    console.error(isError);
+    return null;
+  }
+
+  const { contact_meta_title } = siteRegulars;
+
   return (
     <>
+      <Meta
+        meta_title={contact_meta_title}
+        canonicalUrl={'https://himalayan-flavours.com/contact'}
+      />
+
       <main className="bg-orange-50">
         <Title
           title="Reach Himalayan Flavours"

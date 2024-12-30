@@ -6,6 +6,7 @@ import fire from '../assets/logos/fire.svg';
 import UniversalFooter from '../layouts/UniversalFooter';
 import OffersEnquiry from '../components/ui/OffersEnquiry';
 import useFetchAPI from '../hooks/useFetchAPI';
+import Meta from '../utils/Meta';
 
 const PromotionsPage = () => {
   const apiUrl = import.meta.env.VITE_API_URL;
@@ -48,8 +49,17 @@ const PromotionsPage = () => {
     return null;
   }
 
+  const { meta_title, meta_description, meta_keywords } = offersContent;
+
   return (
     <>
+      <Meta
+        meta_title={meta_title}
+        meta_description={meta_description}
+        meta_keywords={meta_keywords}
+        canonicalUrl="https://himalayan-flavours.com/offers"
+      />
+
       <main className="px-4 lg:px-8">
         <Title
           title="Special Offers & Promotions"

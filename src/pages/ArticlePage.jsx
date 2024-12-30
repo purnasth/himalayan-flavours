@@ -31,12 +31,12 @@ const ArticlePage = () => {
     return <Error404 />;
   }
 
-  const { html, title, meta_title, meta_description, meta_keywords } = article;
+  const { html, title, meta_description, meta_keywords } = article;
 
   return (
     <>
       <Meta
-        meta_title={meta_title}
+        meta_title={`${title} | Himalayan Flavours`}
         meta_description={meta_description}
         meta_keywords={meta_keywords}
         canonicalUrl={`https://himalayan-flavours.com/${slug}`}

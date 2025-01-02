@@ -13,7 +13,7 @@ const Offers = () => {
     data: offersContent,
     isLoading,
     isError,
-  } = useFetchAPI('offers', `${apiUrl}/api_offers.php`);
+  } = useFetchAPI('offers', `${apiUrl}offers`);
 
   if (isLoading) return null;
   if (isError) {

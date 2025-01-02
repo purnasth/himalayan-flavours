@@ -18,7 +18,7 @@ const FoodGallery = ({ limit, galleryClassName }) => {
     data: galleryImages,
     isLoading,
     isError,
-  } = useFetchAPI('gallery', `${apiUrl}api_gallery.php`);
+  } = useFetchAPI('gallery', `${apiUrl}gallery`);
 
   if (isLoading) return null;
   if (isError) return console.error(isError);

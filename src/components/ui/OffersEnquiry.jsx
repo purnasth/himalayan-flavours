@@ -51,7 +51,7 @@ const OffersEnquiry = ({ offerTitle, onClose }) => {
     }
 
     try {
-      await submitForm('/offersEnquery_mail_react.php', {
+      await submitForm('offers-form', {
         ...data,
         recaptchaToken,
         offerTitle,

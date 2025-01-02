@@ -48,7 +48,7 @@ const TestimonialSlider = () => {
     data: testimonialsContent,
     isLoading,
     isError,
-  } = useFetchAPI('testimonials', `${apiUrl}api_testimonial.php`);
+  } = useFetchAPI('testimonials', `${apiUrl}testimonials`);
 
   const swiperRef = useRef(null);
 

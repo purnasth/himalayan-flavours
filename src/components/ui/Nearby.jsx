@@ -8,7 +8,7 @@ const Nearby = () => {
     data: nearbyLocations,
     isLoading,
     isError,
-  } = useFetchAPI('nearby', `${apiUrl}api_nearby.php`);
+  } = useFetchAPI('nearby', `${apiUrl}nearby`);
 
   const [isMapOpen, setIsMapOpen] = useState(false);
   const [mapUrl, setMapUrl] = useState('');

@@ -55,7 +55,7 @@ const Hero = () => {
     data: slideShow,
     isLoading,
     isError,
-  } = useFetchAPI('slideShow', `${apiUrl}api_slideshow.php`);
+  } = useFetchAPI('slideShow', `${apiUrl}slideshow`);
 
   if (isLoading) return null;
   if (isError) return console.error(isError);

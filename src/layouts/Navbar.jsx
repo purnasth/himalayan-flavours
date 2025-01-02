@@ -14,7 +14,7 @@ const Navbar = () => {
     data: navLinks = [],
     isLoading,
     isError,
-  } = useFetchAPI('navLinks', `${apiUrl}api_menu.php`);
+  } = useFetchAPI('navLinks', `${apiUrl}menu`);
   // } = useFetchAPI('navLinks', `/himalayanflavours/api/navLinks.json`);
 
   const [isOpen, setIsOpen] = useState(false);

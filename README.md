@@ -61,6 +61,100 @@ Himalayan Flavours is more than just a restaurant; it's a celebration of the ric
     pnpm run dev
     ```
 
+---
+## API Endpoints and Usage
+
+1. `/about` (api_about_content.php)
+   - **Files**: `AboutPage.jsx`, `About.jsx`
+   - **Usage**: Fetches content for the About page from home and about page.
+   - **Details**:
+     - Articles ID: [18, 21, 22]
+     - Homepage article ID: 11
+
+2. `/article` (api_article.php)
+   - **Files**: `ArticlePage.jsx`
+   - **Usage**: Fetches content for individual articles based on the slug, including HTML content, title, meta description, and meta keywords.
+   - **Details**: All active articles
+
+3. `/delivery-partners` (api_delivery_partners.php)
+   - **Files**: `DeliveryPartners.jsx`
+   - **Usage**: Fetches information about delivery partners, including partner names and logos.
+   - **Details**: OTA
+
+4. `/facilities` (api_facilities.php)
+   - **Files**: `FacilityList.jsx`
+   - **Usage**: Fetches a list of facilities available at the restaurant.
+   - **Details**: Features with parent ID: 47
+
+5. `/gallery` (api_gallery.php)
+   - **Files**: `FoodGallery.jsx`
+   - **Usage**: Fetches images and title for the gallery.
+   - **Details**: All gallery images
+
+6. `/home-facilities` (api_home_facilities.php)
+   - **Files**: `Facility.jsx`
+   - **Usage**: Fetches home facilities data, including heading, description, facilities, and images.
+   - **Details**:
+     - Article ID: 19
+     - Services
+
+7. `/location` (api_location.php)
+   - **Files**: `ContactInfo.jsx`
+   - **Usage**: Fetches contact information, including phone numbers and email addresses.
+   - **Details**: Address, phone, email, social medias
+
+8. `/menu` (api_menu.php)
+   - **Files**: `Footer.jsx`, `Navbar.jsx`, `UniversalFooter.jsx`
+   - **Usage**: Fetches menu links for the footer.
+   - **Details**: Main menu only
+
+9. `/menu-page` (api_menu_page.php)
+   - **Files**: `Menu.jsx`
+   - **Usage**: Fetches content for the menu page, including title, description, and PDF link for the menu.
+   - **Details**: Subpackage ID: 51
+
+10. `/offers` (api_offers.php)
+    - **Files**: `Offers.jsx`, `PromotionsPage.jsx`
+    - **Usage**: Fetches current offers and promotions, including offer titles, descriptions, and images.
+    - **Details**: Get all valid offers
+
+11. `/site-regulars` (api_siteregulars.php)
+    - **Files**: `Footer.jsx`, `Booking.jsx`, `Logo.jsx`, `OrCallUs.jsx`, `Reservation.jsx`, `ReservationWhatsApp.jsx`, `WhatsApp.jsx`, `UniversalFooter.jsx`, `ContactPage.jsx`, `GalleryPage.jsx`
+    - **Usage**: Fetches site regulars information.
+    - **Details**: All of site regulars
+
+12. `/slideshow` (api_slideshow.php)
+    - **Files**: `Hero.jsx`
+    - **Usage**: Fetches slideshow data for the hero section, including images and captions.
+    - **Details**: Gets image slideshows
+
+13. `/testimonials` (api_testimonial.php)
+    - **Files**: `TestimonialSlider.jsx`
+    - **Usage**: Fetches testimonials, including customer names, reviews, and ratings.
+    - **Details**: Get all active testimonials
+
+14. `/food-menu` (api_food_menus.php)
+    - **Files**: `OurMenu.jsx`
+    - **Usage**: Fetches food menu data, including menu items, categories, and lists.
+    - **Details**: Get all food menu items
+
+15. `/nearby` (api_nearby.php)
+    - **Files**: `Nearby.jsx`
+    - **Usage**: Fetches nearby locations or attractions.
+
+16. `/enquiry-form` (enquery_mail_react.php)
+    - **Files**: `EnquiryForm.jsx`
+    - **Usage**: Fetches enquiry form data, including form fields and validation rules.
+    - **Details**: Get all enquiry form fields
+
+17. `/offers-form` (offersEnquery_mail_react.php)
+    - **Files**: `OffersForm.jsx`
+    - **Usage**: Fetches offers form data, including form fields and validation rules.
+    - **Details**: Get all offers form fields
+    
+---
+
+
 ## 📂 File Structure
 
 ``` plaintext
@@ -200,4 +294,4 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 ## License
 
-All the assets, and codes used in this project are the propety of `Longtail e-Media` and `Himalayan Flavours`. Use of any of the assets, codes, and designs without the permission of the owner is strictly prohibited.
+All designs, code, and assets used in this project are the property of `Longtail e-Media` and `Himalayan Flavours`. Unauthorized use, reproduction, or distribution of any designs, code, or assets without the express written permission of the owners is strictly prohibited and is subject to legal action.

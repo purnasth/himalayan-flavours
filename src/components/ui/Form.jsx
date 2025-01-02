@@ -55,7 +55,7 @@ const Form = () => {
       return;
     }
     try {
-      await submitForm('/enquery_mail_react.php', {
+      await submitForm('enquiry-form', {
         ...data,
         recaptchaToken,
       });

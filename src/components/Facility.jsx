@@ -30,7 +30,7 @@ const Facility = () => {
     data: homeFacilities,
     isLoading,
     isError,
-  } = useFetchAPI('homeFacilities', `${apiUrl}api_home_facilities.php`);
+  } = useFetchAPI('homeFacilities', `${apiUrl}home-facilities`);
 
   if (isLoading) return null;
   if (isError) {

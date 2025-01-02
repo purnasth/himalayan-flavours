@@ -10,7 +10,7 @@ const About = () => {
     data: aboutContents,
     isLoading,
     isError,
-  } = useFetchAPI('aboutContents', `${apiUrl}api_about_content.php`);
+  } = useFetchAPI('aboutContents', `${apiUrl}about`);
 
   if (isLoading) return null;
   if (isError) {

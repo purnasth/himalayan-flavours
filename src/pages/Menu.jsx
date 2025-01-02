@@ -13,7 +13,7 @@ const Menu = () => {
     data: menuPage,
     isLoading,
     isError,
-  } = useFetchAPI('menuPage', `${apiUrl}api_menu_page.php`);
+  } = useFetchAPI('menuPage', `${apiUrl}menu-page`);
 
   if (isLoading) return null;
   if (isError) {
@@ -32,8 +32,8 @@ const Menu = () => {
 
   return (
     <>
-    <Meta
-        meta_title={meta_title}
+      <Meta
+        meta_title={`${meta_title ? meta_title : 'Food Menu | Himalayan Flavours'}`}
         meta_description={meta_description}
         meta_keywords={meta_keywords}
         canonicalUrl="https://himalayan-flavours.com/food-menu"

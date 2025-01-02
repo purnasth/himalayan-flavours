@@ -13,7 +13,7 @@ const ArticlePage = () => {
     data: articlePageContents,
     isLoading,
     isError,
-  } = useFetchAPI(key, `${apiUrl}api_article.php`);
+  } = useFetchAPI(key, `${apiUrl}article`);
 
   if (isLoading) return null;
 

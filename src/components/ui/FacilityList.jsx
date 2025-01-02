@@ -33,7 +33,7 @@ const FacilityList = () => {
     data: facilities,
     isLoading,
     isError,
-  } = useFetchAPI('facilities', `${apiUrl}api_facilities.php`);
+  } = useFetchAPI('facilities', `${apiUrl}facilities`);
 
   if (isLoading) return null;
   if (isError) {

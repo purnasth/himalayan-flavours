@@ -19,7 +19,7 @@ const OurMenu = () => {
     data: menu,
     isLoading,
     isError,
-  } = useFetchAPI('foodMenu', `${apiUrl}api_food_menus.php`);
+  } = useFetchAPI('foodMenu', `${apiUrl}food-menu`);
 
   if (isLoading) return null;
   if (isError) {

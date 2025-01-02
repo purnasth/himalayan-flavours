@@ -33,7 +33,7 @@ const ContactInfo = ({ align }) => {
     data: contactInfo = [],
     isLoading,
     isError,
-  } = useFetchAPI('contactInfo', `${apiUrl}api_location.php`);
+  } = useFetchAPI('contactInfo', `${apiUrl}location`);
 
   if (isLoading) return null;
   if (isError) {

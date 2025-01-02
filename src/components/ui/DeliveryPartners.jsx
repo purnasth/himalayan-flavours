@@ -10,7 +10,7 @@ const DeliveryPartners = () => {
     isError,
   } = useFetchAPI(
     'deliveryPartners',
-    `${apiUrl}api_delivery_partners.php`,
+    `${apiUrl}delivery-partners`,
   );
 
   if (isLoading) return null;

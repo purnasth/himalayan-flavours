@@ -15,7 +15,7 @@ const PromotionsPage = () => {
     data: offersContent,
     isLoading,
     isError,
-  } = useFetchAPI('offers', `${apiUrl}api_offers.php`);
+  } = useFetchAPI('offers', `${apiUrl}offers`);
 
   const [showOffersEnquiry, setShowOffersEnquiry] = useState(false);
   const [selectedOffer, setSelectedOffer] = useState(null);

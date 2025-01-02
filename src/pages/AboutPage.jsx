@@ -13,7 +13,7 @@ const AboutPage = () => {
     data: aboutContents,
     isLoading,
     isError,
-  } = useFetchAPI('aboutContents', `${apiUrl}api_about_content.php`);
+  } = useFetchAPI('aboutContents', `${apiUrl}about`);
 
   if (isLoading) return null;
   if (isError) {
@@ -34,7 +34,7 @@ const AboutPage = () => {
   return (
     <>
       <Meta
-        meta_title={meta_title}
+        meta_title={`${meta_title ? meta_title : 'About | Himalayan Flavours'}`}
         meta_description={meta_description}
         meta_keywords={meta_keywords}
         canonicalUrl="https://himalayan-flavours.com/about"

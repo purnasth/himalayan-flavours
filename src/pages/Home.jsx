@@ -9,10 +9,35 @@ import Gallery from '../components/Gallery';
 import OurMenu from '../components/OurMenu';
 import Reservation from '../components/ui/Reservation';
 import Footer from '../components/Footer';
+import useFetchAPI from '../hooks/useFetchAPI';
+import Meta from '../utils/Meta';
 
 const Home = () => {
+  const apiUrl = import.meta.env.VITE_API_URL;
+
+  const {
+    data: siteRegulars,
+    isLoading,
+    isError,
+  } = useFetchAPI('siteRegulars', `${apiUrl}site-regulars`);
+
+  if (isLoading) return null;
+  if (isError) {
+    console.error(isError);
+    return null;
+  }
+
+  const { meta_title, meta_description, meta_keywords, canonicalUrl } =
+    siteRegulars;
+
   return (
     <>
+      <Meta
+        meta_title={meta_title}
+        meta_description={meta_description}
+        meta_keywords={meta_keywords}
+        canonicalUrl={canonicalUrl}
+      />
       <Hero />
       <About />
       {/* <Cuisine /> */}

@@ -10,7 +10,7 @@ const ReservationWhatsApp = () => {
     data: siteRegulars,
     isLoading,
     isError,
-  } = useFetchAPI('siteRegulars', `${apiUrl}api_siteregulars.php`);
+  } = useFetchAPI('siteRegulars', `${apiUrl}site-regulars`);
 
   if (isLoading) return null;
   if (isError) {

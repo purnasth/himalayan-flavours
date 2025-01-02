@@ -16,13 +16,13 @@ const UniversalFooter = () => {
     data: navLinks = [],
     isLoading: navLoading,
     isError: navError,
-  } = useFetchAPI('navLinks', `${apiUrl}api_menu.php`);
+  } = useFetchAPI('navLinks', `${apiUrl}menu`);
 
   const {
     data: siteRegulars = [],
     isLoading: regularsLoading,
     isError: regularsError,
-  } = useFetchAPI('siteRegulars', `${apiUrl}api_siteregulars.php`);
+  } = useFetchAPI('siteRegulars', `${apiUrl}site-regulars`);
 
   const isLoading = navLoading || regularsLoading;
   const isError = navError || regularsError;

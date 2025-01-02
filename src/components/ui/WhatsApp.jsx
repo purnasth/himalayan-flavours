@@ -10,7 +10,7 @@ const WhatsApp = () => {
     data: siteRegulars,
     isLoading,
     isError,
-  } = useFetchAPI('siteRegulars', `${apiUrl}api_siteregulars.php`);
+  } = useFetchAPI('siteRegulars', `${apiUrl}site-regulars`);
 
   const [showButton, setShowButton] = useState(false);
 

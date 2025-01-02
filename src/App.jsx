@@ -48,7 +48,8 @@ const App = () => {
           <RouterToTop />
           <Navbar />
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Navigate to="/home" />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/food-menu" element={<Menu />} />
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/offers" element={<PromotionsPage />} />

@@ -45,12 +45,12 @@ const AboutPage = () => {
           <Title title={title} description={description} />
         </div>
         <section className="mt-12 grid grid-cols-3 gap-3 md:mt-32 md:gap-12">
-          {images.slice(0, 3).map((image, index) => (
+          {images.slice(0, 3).reverse().map((image, index) => (
             <img
               key={index}
               src={image.src}
               alt={image.alt}
-              className={index === 1 ? 'translate-y-8 md:translate-y-16' : ''}
+              className={`w-full h-48 sm:h-96 md:h-12 lg:h-[32rem] xl:h-[85vh] object-cover ${index === 1 ? 'translate-y-8 md:translate-y-16' : ''}`}
             />
           ))}
         </section>

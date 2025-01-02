@@ -26,14 +26,14 @@ const About = () => {
         <div className="flex items-center justify-center gap-8 pt-12 sm:gap-24 lg:block lg:space-y-24 lg:pt-64">
           <div className="flex items-end justify-end">
             <img
-              src={images[0].src}
+              src={images[3].src}
               alt="Foods"
               className="h-64 w-auto object-cover sm:h-80 lg:h-60 lg:w-44 2xl:h-72 2xl:w-52"
             />
           </div>
           <div className="flex items-end">
             <img
-              src={images[1].src}
+              src={images[2].src}
               alt="Foods"
               className="h-64 w-auto object-cover sm:h-80 lg:h-full lg:w-80 2xl:w-96"
             />
@@ -55,14 +55,14 @@ const About = () => {
         <div className="flex items-center justify-center gap-8 pt-12 sm:gap-24 lg:block lg:space-y-24 lg:pt-64">
           <div className="flex items-end justify-end">
             <img
-              src={images[2].src}
+              src={images[1].src}
               alt="Foods"
               className="h-64 w-auto object-cover sm:h-80 lg:h-full lg:w-80 2xl:w-96"
             />
           </div>
           <div className="flex">
             <img
-              src={images[3].src}
+              src={images[0].src}
               alt="Foods"
               className="h-64 w-auto object-cover sm:h-80 lg:h-60 lg:w-44 2xl:h-72 2xl:w-52"
             />

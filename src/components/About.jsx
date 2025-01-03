@@ -18,7 +18,8 @@ const About = () => {
     return null;
   }
 
-  const { title, description, images } = aboutContents;
+  const homePageContent = aboutContents.home_page[0];
+  const { title, description, images } = homePageContent;
 
   return (
     <main className="pt-0">

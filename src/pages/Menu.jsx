@@ -30,6 +30,8 @@ const Menu = () => {
     meta_keywords,
   } = menuPage;
 
+  console.log(menuPdf)
+  
   return (
     <>
       <Meta

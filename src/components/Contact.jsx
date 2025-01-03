@@ -4,6 +4,7 @@ import { MdFacebook } from 'react-icons/md';
 import { RiInstagramFill } from 'react-icons/ri';
 import ContactInfo from './ui/ContactInfo';
 import { TbClockFilled } from 'react-icons/tb';
+import RestaurantTime from './ui/RestaurantTime';
 
 const Contact = () => {
   return (
@@ -14,18 +15,13 @@ const Contact = () => {
             <h3 className="text-3xl capitalize leading-snug sm:text-2xl md:text-4xl lg:text-6xl lg:leading-snug">
               Looking for celebrations?
             </h3>
-            <p className="text-pretty text-sm text-dark/60">
+            <p className="mb-4 text-pretty text-sm text-dark/60">
               Looking to make your event unforgettable, or have a question? Drop
               us a message, and we'll get back to you with a feast of ideas to
               make it happen!
             </p>
 
-            <div className="mt-4">
-              <h4 className="inline-flex items-center justify-center gap-1 font-body text-base text-dark">
-                <TbClockFilled className="text-xl" />
-                10:00 AM - 10:00 PM
-              </h4>
-            </div>
+            <RestaurantTime />
           </div>
           <hr className="my-8 w-full border-dark/20" />
           <div className="hidden w-full space-y-4 md:block">

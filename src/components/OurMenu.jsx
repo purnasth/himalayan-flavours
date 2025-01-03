@@ -28,8 +28,6 @@ const OurMenu = () => {
   }
   if (!menu || menu.length === 0) return null;
 
-  console.log(menu);
-
   return (
     <main>
       <div className="mx-auto mb-8 flex max-w-lg flex-col items-center justify-center gap-4 text-center md:mb-12 lg:mb-32">

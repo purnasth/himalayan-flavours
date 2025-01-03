@@ -62,6 +62,7 @@ Himalayan Flavours is more than just a restaurant; it's a celebration of the ric
     ```
 
 ---
+
 ## API Endpoints and Usage
 
 1. `/about` (api_about_content.php)
@@ -119,8 +120,8 @@ Himalayan Flavours is more than just a restaurant; it's a celebration of the ric
     - **Details**: Get all valid offers
 
 11. `/site-regulars` (api_siteregulars.php)
-    - **Files**: `Footer.jsx`, `Booking.jsx`, `Logo.jsx`, `OrCallUs.jsx`, `Reservation.jsx`, `ReservationWhatsApp.jsx`, `WhatsApp.jsx`, `UniversalFooter.jsx`, `ContactPage.jsx`, `GalleryPage.jsx`
-    - **Usage**: Fetches site regulars information.
+    - **Files**: `Footer.jsx`, `Booking.jsx`, `Logo.jsx`, `OrCallUs.jsx`, `Reservation.jsx`, `ReservationWhatsApp.jsx`, `WhatsApp.jsx`, `UniversalFooter.jsx`, `ContactPage.jsx`, `GalleryPage.jsx`, `RestaurantTime.jsx`
+    - **Usage**: Fetches site regulars information like booking_code, breif, canonicalUrl, contact_info, contact_meta_title, contact_upload, email_address, fiscal_address, gallery_meta_title, gallery_upload, hotel_page, location_map, logo_upload, meta_description, meta_keywords, meta_title, qeqweqwe_upload, sitename, sitetitle, whatsapp_a.
     - **Details**: All of site regulars
 
 12. `/slideshow` (api_slideshow.php)

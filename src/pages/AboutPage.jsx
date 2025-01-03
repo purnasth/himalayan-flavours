@@ -31,6 +31,8 @@ const AboutPage = () => {
     meta_keywords,
   } = aboutContents;
 
+  console.log(aboutContents);
+
   return (
     <>
       <Meta

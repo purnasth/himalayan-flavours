@@ -38,11 +38,13 @@ const WhatsApp = () => {
 
   const { booking_code } = siteRegulars;
 
+  console.log(booking_code);
+
   return (
     <Link
       to={`${booking_code}`}
-      //   target="_blank"
-      //   rel="noreferrer"
+      target="_blank"
+      rel="noreferrer"
       className={`${
         showButton ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
       } transition-300 transition-1000 fixed bottom-4 right-1/2 z-40 inline-flex translate-x-1/2 translate-y-0 scale-100 items-center justify-center gap-2 rounded-full border border-orange-300/50 bg-dark/50 bg-orange-300 px-6 py-2 font-bold text-dark shadow backdrop-blur-sm`}

@@ -72,13 +72,12 @@ const Hero = () => {
         <MasterSlider
           slides={slideShow}
           speed={5000}
-          hasContent={false}
+          hasContent={true}
           navigation={false}
           sizeClassName="min-h-[34rem] w-full object-cover object-center contrast-125 sm:h-[50vh] md:h-[70vh] lg:h-screen"
         />
 
-        <div className="pointer-events-none absolute inset-0 z-10 flex size-full flex-col items-center justify-end">
-          {/* Typewriter Effect */}
+        {/* <div className="pointer-events-none absolute inset-0 z-10 flex size-full flex-col items-center justify-end">
           <Logo className="h-40 w-auto object-contain p-1 lg:h-64" />
           <h2 className="text-shadow-dark-glow mx-8 mb-5 mt-8 max-w-xl text-center text-xl font-bold leading-relaxed text-dark md:mx-0 md:text-4xl md:leading-snug">
             The Best of Indian, Nepalese & Chinese Cuisines
@@ -100,7 +99,7 @@ const Hero = () => {
             className="size-12 rounded-full border border-orange-300 object-contain p-1"
           />
           <div className="bottom-0 h-10 w-px bg-orange-300 md:h-20"></div>
-        </div>
+        </div> */}
       </section>
     </>
   );

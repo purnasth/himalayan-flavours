@@ -55,7 +55,7 @@ const Footer = () => {
         <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-7 lg:gap-0">
           <div className="col-span-1 w-full lg:col-span-2">
             <span className="text-xs font-bold uppercase text-dark/70">
-              Web Pages
+              Quick Links
             </span>
             <ul className="links mt-4 flex flex-col items-start justify-start gap-2 md:mt-8 md:gap-4">
               {navLinks.slice(1, 6).map((link) => (

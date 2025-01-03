@@ -11,6 +11,7 @@ import Reservation from '../components/ui/Reservation';
 import Footer from '../components/Footer';
 import useFetchAPI from '../hooks/useFetchAPI';
 import Meta from '../utils/Meta';
+import Popup from '../components/Popup';
 
 const Home = () => {
   const apiUrl = import.meta.env.VITE_API_URL;
@@ -38,6 +39,7 @@ const Home = () => {
         meta_keywords={meta_keywords}
         canonicalUrl={canonicalUrl}
       />
+      <Popup />
       <Hero />
       <About />
       {/* <Cuisine /> */}

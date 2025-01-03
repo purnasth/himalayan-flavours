@@ -124,7 +124,7 @@ const Navbar = () => {
 
         <div className="justify -evenly flex size-full flex-col items-start gap-0 px-4 text-dark md:px-8">
           <div className="mt-12 w-full">
-            <span className="text-xs uppercase text-dark/50">Web Pages</span>
+            {/* <span className="text-xs uppercase text-dark/50">Web Pages</span> */}
 
             <ul className="links mt-6 flex flex-col items-start justify-start gap-2 md:gap-4">
               {navLinks.map((link) => (
